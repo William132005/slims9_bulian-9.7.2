@@ -1,0 +1,5845 @@
+# SLiMS9 Bulian - Korean Translation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: SLiMS9 Bulian\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0700\n"
+"PO-Revision-Date: 2024-01-01 00:00+0700\n"
+"Language: ko_KR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_ngettext:1,2\n"
+
+msgid "No ID Supplied!"
+msgstr "ID가 없습니다!"
+
+msgid "ID Already exists! Please use another ID"
+msgstr "이미 사용 중인 ID입니다! 다른 ID를 사용하세요"
+
+msgid "ID Available"
+msgstr "사용 가능한 ID"
+
+msgid "Add New"
+msgstr "새로 추가"
+
+msgid "Shortcut"
+msgstr "단축키"
+
+msgid "Dashboard"
+msgstr "대시보드"
+
+msgid "OPAC"
+msgstr "OPAC"
+
+msgid "Logout"
+msgstr "로그아웃"
+
+msgid "Help"
+msgstr "도움말"
+
+msgid "Bibliography"
+msgstr "서지"
+
+msgid "Master File"
+msgstr "마스터 파일"
+
+msgid "Barcode Reader"
+msgstr "바코드 리더"
+
+msgid "Close"
+msgstr "닫기"
+
+msgid "Librarian"
+msgstr "사서"
+
+msgid "entries"
+msgstr "항목"
+
+msgid "values"
+msgstr "values"
+
+msgid "keys"
+msgstr "keys"
+
+msgid "Color Theme.<br><small>( Default : #004db6 )</small>"
+msgstr "Color Theme.<br><small>( Default : #004db6 )</small>"
+
+msgid "Always Show Tracks"
+msgstr "Always Show Tracks"
+
+msgid "Yes"
+msgstr "예"
+
+msgid "No"
+msgstr "아니오"
+
+msgid "To <strong><!--MEMBER_NAME--> (<!--MEMBER_ID-->)</strong>&nbsp;\\n         This is notification e-mail to inform you that you have <strong>DUE DATE</strong> library loan,\\n        the overdued collection(s) are:"
+msgstr "To <strong><!--MEMBER_NAME--> (<!--MEMBER_ID-->)</strong>&nbsp;\\n         This is notification e-mail to inform you that you have <strong>DUE DATE</strong> library loan,\\n        the overdued collection(s) are:"
+
+msgid "Please return all collections immediately to library at or before due date. If you have\\n        any complaint regarding to this due date notification,\\n        please contact our circulation desk."
+msgstr "Please return all collections immediately to library at or before due date. If you have\\n        any complaint regarding to this due date notification,\\n        please contact our circulation desk."
+
+msgid "<p>Thank You.</p>\\n\\n        <strong><!--DATE--></strong>\\n        <br />Library Management"
+msgstr "<p>Thank You.</p>\\n\\n        <strong><!--DATE--></strong>\\n        <br />Library Management"
+
+msgid "days"
+msgstr "일"
+
+msgid "To <strong><!--MEMBER_NAME--> (<!--MEMBER_ID-->)</strong>\\nThis is notification e-mail to inform you that you have <strong>OVERDUED</strong> library loan,\\nthe overdued collection(s) are:"
+msgstr "To <strong><!--MEMBER_NAME--> (<!--MEMBER_ID-->)</strong>\\nThis is notification e-mail to inform you that you have <strong>OVERDUED</strong> library loan,\\nthe overdued collection(s) are:"
+
+msgid "Please return all overdued collections immediately to library. If you have\\nany complaint regarding to this overdue notification,\\nplease contact our circulation desk."
+msgstr "Please return all overdued collections immediately to library. If you have\\nany complaint regarding to this overdue notification,\\nplease contact our circulation desk."
+
+msgid "<p>Thank You.</p>\\n\\n<strong><!--DATE--></strong>\\n<br />Library Management"
+msgstr "<p>Thank You.</p>\\n\\n<strong><!--DATE--></strong>\\n<br />Library Management"
+
+msgid "To <strong><!--MEMBER_NAME--> (<!--MEMBER_ID-->)</strong>\\n         This is notification e-mail to inform you that you have <strong>OVERDUED</strong> library loan,\\n        the overdued collection(s) are:"
+msgstr "To <strong><!--MEMBER_NAME--> (<!--MEMBER_ID-->)</strong>\\n         This is notification e-mail to inform you that you have <strong>OVERDUED</strong> library loan,\\n        the overdued collection(s) are:"
+
+msgid "Please return all overdued collections immediately to library. If you have\\n        any complaint regarding to this overdue notification,\\n        please contact our circulation desk."
+msgstr "Please return all overdued collections immediately to library. If you have\\n        any complaint regarding to this overdue notification,\\n        please contact our circulation desk."
+
+msgid "Chat With Members"
+msgstr "회원과 채팅"
+
+msgid "Please type and hit Enter button to send your messages"
+msgstr "메시지를 입력하고 Enter를 누르세요"
+
+msgid "Members"
+msgstr "회원"
+
+msgid "Library Administration"
+msgstr "도서관 관리"
+
+msgid "Database backup process is running, please wait"
+msgstr "Database backup process is running, please wait"
+
+msgid "<strong>PHP GD</strong> extension is not installed. Please install it or application won't be able to create image thumbnail and barcode."
+msgstr "<strong>PHP GD</strong> extension is not installed. Please install it or application won't be able to create image thumbnail and barcode."
+
+msgid "<strong>Freetype</strong> support is not enabled in PHP GD extension. Rebuild PHP GD extension with Freetype support or application won't be able to create barcode."
+msgstr "<strong>Freetype</strong> support is not enabled in PHP GD extension. Rebuild PHP GD extension with Freetype support or application won't be able to create barcode."
+
+msgid "There are currently <strong>{num_overdue}</strong> library members having overdue. Please check at <b>Circulation</b> module at <b>Overdues</b> section for more detail"
+msgstr "There are currently <strong>{num_overdue}</strong> library members having overdue. Please check at <b>Circulation</b> module at <b>Overdues</b> section for more detail"
+
+msgid "<strong>Images</strong> directory and directories under it is not writable. Make sure it is writable by changing its permission or you won't be able to upload any images and create barcodes"
+msgstr "<strong>Images</strong> directory and directories under it is not writable. Make sure it is writable by changing its permission or you won't be able to upload any images and create barcodes"
+
+msgid "<strong>Repository</strong> directory is not writable. Make sure it is writable (and all directories under it) by changing its permission or you won't be able to upload any bibliographic attachments."
+msgstr "<strong>Repository</strong> directory is not writable. Make sure it is writable (and all directories under it) by changing its permission or you won't be able to upload any bibliographic attachments."
+
+msgid "<strong>File upload</strong> directory is not writable. Make sure it is writable (and all directories under it) by changing its permission or you won't be able to upload any file, create report files and create database backups."
+msgstr "<strong>File upload</strong> directory is not writable. Make sure it is writable (and all directories under it) by changing its permission or you won't be able to upload any file, create report files and create database backups."
+
+msgid "Installer folder is still exist inside your server. Please remove it or rename to another name for security reason."
+msgstr "Installer folder is still exist inside your server. Please remove it or rename to another name for security reason."
+
+msgid "<strong><i>You are logged in as Super User. With great power comes great responsibility.</i></strong>"
+msgstr "<strong><i>You are logged in as Super User. With great power comes great responsibility.</i></strong>"
+
+msgid "Table"
+msgstr "테이블"
+
+msgid "might need to be repaired."
+msgstr "might need to be repaired."
+
+msgid "Click Here To Repair The Tables"
+msgstr "Click Here To Repair The Tables"
+
+msgid "It looks like today you haven't backup your database."
+msgstr "It looks like today you haven't backup your database."
+
+msgid "Backup Now"
+msgstr "Backup Now"
+
+msgid "Total of Collections"
+msgstr "Total of Collections"
+
+msgid "Total of Items"
+msgstr "Total of Items"
+
+msgid "Lent"
+msgstr "Lent"
+
+msgid "Available"
+msgstr "Available"
+
+msgid "Latest Transactions"
+msgstr "Latest Transactions"
+
+msgid "Loan"
+msgstr "Loan"
+
+msgid "Return"
+msgstr "Return"
+
+msgid "Extend"
+msgstr "Extend"
+
+msgid "Summary"
+msgstr "Summary"
+
+msgid "Total"
+msgstr "Total"
+
+msgid "New"
+msgstr "New"
+
+msgid "Extends"
+msgstr "Extends"
+
+msgid "Overdue"
+msgstr "Overdue"
+
+msgid "Please wait"
+msgstr "Please wait"
+
+msgid "Error"
+msgstr "Error"
+
+msgid "You are not authorized to view this section"
+msgstr "You are not authorized to view this section"
+
+msgid "Your Login session has timed out."
+msgstr "Your Login session has timed out."
+
+msgid "Click here to Login again"
+msgstr "Click here to Login again"
+
+msgid "SHORTCUT"
+msgstr "SHORTCUT"
+
+msgid "Change User Profiles"
+msgstr "Change User Profiles"
+
+msgid "Change Current User Profiles and Password"
+msgstr "Change Current User Profiles and Password"
+
+msgid "Shortcut Setting"
+msgstr "Shortcut Setting"
+
+msgid "Theme"
+msgstr "Theme"
+
+msgid "Configure theme Preferences"
+msgstr "Configure theme Preferences"
+
+msgid "Sorry, help content is not available yet."
+msgstr "Sorry, help content is not available yet."
+
+msgid "Cannot Access This File Directly"
+msgstr "Cannot Access This File Directly"
+
+msgid "Senayan Library Management System"
+msgstr "Senayan Library Management System"
+
+msgid "You are currently logged in as"
+msgstr "You are currently logged in as"
+
+msgid "You Have Been Logged Out From Library Automation System"
+msgstr "You Have Been Logged Out From Library Automation System"
+
+msgid "Hidden in OPAC"
+msgstr "Hidden in OPAC"
+
+msgid "Promoted To Homepage"
+msgstr "Promoted To Homepage"
+
+msgid "Checkout Items"
+msgstr "Checkout Items"
+
+msgid "Search"
+msgstr "검색"
+
+msgid "Item Code"
+msgstr "Item Code"
+
+msgid "Member ID"
+msgstr "회원 ID"
+
+msgid "Title"
+msgstr "제목"
+
+msgid "Loan Date"
+msgstr "Loan Date"
+
+msgid "Due Date"
+msgstr "Due Date"
+
+msgid "Found <strong>{result->num_rows}</strong> from your keywords"
+msgstr "Found <strong>{result->num_rows}</strong> from your keywords"
+
+msgid "Selected items NOT ADDED to print queue. Only {max_print} can be printed at once"
+msgstr "Selected items NOT ADDED to print queue. Only {max_print} can be printed at once"
+
+msgid "Selected items added to print queue"
+msgstr "Selected items added to print queue"
+
+msgid "Print queue cleared!"
+msgstr "Print queue cleared!"
+
+msgid "There is no data to print!"
+msgstr "There is no data to print!"
+
+msgid "Print Again"
+msgstr "Print Again"
+
+msgid "Labels Printing"
+msgstr "Labels Printing"
+
+msgid "ERROR! Label failed to generate, possibly because {directory} directory is not writable"
+msgstr "ERROR! Label failed to generate, possibly because {directory} directory is not writable"
+
+msgid "Clear Print Queue"
+msgstr "Clear Print Queue"
+
+msgid "Print Labels for Selected Data"
+msgstr "Print Labels for Selected Data"
+
+msgid "Change print label settings"
+msgstr "Change print label settings"
+
+msgid "Maximum"
+msgstr "Maximum"
+
+msgid "records can be printed at once. Currently there is"
+msgstr "records can be printed at once. Currently there is"
+
+msgid "in queue waiting to be printed."
+msgstr "in queue waiting to be printed."
+
+msgid "Call Number"
+msgstr "청구 기호"
+
+msgid "Add"
+msgstr "Add"
+
+msgid "Add To Print Queue"
+msgstr "Add To Print Queue"
+
+msgid "Add to print queue?"
+msgstr "Add to print queue?"
+
+msgid "Query took"
+msgstr "Query took"
+
+msgid "second(s) to complete"
+msgstr "second(s) to complete"
+
+msgid "Required fields (*)  must be filled correctly!"
+msgstr "Required fields (*)  must be filled correctly!"
+
+msgid "Error on query to database, Export FAILED!"
+msgstr "Error on query to database, Export FAILED!"
+
+msgid "There is no record in bibliographic database yet, Export FAILED!"
+msgstr "There is no record in bibliographic database yet, Export FAILED!"
+
+msgid "Export Tool"
+msgstr "Export Tool"
+
+msgid "Export bibliographics data to CSV file"
+msgstr "Export bibliographics data to CSV file"
+
+msgid "Export Now"
+msgstr "Export Now"
+
+msgid "Field Separator"
+msgstr "Field Separator"
+
+msgid "Field Enclosed With"
+msgstr "Field Enclosed With"
+
+msgid "Record Separator"
+msgstr "Record Separator"
+
+msgid "Number of Records To Export (0 for all records)"
+msgstr "Number of Records To Export (0 for all records)"
+
+msgid "Start From Record"
+msgstr "Start From Record"
+
+msgid "Put columns names in the first row"
+msgstr "Put columns names in the first row"
+
+msgid "Are you sure to remove the file attachment data?"
+msgstr "Are you sure to remove the file attachment data?"
+
+msgid "Do you also want to remove {filename} file from repository?"
+msgstr "Do you also want to remove {filename} file from repository?"
+
+msgid "Attachment removed!"
+msgstr "Attachment removed!"
+
+msgid "Attachment {filename} succesfully removed!"
+msgstr "Attachment {filename} succesfully removed!"
+
+msgid "Delete"
+msgstr "Delete"
+
+msgid "File Attachments"
+msgstr "File Attachments"
+
+msgid "Edit"
+msgstr "Edit"
+
+msgid "Remove"
+msgstr "Remove"
+
+msgid "Are you sure to remove selected author?"
+msgstr "Are you sure to remove selected author?"
+
+msgid "Once deleted, it cannot be restored!"
+msgstr "Once deleted, it cannot be restored!"
+
+msgid "Author succesfully removed!"
+msgstr "Author succesfully removed!"
+
+msgid "Author removed!"
+msgstr "Author removed!"
+
+msgid "Author"
+msgstr "저자"
+
+msgid "Authority Level"
+msgstr "Authority Level"
+
+msgid "Are you sure to remove selected title?"
+msgstr "Are you sure to remove selected title?"
+
+msgid "Biblio relation succesfully removed!"
+msgstr "Biblio relation succesfully removed!"
+
+msgid "Biblio relation removed!"
+msgstr "Biblio relation removed!"
+
+msgid "Are you sure to remove selected item?"
+msgstr "Are you sure to remove selected item?"
+
+msgid "Item data can not be deleted because still on hold by members"
+msgstr "Item data can not be deleted because still on hold by members"
+
+msgid "Item succesfully removed!"
+msgstr "Item succesfully removed!"
+
+msgid "Item FAILED to removed!"
+msgstr "Item FAILED to removed!"
+
+msgid "Items/Copies"
+msgstr "Items/Copies"
+
+msgid "Are you sure to remove selected topic?"
+msgstr "Are you sure to remove selected topic?"
+
+msgid "Topic removed!"
+msgstr "Topic removed!"
+
+msgid "Topic succesfully removed!"
+msgstr "Topic succesfully removed!"
+
+msgid "Subject"
+msgstr "주제"
+
+msgid "Import Tool"
+msgstr "Import Tool"
+
+msgid "Upload failed! File type not allowed or the size is more than"
+msgstr "Upload failed! File type not allowed or the size is more than"
+
+msgid "Preview Import"
+msgstr "Preview Import"
+
+msgid "Preview your data before import to SLiMS"
+msgstr "Preview your data before import to SLiMS"
+
+msgid "Importing data to SLiMS"
+msgstr "Importing data to SLiMS"
+
+msgid "Imported data list preview"
+msgstr "Imported data list preview"
+
+msgid "Make sure all the data that appears matches the column you enter."
+msgstr "Make sure all the data that appears matches the column you enter."
+
+msgid "All"
+msgstr "All"
+
+msgid "Import Now"
+msgstr "Import Now"
+
+msgid "Uknown CSV import section!"
+msgstr "Uknown CSV import section!"
+
+msgid "Loading all the data in the preview section may take longer. Would you like to continue the process?"
+msgstr "Loading all the data in the preview section may take longer. Would you like to continue the process?"
+
+msgid "{imageFilename} successfully removed!"
+msgstr "{imageFilename} successfully removed!"
+
+msgid "Invalid form submission token!"
+msgstr "Invalid form submission token!"
+
+msgid "Title can not be empty"
+msgstr "Title can not be empty"
+
+msgid "Field %s only number for allowed"
+msgstr "Field %s only number for allowed"
+
+msgid "Field %s is date format, empty not allowed"
+msgstr "Field %s is date format, empty not allowed"
+
+msgid "Image Uploaded Successfully"
+msgstr "Image Uploaded Successfully"
+
+msgid "Image Uploaded Failed"
+msgstr "Image Uploaded Failed"
+
+msgid "Bibliography Data Successfully Updated"
+msgstr "Bibliography Data Successfully Updated"
+
+msgid "Bibliography Data FAILED to Updated. Please Contact System Administrator"
+msgstr "Bibliography Data FAILED to Updated. Please Contact System Administrator"
+
+msgid "New Bibliography Data Successfully Saved"
+msgstr "New Bibliography Data Successfully Saved"
+
+msgid "Bibliography Data FAILED to Save. Please Contact System Administrator"
+msgstr "Bibliography Data FAILED to Save. Please Contact System Administrator"
+
+msgid "Item Data FAILED to Save. Insert batch item maximum %s copies"
+msgstr "Item Data FAILED to Save. Insert batch item maximum %s copies"
+
+msgid "Below data can not be deleted:"
+msgstr "Below data can not be deleted:"
+
+msgid "All Data Successfully Deleted"
+msgstr "All Data Successfully Deleted"
+
+msgid "Some or All Data NOT deleted successfully!\\\\nPlease contact system administrator"
+msgstr "Some or All Data NOT deleted successfully!\\\\nPlease contact system administrator"
+
+msgid "Bibliographic"
+msgstr "Bibliographic"
+
+msgid "Bibliographic List"
+msgstr "Bibliographic List"
+
+msgid "Add New Bibliography"
+msgstr "Add New Bibliography"
+
+msgid "All Fields"
+msgstr "All Fields"
+
+msgid "Title/Series Title"
+msgstr "Title/Series Title"
+
+msgid "Topics"
+msgstr "Topics"
+
+msgid "Authors"
+msgstr "Authors"
+
+msgid "ISBN/ISSN"
+msgstr "ISBN/ISSN"
+
+msgid "Publisher"
+msgstr "출판사"
+
+msgid "Advanced Filter"
+msgstr "Advanced Filter"
+
+msgid "Hide in OPAC"
+msgstr "Hide in OPAC"
+
+msgid "ALL"
+msgstr "전체"
+
+msgid "Show"
+msgstr "보기"
+
+msgid "Hide"
+msgstr "숨기기"
+
+msgid "Promote To Homepage"
+msgstr "Promote To Homepage"
+
+msgid "Don't Promote"
+msgstr "Don't Promote"
+
+msgid "Promote"
+msgstr "Promote"
+
+msgid "Upload Selected Bibliographic data to Union Catalog Server*"
+msgstr "Upload Selected Bibliographic data to Union Catalog Server*"
+
+msgid "Date"
+msgstr "Date"
+
+msgid "User Name"
+msgstr "User Name"
+
+msgid "Additional Information"
+msgstr "Additional Information"
+
+msgid "Biblio Log"
+msgstr "Biblio Log"
+
+msgid "Save"
+msgstr "Save"
+
+msgid "Log"
+msgstr "Log"
+
+msgid "Update"
+msgstr "Update"
+
+msgid "Main title of collection. Separate child title with colon and pararel title with equal (=) sign."
+msgstr "Main title of collection. Separate child title with colon and pararel title with equal (=) sign."
+
+msgid "Authors/Roles"
+msgstr "Authors/Roles"
+
+msgid "Add Author(s)"
+msgstr "Add Author(s)"
+
+msgid "Author(s)"
+msgstr "저자"
+
+msgid "Statement of Responsibility"
+msgstr "책임 표시"
+
+msgid "Main source of information to show who has written, composed, illustrated, or in other ways contributed to the existence of the item."
+msgstr "Main source of information to show who has written, composed, illustrated, or in other ways contributed to the existence of the item."
+
+msgid "Edition"
+msgstr "판"
+
+msgid "A version of publication having substantial changes or additions."
+msgstr "A version of publication having substantial changes or additions."
+
+msgid "Specific Detail Info"
+msgstr "세부 정보"
+
+msgid "explain more details about an item e.g. scale within a map, running time in a movie dvd."
+msgstr "explain more details about an item e.g. scale within a map, running time in a movie dvd."
+
+msgid "Choose pattern"
+msgstr "Choose pattern"
+
+msgid "Total item(s)"
+msgstr "Total item(s)"
+
+msgid "Options"
+msgstr "Options"
+
+msgid "Add new pattern"
+msgstr "Add new pattern"
+
+msgid "Add New Pattern"
+msgstr "Add New Pattern"
+
+msgid "Location"
+msgstr "위치"
+
+msgid "Shelf Location"
+msgstr "Shelf Location"
+
+msgid "Collection Type"
+msgstr "자료 유형"
+
+msgid "Item Status"
+msgstr "Item Status"
+
+msgid "Buy"
+msgstr "Buy"
+
+msgid "Prize/Grant"
+msgstr "Prize/Grant"
+
+msgid "Source"
+msgstr "Source"
+
+msgid "Order Date"
+msgstr "Order Date"
+
+msgid "Receiving Date"
+msgstr "Receiving Date"
+
+msgid "Order Number"
+msgstr "Order Number"
+
+msgid "Invoice"
+msgstr "Invoice"
+
+msgid "Invoice Date"
+msgstr "Invoice Date"
+
+msgid "Not Applicable"
+msgstr "Not Applicable"
+
+msgid "Supplier"
+msgstr "Supplier"
+
+msgid "Price"
+msgstr "Price"
+
+msgid "Item(s) code batch generator"
+msgstr "Item(s) code batch generator"
+
+msgid "Add New Items"
+msgstr "Add New Items"
+
+msgid "Item(s) Data"
+msgstr "Item(s) Data"
+
+msgid "GMD"
+msgstr "GMD"
+
+msgid "General material designation. The physical form of publication."
+msgstr "General material designation. The physical form of publication."
+
+msgid "Not set"
+msgstr "Not set"
+
+msgid "RDA "
+msgstr "RDA "
+
+msgid "Use this for Serial publication"
+msgstr "Use this for Serial publication"
+
+msgid "Frequency"
+msgstr "Frequency"
+
+msgid "Unique publishing number for each title of publication."
+msgstr "Unique publishing number for each title of publication."
+
+msgid "Publishing Year"
+msgstr "Publishing Year"
+
+msgid "Year of publication"
+msgstr "Year of publication"
+
+msgid "Publishing Place"
+msgstr "Publishing Place"
+
+msgid "Collation"
+msgstr "권책사항"
+
+msgid "Physical description of a publication e.g. publication length, width, page numbers, etc."
+msgstr "Physical description of a publication e.g. publication length, width, page numbers, etc."
+
+msgid "Series Title"
+msgstr "총서명"
+
+msgid "Classification"
+msgstr "분류"
+
+msgid "Sets of ID that put in the book spine."
+msgstr "Sets of ID that put in the book spine."
+
+msgid "Subjects/Topics"
+msgstr "Subjects/Topics"
+
+msgid "Add Subject(s)"
+msgstr "Add Subject(s)"
+
+msgid "Subject(s)"
+msgstr "주제"
+
+msgid "Language"
+msgstr "언어"
+
+msgid "Language use by publication."
+msgstr "Language use by publication."
+
+msgid "Abstract/Notes"
+msgstr "Abstract/Notes"
+
+msgid "Insert here any abstract or notes from the publication."
+msgstr "Insert here any abstract or notes from the publication."
+
+msgid "Click to enlarge preview"
+msgstr "Click to enlarge preview"
+
+msgid "Remove Image"
+msgstr "Remove Image"
+
+msgid "Choose file"
+msgstr "Choose file"
+
+msgid "Or download from url"
+msgstr "Or download from url"
+
+msgid "Download"
+msgstr "Download"
+
+msgid "Trying search in DuckduckGo"
+msgstr "Trying search in DuckduckGo"
+
+msgid "or scan a cover"
+msgstr "or scan a cover"
+
+msgid "Show scan dialog"
+msgstr "Show scan dialog"
+
+msgid "Reset"
+msgstr "Reset"
+
+msgid "Scan a cover"
+msgstr "Scan a cover"
+
+msgid "Format:"
+msgstr "Format:"
+
+msgid "Scan"
+msgstr "Scan"
+
+msgid "Click to show or hide options"
+msgstr "Click to show or hide options"
+
+msgid "History index:"
+msgstr "History index:"
+
+msgid "Recall"
+msgstr "Recall"
+
+msgid "Host:"
+msgstr "Host:"
+
+msgid "Get machine"
+msgstr "Get machine"
+
+msgid "Scanner:"
+msgstr "Scanner:"
+
+msgid "Default"
+msgstr "Default"
+
+msgid "Resolution"
+msgstr "Resolution"
+
+msgid "Horizontal:"
+msgstr "Horizontal:"
+
+msgid "Vertical:"
+msgstr "Vertical:"
+
+msgid "Capture"
+msgstr "Capture"
+
+msgid "Width:"
+msgstr "Width:"
+
+msgid "Height:"
+msgstr "Height:"
+
+msgid "Result"
+msgstr "Result"
+
+msgid "Max Width:"
+msgstr "Max Width:"
+
+msgid "Max Height:"
+msgstr "Max Height:"
+
+msgid "Scan result"
+msgstr "Scan result"
+
+msgid "Preview"
+msgstr "Preview"
+
+msgid "Rotate Left"
+msgstr "Rotate Left"
+
+msgid "Rotate Right"
+msgstr "Rotate Right"
+
+msgid "Image"
+msgstr "Image"
+
+msgid "Add Attachment"
+msgstr "Add Attachment"
+
+msgid "File Attachment"
+msgstr "첨부 파일"
+
+msgid "Biblio Relation"
+msgstr "Biblio Relation"
+
+msgid "Add Relation"
+msgstr "Add Relation"
+
+msgid "Related Biblio Data"
+msgstr "Related Biblio Data"
+
+msgid "You are going to edit biblio data"
+msgstr "You are going to edit biblio data"
+
+msgid "Last Updated"
+msgstr "Last Updated"
+
+msgid "Current url is not valid or your internet is down."
+msgstr "Current url is not valid or your internet is down."
+
+msgid "None"
+msgstr "없음"
+
+msgid "Copies"
+msgstr "Copies"
+
+msgid "Last Update"
+msgstr "Last Update"
+
+msgid "Item Code can't be empty!"
+msgstr "Item Code can't be empty!"
+
+msgid "Item Data Successfully Updated"
+msgstr "Item Data Successfully Updated"
+
+msgid "Item Data FAILED to Save. Please Contact System Administrator"
+msgstr "Item Data FAILED to Save. Please Contact System Administrator"
+
+msgid "New Item Data Successfully Saved"
+msgstr "New Item Data Successfully Saved"
+
+msgid "Items"
+msgstr "Items"
+
+msgid "Others"
+msgstr "Others"
+
+msgid "Edit Biblographic data"
+msgstr "Edit Biblographic data"
+
+msgid "Inventory Code"
+msgstr "Inventory Code"
+
+msgid "You are going to edit Item data"
+msgstr "You are going to edit Item data"
+
+msgid "Item Barcodes Printing"
+msgstr "Item Barcodes Printing"
+
+msgid "ERROR! Item barcodes failed to generate, possibly because {directory} directory is not writable"
+msgstr "ERROR! Item barcodes failed to generate, possibly because {directory} directory is not writable"
+
+msgid "Print Barcodes for Selected Data"
+msgstr "Print Barcodes for Selected Data"
+
+msgid "Change print barcode settings"
+msgstr "Change print barcode settings"
+
+msgid "There is no record in item database yet, Export FAILED!"
+msgstr "There is no record in item database yet, Export FAILED!"
+
+msgid "Item Export Tool"
+msgstr "Item Export Tool"
+
+msgid "Export item data to CSV file"
+msgstr "Export item data to CSV file"
+
+msgid "You don't have enough privileges to access this area!"
+msgstr "You don't have enough privileges to access this area!"
+
+msgid "<a href=\\\"http://pear.php.net/index.php\\\">PEAR</a>, <a href=\\\"http://pear.php.net/package/File_MARC\\\">File_MARC</a>\\n    packages need to be installed in order to export MARC record"
+msgstr "<a href=\\\"http://pear.php.net/index.php\\\">PEAR</a>, <a href=\\\"http://pear.php.net/package/File_MARC\\\">File_MARC</a>\\n    packages need to be installed in order to export MARC record"
+
+msgid "Export queue cleared!"
+msgstr "Export queue cleared!"
+
+msgid "There is no data to export!*"
+msgstr "There is no data to export!*"
+
+msgid "There is no data to export!"
+msgstr "There is no data to export!"
+
+msgid "Export Catalog to Marc Format "
+msgstr "Export Catalog to Marc Format "
+
+msgid "Clear selected catalog"
+msgstr "Clear selected catalog"
+
+msgid "Export now"
+msgstr "Export now"
+
+msgid "Batch Export"
+msgstr "Batch Export"
+
+msgid "Currently there is"
+msgstr "Currently there is"
+
+msgid "in queue waiting to be processed."
+msgstr "in queue waiting to be processed."
+
+msgid "Export Type"
+msgstr "Export Type"
+
+msgid "Add To Export Queue"
+msgstr "Add To Export Queue"
+
+msgid "Add to export queue?"
+msgstr "Add to export queue?"
+
+msgid "<a href=\\\"http://pear.php.net/index.php\\\">PEAR</a>, <a href=\\\"http://pear.php.net/package/File_MARC\\\">File_MARC</a>\\n    and <a href=\\\"http://pear.php.net/package/Structures_LinkedList/\\\">Structures_LinkedList</a>\\n    packages need to be installed in order\\n    to import MARC record"
+msgstr "<a href=\\\"http://pear.php.net/index.php\\\">PEAR</a>, <a href=\\\"http://pear.php.net/package/File_MARC\\\">File_MARC</a>\\n    and <a href=\\\"http://pear.php.net/package/Structures_LinkedList/\\\">Structures_LinkedList</a>\\n    packages need to be installed in order\\n    to import MARC record"
+
+msgid "Please select the file to import!"
+msgstr "Please select the file to import!"
+
+msgid "MARC Import tool"
+msgstr "MARC Import tool"
+
+msgid "Import bibliographic records from MARC file. The file can be native MARC record format file (.mrc) or MARCXML XML file (.xml). You need to have PHP PEAR and PEAR's File_MARC package installed in your system. To convert native/legacy MARC file to MARCXML you can use <a class=\\\"notAJAX\\\" href=\\\"http://www.loc.gov/standards/marcxml/marcxml.zip\\\">MARCXML Toolkit</a>"
+msgstr "Import bibliographic records from MARC file. The file can be native MARC record format file (.mrc) or MARCXML XML file (.xml). You need to have PHP PEAR and PEAR's File_MARC package installed in your system. To convert native/legacy MARC file to MARCXML you can use <a class=\\\"notAJAX\\\" href=\\\"http://www.loc.gov/standards/marcxml/marcxml.zip\\\">MARCXML Toolkit</a>"
+
+msgid "File To Import"
+msgstr "File To Import"
+
+msgid "Number of records to import (0 for all records)"
+msgstr "Number of records to import (0 for all records)"
+
+msgid "%s insert bibliographic data from MARC SRU service (server: %s) with title (%s) and biblio_id (%s)"
+msgstr "%s insert bibliographic data from MARC SRU service (server: %s) with title (%s) and biblio_id (%s)"
+
+msgid "Current Marc SRU address is not register in database!"
+msgstr "Current Marc SRU address is not register in database!"
+
+msgid "No Keywords Supplied!"
+msgstr "No Keywords Supplied!"
+
+msgid "Found {hits} records from Marc SRU Server."
+msgstr "Found {hits} records from Marc SRU Server."
+
+msgid "Check All"
+msgstr "Check All"
+
+msgid "Uncheck All"
+msgstr "Uncheck All"
+
+msgid "Save Marc Records to Database"
+msgstr "Save Marc Records to Database"
+
+msgid "Select"
+msgstr "Select"
+
+msgid "No Results Found!"
+msgstr "No Results Found!"
+
+msgid "MARC Search/Retrieve via URL (SRU)"
+msgstr "MARC Search/Retrieve via URL (SRU)"
+
+msgid "All fields"
+msgstr "All fields"
+
+msgid "SRU Server: "
+msgstr "SRU Server: "
+
+msgid "* Please make sure you have a working Internet connection."
+msgstr "* Please make sure you have a working Internet connection."
+
+msgid "failed %s download file ( %s ) from  ( %s )"
+msgstr "failed %s download file ( %s ) from  ( %s )"
+
+msgid "%s download file ( %s ) from  ( %s )"
+msgstr "%s download file ( %s ) from  ( %s )"
+
+msgid "%s insert bibliographic data from P2P service (server : %s) with title (%s) and biblio_id (%s)"
+msgstr "%s insert bibliographic data from P2P service (server : %s) with title (%s) and biblio_id (%s)"
+
+msgid "P2P Service"
+msgstr "P2P Service"
+
+msgid "Fields"
+msgstr "Fields"
+
+msgid "ISBN"
+msgstr "ISBN"
+
+msgid "Server"
+msgstr "Server"
+
+msgid "Found %s records from <strong>%s</strong> Server"
+msgstr "Found %s records from <strong>%s</strong> Server"
+
+msgid "Save P2P Records to Database"
+msgstr "Save P2P Records to Database"
+
+msgid "Digital Files"
+msgstr "Digital Files"
+
+msgid "Detail"
+msgstr "Detail"
+
+msgid "No data selected!"
+msgstr "No data selected!"
+
+msgid "Sorry, no result found from %s OR maybe XML result and detail disabled."
+msgstr "Sorry, no result found from %s OR maybe XML result and detail disabled."
+
+msgid "read error detail"
+msgstr "read error detail"
+
+msgid "Invalid attacment, make sure your file is not exceeded system max upload"
+msgstr "Invalid attacment, make sure your file is not exceeded system max upload"
+
+msgid "Upload FAILED! Forbidden file type or file size too big!"
+msgstr "Upload FAILED! Forbidden file type or file size too big!"
+
+msgid "File Attachment data updated!"
+msgstr "File Attachment data updated!"
+
+msgid "File Attachment data FAILED to update!"
+msgstr "File Attachment data FAILED to update!"
+
+msgid "File Attachment uploaded succesfully!"
+msgstr "File Attachment uploaded succesfully!"
+
+msgid "File Attachment data FAILED to save!"
+msgstr "File Attachment data FAILED to save!"
+
+msgid "Upload Now"
+msgstr "Upload Now"
+
+msgid "Repository ROOT"
+msgstr "Repository ROOT"
+
+msgid "Repo. Directory"
+msgstr "Repo. Directory"
+
+msgid "File To Attach"
+msgstr "File To Attach"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Work for embedded link or video attachment"
+msgstr "Work for embedded link or video attachment"
+
+msgid "Link"
+msgstr "Link"
+
+msgid "Popup"
+msgstr "Popup"
+
+msgid "Embed"
+msgstr "Embed"
+
+msgid "Placement"
+msgstr "Placement"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "File Password"
+msgstr "File Password"
+
+msgid "Public"
+msgstr "Public"
+
+msgid "Private"
+msgstr "Private"
+
+msgid "Access"
+msgstr "Access"
+
+msgid "Access Limit by Member Type"
+msgstr "Access Limit by Member Type"
+
+msgid "Author succesfully updated!"
+msgstr "Author succesfully updated!"
+
+msgid "Author FAILED to Add. Please Contact System Administrator"
+msgstr "Author FAILED to Add. Please Contact System Administrator"
+
+msgid "Author added!"
+msgstr "Author added!"
+
+msgid "Add Author"
+msgstr "Add Author"
+
+msgid "Author Name"
+msgstr "Author Name"
+
+msgid "Type to search for existing authors or to add a new one"
+msgstr "Type to search for existing authors or to add a new one"
+
+msgid "Insert To Bibliography"
+msgstr "Insert To Bibliography"
+
+msgid "Authority Level Data FAILED to Updated. Please Contact System Administrator"
+msgstr "Authority Level Data FAILED to Updated. Please Contact System Administrator"
+
+msgid "Authority Type"
+msgstr "Authority Type"
+
+msgid "Biblio relation succesfully updated!"
+msgstr "Biblio relation succesfully updated!"
+
+msgid "Biblio relation FAILED to Add. Please Contact System Administrator"
+msgstr "Biblio relation FAILED to Add. Please Contact System Administrator"
+
+msgid "Biblio relation added!"
+msgstr "Biblio relation added!"
+
+msgid "Add Biblio Relation"
+msgstr "Add Biblio Relation"
+
+msgid "Type to search for existing biblio data"
+msgstr "Type to search for existing biblio data"
+
+msgid "Notes"
+msgstr "Notes"
+
+msgid "Please, fill length serial number more than 2"
+msgstr "Please, fill length serial number more than 2"
+
+msgid "Prefix"
+msgstr "Prefix"
+
+msgid "Suffix"
+msgstr "Suffix"
+
+msgid "Length serial number"
+msgstr "Length serial number"
+
+msgid "Topic succesfully updated!"
+msgstr "Topic succesfully updated!"
+
+msgid "Subject FAILED to Add. Please Contact System Administrator"
+msgstr "Subject FAILED to Add. Please Contact System Administrator"
+
+msgid "Subject added!"
+msgstr "Subject added!"
+
+msgid "Add Subject"
+msgstr "Add Subject"
+
+msgid "Keyword"
+msgstr "Keyword"
+
+msgid "Primary"
+msgstr "Primary"
+
+msgid "Additional"
+msgstr "Additional"
+
+msgid "Type to search for existing topics or to add a new one"
+msgstr "Type to search for existing topics or to add a new one"
+
+msgid "Settings saved"
+msgstr "Settings saved"
+
+msgid "Save Settings"
+msgstr "Save Settings"
+
+msgid "(px)"
+msgstr "(px)"
+
+msgid "(default is 3)"
+msgstr "(default is 3)"
+
+msgid "(cm)"
+msgstr "(cm)"
+
+msgid "(empty if you want to use Library Name)"
+msgstr "(empty if you want to use Library Name)"
+
+msgid "(name of the font used)"
+msgstr "(name of the font used)"
+
+msgid "(pt)"
+msgstr "(pt)"
+
+msgid "(0 if you prefer without title)"
+msgstr "(0 if you prefer without title)"
+
+msgid "(percent relative to box width and height)"
+msgstr "(percent relative to box width and height)"
+
+msgid "(decimal value. default is 0.2)"
+msgstr "(decimal value. default is 0.2)"
+
+msgid "(decimal value. default is 0.05)"
+msgstr "(decimal value. default is 0.05)"
+
+msgid "font name. default is Courier"
+msgstr "font name. default is Courier"
+
+msgid "(hexa color code)"
+msgstr "(hexa color code)"
+
+msgid "px"
+msgstr "px"
+
+msgid "px style hexa"
+msgstr "px style hexa"
+
+msgid "pt"
+msgstr "pt"
+
+msgid "(number)"
+msgstr "(number)"
+
+msgid "(decimal)"
+msgstr "(decimal)"
+
+msgid "(filename)"
+msgstr "(filename)"
+
+msgid "(text - add <br> tag for line break)"
+msgstr "(text - add <br> tag for line break)"
+
+msgid "(hexa color)"
+msgstr "(hexa color)"
+
+msgid "(normal or bold)"
+msgstr "(normal or bold)"
+
+msgid "1-100 percent"
+msgstr "1-100 percent"
+
+msgid "(list of rules)"
+msgstr "(list of rules)"
+
+msgid "Print setting for"
+msgstr "Print setting for"
+
+msgid "Change print %s settings"
+msgstr "Change print %s settings"
+
+msgid "Print Catalog Format"
+msgstr "Print Catalog Format"
+
+msgid "Catalog Printing"
+msgstr "Catalog Printing"
+
+msgid "ERROR! Catalog card failed to generate, possibly because {directory} directory is not writable"
+msgstr "ERROR! Catalog card failed to generate, possibly because {directory} directory is not writable"
+
+msgid "Print Catalog for Selected Data"
+msgstr "Print Catalog for Selected Data"
+
+msgid "Change print catalog settings"
+msgstr "Change print catalog settings"
+
+msgid "Change Print Catalog settings"
+msgstr "Change Print Catalog settings"
+
+msgid "Item"
+msgstr "Item"
+
+msgid "URL not valid!"
+msgstr "URL not valid!"
+
+msgid "BIBLIOGRAPHIC"
+msgstr "BIBLIOGRAPHIC"
+
+msgid "Show Existing Bibliographic Data"
+msgstr "Show Existing Bibliographic Data"
+
+msgid "Add New Bibliographic Data/Catalog"
+msgstr "Add New Bibliographic Data/Catalog"
+
+msgid "ITEMS"
+msgstr "ITEMS"
+
+msgid "Item List"
+msgstr "Item List"
+
+msgid "Show List of Library Items"
+msgstr "Show List of Library Items"
+
+msgid "Show List of Checkout Items"
+msgstr "Show List of Checkout Items"
+
+msgid "COPY CATALOGUING"
+msgstr "COPY CATALOGUING"
+
+msgid "MARC SRU"
+msgstr "MARC SRU"
+
+msgid "Grab Bibliographic Data from Other MARC Services"
+msgstr "Grab Bibliographic Data from Other MARC Services"
+
+msgid "Z3950 SRU"
+msgstr "Z3950 SRU"
+
+msgid "Grab Bibliographic Data from Z3950 SRU Web Services"
+msgstr "Grab Bibliographic Data from Z3950 SRU Web Services"
+
+msgid "Grab Bibliographic Data from Other SLiMS Web Services"
+msgstr "Grab Bibliographic Data from Other SLiMS Web Services"
+
+msgid "TOOLS"
+msgstr "TOOLS"
+
+msgid "Print Document Labels"
+msgstr "Print Document Labels"
+
+msgid "Print Item Barcodes"
+msgstr "Print Item Barcodes"
+
+msgid "MARC Export"
+msgstr "MARC Export"
+
+msgid "Export Bibliographic Data to MARC file"
+msgstr "Export Bibliographic Data to MARC file"
+
+msgid "MARC Import"
+msgstr "MARC Import"
+
+msgid "Import Bibliographic Data from MARC file"
+msgstr "Import Bibliographic Data from MARC file"
+
+msgid "Print Catalog Card"
+msgstr "Print Catalog Card"
+
+msgid "Biblio Data Export"
+msgstr "Biblio Data Export"
+
+msgid "Export Bibliographic Data To CSV format"
+msgstr "Export Bibliographic Data To CSV format"
+
+msgid "Biblio Data Import"
+msgstr "Biblio Data Import"
+
+msgid "Import Data to Bibliographic Database from CSV file"
+msgstr "Import Data to Bibliographic Database from CSV file"
+
+msgid "Biblio Item Export"
+msgstr "Biblio Item Export"
+
+msgid "Export Item/Copies data To CSV format"
+msgstr "Export Item/Copies data To CSV format"
+
+msgid "Biblio Item Import"
+msgstr "Biblio Item Import"
+
+msgid "Import Data to Item/Copies database from CSV file"
+msgstr "Import Data to Item/Copies database from CSV file"
+
+msgid "UCS is not enabled! Change global system configuration to enable UCS"
+msgstr "UCS is not enabled! Change global system configuration to enable UCS"
+
+msgid "YAZ extension library is not loaded/installed yet. YAZ library is needed to use z3950 enabled service. Please refer to official <a href=\\\"http://www.php.net/manual/en/book.yaz.php\\\" class=\\\"notAJAX\\\" target=\\\"_blank\\\">YAZ PHP Manual</a> on how to setup/install YAZ extension library in PHP."
+msgstr "YAZ extension library is not loaded/installed yet. YAZ library is needed to use z3950 enabled service. Please refer to official <a href=\\\"http://www.php.net/manual/en/book.yaz.php\\\" class=\\\"notAJAX\\\" target=\\\"_blank\\\">YAZ PHP Manual</a> on how to setup/install YAZ extension library in PHP."
+
+msgid "{recordCount} records inserted into the database."
+msgstr "{recordCount} records inserted into the database."
+
+msgid "Found {hits} records from Z3950 Server, {maxHits} listed."
+msgstr "Found {hits} records from Z3950 Server, {maxHits} listed."
+
+msgid "Save Z3950 Records to Database"
+msgstr "Save Z3950 Records to Database"
+
+msgid "Z3950"
+msgstr "Z3950"
+
+msgid "%s insert bibliographic data from Z3950 service (server : %s) with title (%s) and biblio_id (%s)"
+msgstr "%s insert bibliographic data from Z3950 service (server : %s) with title (%s) and biblio_id (%s)"
+
+msgid "Current z3950 SRU address is not register in database!"
+msgstr "Current z3950 SRU address is not register in database!"
+
+msgid "Found {hits} records from Z3950 SRU Server."
+msgstr "Found {hits} records from Z3950 SRU Server."
+
+msgid "Z3950 Search/Retrieve via URL (SRU)"
+msgstr "Z3950 Search/Retrieve via URL (SRU)"
+
+msgid "SRU Server"
+msgstr "SRU Server"
+
+msgid "ERROR! Can't insert visitor counter data"
+msgstr "ERROR! Can't insert visitor counter data"
+
+msgid "ERROR! Loan data can't be saved to database"
+msgstr "ERROR! Loan data can't be saved to database"
+
+msgid "Transaction finished"
+msgstr "Transaction finished"
+
+msgid "Overdue fines inserted to fines database"
+msgstr "Overdue fines inserted to fines database"
+
+msgid "Item CANNOT BE Extended! This Item is being reserved by other member"
+msgstr "Item CANNOT BE Extended! This Item is being reserved by other member"
+
+msgid "Loan Extended"
+msgstr "Loan Extended"
+
+msgid "Loan Limit Reached!"
+msgstr "Loan Limit Reached!"
+
+msgid "Do You Want To Overide This?"
+msgstr "Do You Want To Overide This?"
+
+msgid "WARNING! This Item is reserved by another member"
+msgstr "WARNING! This Item is reserved by another member"
+
+msgid "This Item is not registered in database"
+msgstr "This Item is not registered in database"
+
+msgid "This Item is currently not available"
+msgstr "This Item is currently not available"
+
+msgid "Loan NOT PERMITTED! Membership already EXPIRED!"
+msgstr "Loan NOT PERMITTED! Membership already EXPIRED!"
+
+msgid "Loan NOT PERMITTED! Membership under PENDING State!"
+msgstr "Loan NOT PERMITTED! Membership under PENDING State!"
+
+msgid "Loan Forbidden for this Item!"
+msgstr "Loan Forbidden for this Item!"
+
+msgid "Item {removeID} removed from session"
+msgstr "Item {removeID} removed from session"
+
+msgid "This is item already returned or not exists in loan database"
+msgstr "This is item already returned or not exists in loan database"
+
+msgid "OVERDUED for {overdueDays} days(s) with fines value of"
+msgstr "OVERDUED for {overdueDays} days(s) with fines value of"
+
+msgid "Item {itemCode} is being reserved by member {member}"
+msgstr "Item {itemCode} is being reserved by member {member}"
+
+msgid "Item {itemCode} successfully returned on&nbsp;{returnDate}"
+msgstr "Item {itemCode} successfully returned on&nbsp;{returnDate}"
+
+msgid "Member Name"
+msgstr "Member Name"
+
+msgid "NO DATA Selected to reserve!"
+msgstr "NO DATA Selected to reserve!"
+
+msgid "Can not add more reservation. Maximum limit reached"
+msgstr "Can not add more reservation. Maximum limit reached"
+
+msgid "Can't reserve this Item. Loan Forbidden!"
+msgstr "Can't reserve this Item. Loan Forbidden!"
+
+msgid "Reservation added"
+msgstr "Reservation added"
+
+msgid "Item for this title is already available or already on hold by this member!"
+msgstr "Item for this title is already available or already on hold by this member!"
+
+msgid "Reservation removed"
+msgstr "Reservation removed"
+
+msgid "Fines data removed"
+msgstr "Fines data removed"
+
+msgid " not valid (unregistered in database)"
+msgstr " not valid (unregistered in database)"
+
+msgid "Circulation"
+msgstr "Circulation"
+
+msgid "Finish Transaction"
+msgstr "Finish Transaction"
+
+msgid "Are you sure want to finish current transaction?"
+msgstr "Are you sure want to finish current transaction?"
+
+msgid "Member Email"
+msgstr "Member Email"
+
+msgid "Member Type"
+msgstr "Member Type"
+
+msgid "Register Date"
+msgstr "Register Date"
+
+msgid "Membership Already Expired"
+msgstr "Membership Already Expired"
+
+msgid "Expiry Date"
+msgstr "Expiry Date"
+
+msgid "Membership currently in pending state, loan transaction is locked."
+msgstr "Membership currently in pending state, loan transaction is locked."
+
+msgid "Loans"
+msgstr "Loans"
+
+msgid "Current Loans"
+msgstr "Current Loans"
+
+msgid "Reserve"
+msgstr "Reserve"
+
+msgid "Fines"
+msgstr "Fines"
+
+msgid "Loan History"
+msgstr "Loan History"
+
+msgid "Overdue fines for item {item_code}"
+msgstr "Overdue fines for item {item_code}"
+
+msgid "Fines Description and Debet value can't be empty"
+msgstr "Fines Description and Debet value can't be empty"
+
+msgid "Value of Credit can not be higher that Debet Value"
+msgstr "Value of Credit can not be higher that Debet Value"
+
+msgid "Fines Data Successfully Updated"
+msgstr "Fines Data Successfully Updated"
+
+msgid "Fines Data FAILED to Updated. Please Contact System Administrator"
+msgstr "Fines Data FAILED to Updated. Please Contact System Administrator"
+
+msgid "New Fines Data Successfully Saved"
+msgstr "New Fines Data Successfully Saved"
+
+msgid "Fines Data FAILED to Save. Please Contact System Administrator"
+msgstr "Fines Data FAILED to Save. Please Contact System Administrator"
+
+msgid "Fines data succesfully deleted!"
+msgstr "Fines data succesfully deleted!"
+
+msgid "Fines data FAILED to delete!"
+msgstr "Fines data FAILED to delete!"
+
+msgid "Add New Fines"
+msgstr "Add New Fines"
+
+msgid "Fines List"
+msgstr "Fines List"
+
+msgid "View Balanced Overdue"
+msgstr "View Balanced Overdue"
+
+msgid "Fines Date"
+msgstr "Fines Date"
+
+msgid "Description/Name"
+msgstr "Description/Name"
+
+msgid "Debit"
+msgstr "Debit"
+
+msgid "Credit"
+msgstr "Credit"
+
+msgid "You are going to edit fines data"
+msgstr "You are going to edit fines data"
+
+msgid "Total of unpaid fines"
+msgstr "Total of unpaid fines"
+
+msgid "You don't have enough privileges to view this section"
+msgstr "You don't have enough privileges to view this section"
+
+msgid "CIRCULATION - Insert a member ID to start transaction with keyboard or barcode reader"
+msgstr "CIRCULATION - Insert a member ID to start transaction with keyboard or barcode reader"
+
+msgid "Start Transaction"
+msgstr "Start Transaction"
+
+msgid "Open Barcode Reader - Experimental (F8)"
+msgstr "Open Barcode Reader - Experimental (F8)"
+
+msgid "Transaction with member {member_id} is completed"
+msgstr "Transaction with member {member_id} is completed"
+
+msgid "Insert Item Code/Barcode"
+msgstr "Insert Item Code/Barcode"
+
+msgid "Remove this item"
+msgstr "Remove this item"
+
+msgid "Click To Change Loan Date"
+msgstr "Click To Change Loan Date"
+
+msgid "Click To Change Due Date"
+msgstr "Click To Change Due Date"
+
+msgid "Are you sure you want to return the item"
+msgstr "Are you sure you want to return the item"
+
+msgid "Are you sure to extend loan for"
+msgstr "Are you sure to extend loan for"
+
+msgid "Col. Type"
+msgstr "Col. Type"
+
+msgid "Return this item"
+msgstr "Return this item"
+
+msgid "No Extend"
+msgstr "No Extend"
+
+msgid "Extend loan for this item"
+msgstr "Extend loan for this item"
+
+msgid "Extended"
+msgstr "Extended"
+
+msgid "OVERDUED for"
+msgstr "OVERDUED for"
+
+msgid "days(s) with fines value"
+msgstr "days(s) with fines value"
+
+msgid "Total amount of fine is"
+msgstr "Total amount of fine is"
+
+msgid "Send overdues notice e-mail"
+msgstr "Send overdues notice e-mail"
+
+msgid "Loan Rules Successfully Updated"
+msgstr "Loan Rules Successfully Updated"
+
+msgid "Loan Rules FAILED to Updated. Please Contact System Administrator"
+msgstr "Loan Rules FAILED to Updated. Please Contact System Administrator"
+
+msgid "New Loan Rules Successfully Saved"
+msgstr "New Loan Rules Successfully Saved"
+
+msgid "Loan Rules FAILED to Save. Please Contact System Administrator"
+msgstr "Loan Rules FAILED to Save. Please Contact System Administrator"
+
+msgid "Sorry. There is active loan transaction(s) using this loan rules."
+msgstr "Sorry. There is active loan transaction(s) using this loan rules."
+
+msgid "Loan Rules"
+msgstr "Loan Rules"
+
+msgid "Loan Rules List"
+msgstr "Loan Rules List"
+
+msgid "Add New Loan Rules"
+msgstr "Add New Loan Rules"
+
+msgid "Loan Limit"
+msgstr "Loan Limit"
+
+msgid "Loan Period"
+msgstr "Loan Period"
+
+msgid "Reborrow Limit"
+msgstr "Reborrow Limit"
+
+msgid "Fines Each Day"
+msgstr "Fines Each Day"
+
+msgid "Overdue Grace Periode"
+msgstr "Overdue Grace Periode"
+
+msgid "You are going to edit loan rules"
+msgstr "You are going to edit loan rules"
+
+msgid "Not Returned Yet"
+msgstr "Not Returned Yet"
+
+msgid "Returned Date"
+msgstr "Returned Date"
+
+msgid "Quick Return is disabled"
+msgstr "Quick Return is disabled"
+
+msgid "Quick Return"
+msgstr "Quick Return"
+
+msgid "Insert an item ID to return collection with keyboard or barcode reader"
+msgstr "Insert an item ID to return collection with keyboard or barcode reader"
+
+msgid "Item ID"
+msgstr "Item ID"
+
+msgid "Are you sure to remove reservation for"
+msgstr "Are you sure to remove reservation for"
+
+msgid "Search Collection"
+msgstr "Search Collection"
+
+msgid "Add Reserve"
+msgstr "Add Reserve"
+
+msgid "Reserve Date"
+msgstr "Reserve Date"
+
+msgid "Remove Reservation"
+msgstr "Remove Reservation"
+
+msgid "ALREADY EXPIRED"
+msgstr "ALREADY EXPIRED"
+
+msgid "CIRCULATION"
+msgstr "CIRCULATION"
+
+msgid "Start Circulation Transaction Proccess"
+msgstr "Start Circulation Transaction Proccess"
+
+msgid "Quick Return Collection"
+msgstr "Quick Return Collection"
+
+msgid "View and Modify Circulation Loan Rules"
+msgstr "View and Modify Circulation Loan Rules"
+
+msgid "Loan History Overview"
+msgstr "Loan History Overview"
+
+msgid "Due Date Warning"
+msgstr "Due Date Warning"
+
+msgid "View Members That About to Have Overdues"
+msgstr "View Members That About to Have Overdues"
+
+msgid "Overdued List"
+msgstr "Overdued List"
+
+msgid "View Members Having Overdues"
+msgstr "View Members Having Overdues"
+
+msgid "Reservation"
+msgstr "Reservation"
+
+msgid "Author name can't be empty"
+msgstr "Author name can't be empty"
+
+msgid "Author Data Successfully Updated"
+msgstr "Author Data Successfully Updated"
+
+msgid "Author Data FAILED to Updated. Please Contact System Administrator"
+msgstr "Author Data FAILED to Updated. Please Contact System Administrator"
+
+msgid "New Author Data Successfully Saved"
+msgstr "New Author Data Successfully Saved"
+
+msgid "Author Data FAILED to Save. Please Contact System Administrator"
+msgstr "Author Data FAILED to Save. Please Contact System Administrator"
+
+msgid "Author List"
+msgstr "Author List"
+
+msgid "Add New Author"
+msgstr "Add New Author"
+
+msgid "Author Birth Year"
+msgstr "Author Birth Year"
+
+msgid "Authority Files"
+msgstr "Authority Files"
+
+msgid "You are going to edit author data"
+msgstr "You are going to edit author data"
+
+msgid "Author Year"
+msgstr "Author Year"
+
+msgid "Collection type name can't be empty"
+msgstr "Collection type name can't be empty"
+
+msgid "Colllection Type Data Successfully Updated"
+msgstr "Colllection Type Data Successfully Updated"
+
+msgid "Colllection Type Data FAILED to Updated. Please Contact System Administrator"
+msgstr "Colllection Type Data FAILED to Updated. Please Contact System Administrator"
+
+msgid "New Colllection Type Data Successfully Saved"
+msgstr "New Colllection Type Data Successfully Saved"
+
+msgid "Collection type %s still used by %s items"
+msgstr "Collection type %s still used by %s items"
+
+msgid "Collection Type List"
+msgstr "Collection Type List"
+
+msgid "Add New Collection Type"
+msgstr "Add New Collection Type"
+
+msgid "You are going to edit collection type data"
+msgstr "You are going to edit collection type data"
+
+msgid "Cross Reference Code AND Description can't be empty"
+msgstr "Cross Reference Code AND Description can't be empty"
+
+msgid "Cross Reference Data Successfully Updated"
+msgstr "Cross Reference Data Successfully Updated"
+
+msgid "Cross Reference Data FAILED to Updated. Please Contact System Administrator"
+msgstr "Cross Reference Data FAILED to Updated. Please Contact System Administrator"
+
+msgid "New Cross Reference Data Successfully Saved"
+msgstr "New Cross Reference Data Successfully Saved"
+
+msgid "Cross Reference Data FAILED to Save. Please Contact System Administrator"
+msgstr "Cross Reference Data FAILED to Save. Please Contact System Administrator"
+
+msgid "Cross Reference"
+msgstr "Cross Reference"
+
+msgid "Cross Reference List"
+msgstr "Cross Reference List"
+
+msgid "Add New Term"
+msgstr "Add New Term"
+
+msgid "Subject List"
+msgstr "Subject List"
+
+msgid "Cross Reference Code"
+msgstr "Cross Reference Code"
+
+msgid "Cross Reference Description"
+msgstr "Cross Reference Description"
+
+msgid "You are going to edit Subject data"
+msgstr "You are going to edit Subject data"
+
+msgid "Success"
+msgstr "Success"
+
+msgid "Comment Management"
+msgstr "Comment Management"
+
+msgid "3rd party comment management has been activated, all comment will handled by it . This page is not use more."
+msgstr "3rd party comment management has been activated, all comment will handled by it . This page is not use more."
+
+msgid "Comment List"
+msgstr "Comment List"
+
+msgid "Comment"
+msgstr "댓글"
+
+msgid "Comment By"
+msgstr "Comment By"
+
+msgid "Comment At"
+msgstr "Comment At"
+
+msgid "Doc. Language"
+msgstr "Doc. Language"
+
+msgid "Language ID or Name can't be empty"
+msgstr "Language ID or Name can't be empty"
+
+msgid "Language Data Successfully Updated"
+msgstr "Language Data Successfully Updated"
+
+msgid "Language Data FAILED to Updated. Please Contact System Administrator"
+msgstr "Language Data FAILED to Updated. Please Contact System Administrator"
+
+msgid "New Language Data Successfully Saved"
+msgstr "New Language Data Successfully Saved"
+
+msgid "Language Data FAILED to Save. Please Contact System Administrator"
+msgstr "Language Data FAILED to Save. Please Contact System Administrator"
+
+msgid "%s still in use %d biblio"
+msgstr "%s still in use %d biblio"
+
+msgid "Language List"
+msgstr "Language List"
+
+msgid "Add New Language"
+msgstr "Add New Language"
+
+msgid "Language Code"
+msgstr "Language Code"
+
+msgid "You are going to edit language data"
+msgstr "You are going to edit language data"
+
+msgid "Frequency Data Successfully Updated"
+msgstr "Frequency Data Successfully Updated"
+
+msgid "Frequency Data FAILED to Updated. Please Contact System Administrator"
+msgstr "Frequency Data FAILED to Updated. Please Contact System Administrator"
+
+msgid "New Frequency Data Successfully Saved"
+msgstr "New Frequency Data Successfully Saved"
+
+msgid "Frequency Data FAILED to Save. Please Contact System Administrator"
+msgstr "Frequency Data FAILED to Save. Please Contact System Administrator"
+
+msgid "Frequency %s still in use %d biblio(s)"
+msgstr "Frequency %s still in use %d biblio(s)"
+
+msgid "Frequency Available"
+msgstr "Frequency Available"
+
+msgid "Add New Frequency"
+msgstr "Add New Frequency"
+
+msgid "Time Increment"
+msgstr "Time Increment"
+
+msgid "Day"
+msgstr "Day"
+
+msgid "Week"
+msgstr "Week"
+
+msgid "Month"
+msgstr "Month"
+
+msgid "Year"
+msgstr "Year"
+
+msgid "Time Unit"
+msgstr "Time Unit"
+
+msgid "You are going to edit Frequency data"
+msgstr "You are going to edit Frequency data"
+
+msgid "Scope note"
+msgstr "Scope note"
+
+msgid "Vocabolary Control"
+msgstr "Vocabolary Control"
+
+msgid "GMD (General Material Designation)"
+msgstr "GMD (General Material Designation)"
+
+msgid "GMD Code And Name can't be empty"
+msgstr "GMD Code And Name can't be empty"
+
+msgid "GMD Data Successfully Updated"
+msgstr "GMD Data Successfully Updated"
+
+msgid "GMD Data FAILED to Updated. Please Contact System Administrator"
+msgstr "GMD Data FAILED to Updated. Please Contact System Administrator"
+
+msgid "New GMD Data Successfully Saved"
+msgstr "New GMD Data Successfully Saved"
+
+msgid "GMD Data FAILED to Save. Please Contact System Administrator"
+msgstr "GMD Data FAILED to Save. Please Contact System Administrator"
+
+msgid "%s still in use %d biblio "
+msgstr "%s still in use %d biblio "
+
+msgid "GMD List"
+msgstr "GMD List"
+
+msgid "Add New GMD"
+msgstr "Add New GMD"
+
+msgid "GMD Code"
+msgstr "GMD Code"
+
+msgid "GMD Name"
+msgstr "GMD Name"
+
+msgid "You are going to edit gmd data"
+msgstr "You are going to edit gmd data"
+
+msgid "Item Code Pattern"
+msgstr "Item Code Pattern"
+
+msgid "Pattern List"
+msgstr "Pattern List"
+
+msgid "Delete Selected Data"
+msgstr "Delete Selected Data"
+
+msgid "No Loan Transaction"
+msgstr "No Loan Transaction"
+
+msgid "Skipped By Stock Take"
+msgstr "Skipped By Stock Take"
+
+msgid "Item Status ID and Name can't be empty"
+msgstr "Item Status ID and Name can't be empty"
+
+msgid "New Item Status Data Successfully Updated"
+msgstr "New Item Status Data Successfully Updated"
+
+msgid "Item Status Data FAILED to Updated. Please Contact System Administrator"
+msgstr "Item Status Data FAILED to Updated. Please Contact System Administrator"
+
+msgid "New Item Status Data Successfully Saved"
+msgstr "New Item Status Data Successfully Saved"
+
+msgid "Item Status Data FAILED to Save. Please Contact System Administrator"
+msgstr "Item Status Data FAILED to Save. Please Contact System Administrator"
+
+msgid "%s still in use %d item "
+msgstr "%s still in use %d item "
+
+msgid "Add New Item Status"
+msgstr "Add New Item Status"
+
+msgid "Item Status Code"
+msgstr "Item Status Code"
+
+msgid "Item Status Name"
+msgstr "Item Status Name"
+
+msgid "Rules"
+msgstr "Rules"
+
+msgid "You are going to edit Item Status data"
+msgstr "You are going to edit Item Status data"
+
+msgid "Label"
+msgstr "Label"
+
+msgid "Label Name OR Label Description must be filled!"
+msgstr "Label Name OR Label Description must be filled!"
+
+msgid "Label image file successfully uploaded"
+msgstr "Label image file successfully uploaded"
+
+msgid "FAILED to upload label image! Please see System Log for more detailed information"
+msgstr "FAILED to upload label image! Please see System Log for more detailed information"
+
+msgid "Label need image uploaded"
+msgstr "Label need image uploaded"
+
+msgid "Label Data Successfully Updated"
+msgstr "Label Data Successfully Updated"
+
+msgid "Label Data FAILED to Updated. Please Contact System Administrator"
+msgstr "Label Data FAILED to Updated. Please Contact System Administrator"
+
+msgid "New Label Data Successfully Saved"
+msgstr "New Label Data Successfully Saved"
+
+msgid "Label Data FAILED to Save. Please Contact System Administrator"
+msgstr "Label Data FAILED to Save. Please Contact System Administrator"
+
+msgid "Label %s still in use %d biblio(s)"
+msgstr "Label %s still in use %d biblio(s)"
+
+msgid "Label List"
+msgstr "Label List"
+
+msgid "Add New Label"
+msgstr "Add New Label"
+
+msgid "Label Name"
+msgstr "Label Name"
+
+msgid "Label Description"
+msgstr "Label Description"
+
+msgid "You are going to edit Label data"
+msgstr "You are going to edit Label data"
+
+msgid "Location ID and Name can't be empty"
+msgstr "Location ID and Name can't be empty"
+
+msgid "Location Data Successfully Updated"
+msgstr "Location Data Successfully Updated"
+
+msgid "Location Data FAILED to Updated. Please Contact System Administrator"
+msgstr "Location Data FAILED to Updated. Please Contact System Administrator"
+
+msgid "New Location Data Successfully Saved"
+msgstr "New Location Data Successfully Saved"
+
+msgid "Location Data FAILED to Save. Please Contact System Administrator"
+msgstr "Location Data FAILED to Save. Please Contact System Administrator"
+
+msgid "Location %s still in use %s item(s)"
+msgstr "Location %s still in use %s item(s)"
+
+msgid "Location List"
+msgstr "Location List"
+
+msgid "Add New Location"
+msgstr "Add New Location"
+
+msgid "Location Code"
+msgstr "Location Code"
+
+msgid "Location Name"
+msgstr "Location Name"
+
+msgid "You are going to edit location data"
+msgstr "You are going to edit location data"
+
+msgid "Server Name And URI can't be empty"
+msgstr "Server Name And URI can't be empty"
+
+msgid "URI isn't valid, start witch prefix like e.g: http://, https:// etc."
+msgstr "URI isn't valid, start witch prefix like e.g: http://, https:// etc."
+
+msgid "Server Data Successfully Updated"
+msgstr "Server Data Successfully Updated"
+
+msgid "Server Data FAILED to Updated. Please Contact System Administrator"
+msgstr "Server Data FAILED to Updated. Please Contact System Administrator"
+
+msgid "New Server Data Successfully Saved"
+msgstr "New Server Data Successfully Saved"
+
+msgid "Server Data FAILED to Save. Please Contact System Administrator"
+msgstr "Server Data FAILED to Save. Please Contact System Administrator"
+
+msgid "Copy Cataloging Server Configuration"
+msgstr "Copy Cataloging Server Configuration"
+
+msgid "Server List"
+msgstr "Server List"
+
+msgid "Add New Server"
+msgstr "Add New Server"
+
+msgid "Server Name"
+msgstr "Server Name"
+
+msgid "URI"
+msgstr "URI"
+
+msgid "Server Type"
+msgstr "Server Type"
+
+msgid "You are going to edit server data"
+msgstr "You are going to edit server data"
+
+msgid "SERVER"
+msgstr "SERVER"
+
+msgid "Place"
+msgstr "Place"
+
+msgid "Place Name can't be empty"
+msgstr "Place Name can't be empty"
+
+msgid "Place Data Successfully Updated"
+msgstr "Place Data Successfully Updated"
+
+msgid "Place Data FAILED to Updated. Please Contact System Administrator"
+msgstr "Place Data FAILED to Updated. Please Contact System Administrator"
+
+msgid "New Place Data Successfully Saved"
+msgstr "New Place Data Successfully Saved"
+
+msgid "Place Data FAILED to Save. Please Contact System Administrator"
+msgstr "Place Data FAILED to Save. Please Contact System Administrator"
+
+msgid "%s still in use %d biblio <br/>"
+msgstr "%s still in use %d biblio <br/>"
+
+msgid "Place List"
+msgstr "Place List"
+
+msgid "Add New Place"
+msgstr "Add New Place"
+
+msgid "Place Name"
+msgstr "Place Name"
+
+msgid "You are going to edit place data"
+msgstr "You are going to edit place data"
+
+msgid "Data saved!"
+msgstr "Data saved!"
+
+msgid "Failed to save data!"
+msgstr "Failed to save data!"
+
+msgid "Scope Note Vocabulary"
+msgstr "Scope Note Vocabulary"
+
+msgid "Scope"
+msgstr "Scope"
+
+msgid "Delete this scope"
+msgstr "Delete this scope"
+
+msgid "Vocabulary Control"
+msgstr "Vocabulary Control"
+
+msgid "Vocabulary added!"
+msgstr "Vocabulary added!"
+
+msgid "Vocabulary update!"
+msgstr "Vocabulary update!"
+
+msgid "Subject ALREADY Added in Relation!"
+msgstr "Subject ALREADY Added in Relation!"
+
+msgid "Edit Mode"
+msgstr "Edit Mode"
+
+msgid "Related Term"
+msgstr "Related Term"
+
+msgid "Vocabulary"
+msgstr "Vocabulary"
+
+msgid "Cancel"
+msgstr "Cancel"
+
+msgid "Add Vocabulary Control"
+msgstr "Add Vocabulary Control"
+
+msgid "Enter Vocabulary"
+msgstr "Enter Vocabulary"
+
+msgid "Add Vocabulary"
+msgstr "Add Vocabulary"
+
+msgid "Publisher Name can't be empty"
+msgstr "Publisher Name can't be empty"
+
+msgid "Publisher Data Successfully Updated"
+msgstr "Publisher Data Successfully Updated"
+
+msgid "PUBLISHER Data FAILED to Updated. Please Contact System Administrator"
+msgstr "PUBLISHER Data FAILED to Updated. Please Contact System Administrator"
+
+msgid "New Publisher Data Successfully Saved"
+msgstr "New Publisher Data Successfully Saved"
+
+msgid "Publisher Data FAILED to Save. Please Contact System Administrator"
+msgstr "Publisher Data FAILED to Save. Please Contact System Administrator"
+
+msgid "Publisher List"
+msgstr "Publisher List"
+
+msgid "Add New Publisher"
+msgstr "Add New Publisher"
+
+msgid "Publisher Name"
+msgstr "Publisher Name"
+
+msgid "You are going to edit publisher data"
+msgstr "You are going to edit publisher data"
+
+msgid "Name can't be empty"
+msgstr "Name can't be empty"
+
+msgid "Data Successfully Updated"
+msgstr "Data Successfully Updated"
+
+msgid "Data FAILED to Updated. Please Contact System Administrator"
+msgstr "Data FAILED to Updated. Please Contact System Administrator"
+
+msgid "New Data Successfully Saved"
+msgstr "New Data Successfully Saved"
+
+msgid "Data FAILED to Save. Please Contact System Administrator"
+msgstr "Data FAILED to Save. Please Contact System Administrator"
+
+msgid " Type List"
+msgstr " Type List"
+
+msgid "Add New "
+msgstr "Add New "
+
+msgid "Code"
+msgstr "Code"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "MARC Leader Code"
+msgstr "MARC Leader Code"
+
+msgid "You are going to edit "
+msgstr "You are going to edit "
+
+msgid "AUTHORITY FILES"
+msgstr "AUTHORITY FILES"
+
+msgid "General Material Designation"
+msgstr "General Material Designation"
+
+msgid "Content Type"
+msgstr "내용 유형"
+
+msgid "RDA Content Type"
+msgstr "RDA Content Type"
+
+msgid "Media Type"
+msgstr "매체 유형"
+
+msgid "RDA Media Type"
+msgstr "RDA Media Type"
+
+msgid "Carrier Type"
+msgstr "캐리어 유형"
+
+msgid "RDA Carrier Type"
+msgstr "RDA Carrier Type"
+
+msgid "Document Publisher"
+msgstr "Document Publisher"
+
+msgid "Item Supplier"
+msgstr "Item Supplier"
+
+msgid "Document Authors"
+msgstr "Document Authors"
+
+msgid "Item Location"
+msgstr "Item Location"
+
+msgid "LOOKUP FILES"
+msgstr "LOOKUP FILES"
+
+msgid "Document Content Language"
+msgstr "Document Content Language"
+
+msgid "Special Labels for Titles to Show Up On Homepage"
+msgstr "Special Labels for Titles to Show Up On Homepage"
+
+msgid "Visitor Room"
+msgstr "Visitor Room"
+
+msgid "List of members comment about biblio"
+msgstr "List of members comment about biblio"
+
+msgid "Cataloging Servers"
+msgstr "Cataloging Servers"
+
+msgid "List of available Copy Cataloging Servers"
+msgstr "List of available Copy Cataloging Servers"
+
+msgid "Manage item code pattern"
+msgstr "Manage item code pattern"
+
+msgid "Orphaned Author"
+msgstr "Orphaned Author"
+
+msgid "Orphaned Authors"
+msgstr "Orphaned Authors"
+
+msgid "Orphaned Subject"
+msgstr "Orphaned Subject"
+
+msgid "Orphaned Publisher"
+msgstr "Orphaned Publisher"
+
+msgid "Orphaned Place"
+msgstr "Orphaned Place"
+
+msgid "Supplier Name can't be empty"
+msgstr "Supplier Name can't be empty"
+
+msgid "Supplier Data Successfully Updated"
+msgstr "Supplier Data Successfully Updated"
+
+msgid "Supplier Data FAILED to Updated. Please Contact System Administrator"
+msgstr "Supplier Data FAILED to Updated. Please Contact System Administrator"
+
+msgid "New Supplier Data Successfully Saved"
+msgstr "New Supplier Data Successfully Saved"
+
+msgid "Supplier Data FAILED to Save. Please Contact System Administrator"
+msgstr "Supplier Data FAILED to Save. Please Contact System Administrator"
+
+msgid "Supplier %s still used by %s item(s)"
+msgstr "Supplier %s still used by %s item(s)"
+
+msgid "Supplier List"
+msgstr "Supplier List"
+
+msgid "Add New Supplier"
+msgstr "Add New Supplier"
+
+msgid "Supplier Name"
+msgstr "Supplier Name"
+
+msgid "Address"
+msgstr "Address"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Phone Number"
+msgstr "Phone Number"
+
+msgid "Fax Number"
+msgstr "Fax Number"
+
+msgid "Account Number"
+msgstr "Account Number"
+
+msgid "You are going to edit Supplier data"
+msgstr "You are going to edit Supplier data"
+
+msgid "Subject can't be empty"
+msgstr "Subject can't be empty"
+
+msgid "Subject Data Successfully Updated"
+msgstr "Subject Data Successfully Updated"
+
+msgid "Subject Data FAILED to Updated. Please Contact System Administrator"
+msgstr "Subject Data FAILED to Updated. Please Contact System Administrator"
+
+msgid "New Subject Data Successfully Saved"
+msgstr "New Subject Data Successfully Saved"
+
+msgid "Subject Data FAILED to Save. Please Contact System Administrator"
+msgstr "Subject Data FAILED to Save. Please Contact System Administrator"
+
+msgid "%s ... still used biblio %s"
+msgstr "%s ... still used biblio %s"
+
+msgid "Add New Subject"
+msgstr "Add New Subject"
+
+msgid "Classification Code"
+msgstr "Classification Code"
+
+msgid "Subject Type"
+msgstr "Subject Type"
+
+msgid "Add New Vocabulary"
+msgstr "Add New Vocabulary"
+
+msgid "Scope Note"
+msgstr "Scope Note"
+
+msgid "Class. Code"
+msgstr "Class. Code"
+
+msgid "Success saved data"
+msgstr "Success saved data"
+
+msgid "Room List"
+msgstr "Room List"
+
+msgid "Add New Room"
+msgstr "Add New Room"
+
+msgid "Room Name"
+msgstr "Room Name"
+
+msgid "Room Code"
+msgstr "Room Code"
+
+msgid "Unique Code"
+msgstr "Unique Code"
+
+msgid "Created At"
+msgstr "Created At"
+
+msgid "Copy this room link"
+msgstr "Copy this room link"
+
+msgid "Success copied visitor room link"
+msgstr "Success copied visitor room link"
+
+msgid "E-Mail configuration is not ready!"
+msgstr "E-Mail configuration is not ready!"
+
+msgid "There is no record in membership database yet, Export FAILED!"
+msgstr "There is no record in membership database yet, Export FAILED!"
+
+msgid "Export Data"
+msgstr "Export Data"
+
+msgid "Export member(s) data to CSV file"
+msgstr "Export member(s) data to CSV file"
+
+msgid "Member ID, Name and Birthday cannot be empty"
+msgstr "Member ID, Name and Birthday cannot be empty"
+
+msgid "Password confirmation does not match. See if your Caps Lock key is on!"
+msgstr "Password confirmation does not match. See if your Caps Lock key is on!"
+
+msgid "Membership"
+msgstr "Membership"
+
+msgid "Member Data Successfully Updated"
+msgstr "Member Data Successfully Updated"
+
+msgid "Image FAILED to upload"
+msgstr "Image FAILED to upload"
+
+msgid "Member Data FAILED to Save/Update. Please Contact System Administrator"
+msgstr "Member Data FAILED to Save/Update. Please Contact System Administrator"
+
+msgid "New Member Data Successfully Saved"
+msgstr "New Member Data Successfully Saved"
+
+msgid "Below member data can't be deleted because still have unreturned item(s)"
+msgstr "Below member data can't be deleted because still have unreturned item(s)"
+
+msgid "Expired Member List"
+msgstr "Expired Member List"
+
+msgid "Member List"
+msgstr "Member List"
+
+msgid "Add New Member"
+msgstr "Add New Member"
+
+msgid "View Expired Member"
+msgstr "View Expired Member"
+
+msgid "Extend Membership"
+msgstr "Extend Membership"
+
+msgid "Birth Date"
+msgstr "Birth Date"
+
+msgid "Member Since"
+msgstr "Member Since"
+
+msgid "Auto Set"
+msgstr "Auto Set"
+
+msgid "Institution"
+msgstr "Institution"
+
+msgid "Membership Type"
+msgstr "Membership Type"
+
+msgid "Male"
+msgstr "Male"
+
+msgid "Female"
+msgstr "Female"
+
+msgid "Sex"
+msgstr "Sex"
+
+msgid "Postal Code"
+msgstr "Postal Code"
+
+msgid "Mail Address"
+msgstr "Mail Address"
+
+msgid "Personal ID Number"
+msgstr "Personal ID Number"
+
+msgid "Pending Membership"
+msgstr "Pending Membership"
+
+msgid "or take a photo"
+msgstr "or take a photo"
+
+msgid "Load Camera"
+msgstr "Load Camera"
+
+msgid "Photo"
+msgstr "Photo"
+
+msgid "E-mail"
+msgstr "E-mail"
+
+msgid "New Password"
+msgstr "New Password"
+
+msgid "Confirm New Password"
+msgstr "Confirm New Password"
+
+msgid "You are going to edit member data"
+msgstr "You are going to edit member data"
+
+msgid "Leave Password field blank if you don't want to change the password"
+msgstr "Leave Password field blank if you don't want to change the password"
+
+msgid "Extend Selected Member(s)"
+msgstr "Extend Selected Member(s)"
+
+msgid "Are you sure to EXTEND membership for selected members?"
+msgstr "Are you sure to EXTEND membership for selected members?"
+
+msgid "members extended!"
+msgstr "members extended!"
+
+msgid "Found"
+msgstr "Found"
+
+msgid "from your search with keyword"
+msgstr "from your search with keyword"
+
+msgid "Overdue Notice for Member {member_name} ({member_email})"
+msgstr "Overdue Notice for Member {member_name} ({member_email})"
+
+msgid "Overdue notification E-Mail have been sent to "
+msgstr "Overdue notification E-Mail have been sent to "
+
+msgid "Message could not be sent. Mailer Error: "
+msgstr "Message could not be sent. Mailer Error: "
+
+msgid "Member Card Printing"
+msgstr "Member Card Printing"
+
+msgid "ERROR! Cards failed to generate, possibly because {directory} directory is not writable"
+msgstr "ERROR! Cards failed to generate, possibly because {directory} directory is not writable"
+
+msgid "Print Member Cards for Selected Data"
+msgstr "Print Member Cards for Selected Data"
+
+msgid "Member card print settings"
+msgstr "Member card print settings"
+
+msgid "Member Type Name can't be empty"
+msgstr "Member Type Name can't be empty"
+
+msgid "Member Type Successfully Updated"
+msgstr "Member Type Successfully Updated"
+
+msgid "Member Type Data FAILED to Save/Update. Please Contact System Administrator"
+msgstr "Member Type Data FAILED to Save/Update. Please Contact System Administrator"
+
+msgid "New Member Type Successfully Saved"
+msgstr "New Member Type Successfully Saved"
+
+msgid "Member Type %s still in use %d member(s)"
+msgstr "Member Type %s still in use %d member(s)"
+
+msgid "Sorry. There is active loan transaction(s) using this membership type."
+msgstr "Sorry. There is active loan transaction(s) using this membership type."
+
+msgid "Member Type List"
+msgstr "Member Type List"
+
+msgid "Add New Member Type"
+msgstr "Add New Member Type"
+
+msgid "Member Type Name"
+msgstr "Member Type Name"
+
+msgid "Loan Periode (In Days)"
+msgstr "Loan Periode (In Days)"
+
+msgid "Enable"
+msgstr "활성화"
+
+msgid "Disable"
+msgstr "비활성화"
+
+msgid "Reserve Limit"
+msgstr "Reserve Limit"
+
+msgid "Membership Period (In Days)"
+msgstr "Membership Period (In Days)"
+
+msgid "Fine Each Day"
+msgstr "Fine Each Day"
+
+msgid "Overdue Grace Period"
+msgstr "Overdue Grace Period"
+
+msgid "MEMBERSHIP"
+msgstr "MEMBERSHIP"
+
+msgid "View Member List"
+msgstr "View Member List"
+
+msgid "View Library Member List"
+msgstr "View Library Member List"
+
+msgid "Add New Library Member Data"
+msgstr "Add New Library Member Data"
+
+msgid "View and modify member type"
+msgstr "View and modify member type"
+
+msgid "Print Member Card"
+msgstr "Print Member Card"
+
+msgid "Member Data Export"
+msgstr "Member Data Export"
+
+msgid "Export Members Data To CSV File"
+msgstr "Export Members Data To CSV File"
+
+msgid "Member Data Import"
+msgstr "Member Data Import"
+
+msgid "Import Members Data From CSV File"
+msgstr "Import Members Data From CSV File"
+
+msgid "Total Titles By Medium/GMD"
+msgstr "Total Titles By Medium/GMD"
+
+msgid "Total Items By Collection Type"
+msgstr "Total Items By Collection Type"
+
+msgid "Total Members By Membership Type"
+msgstr "Total Members By Membership Type"
+
+msgid "Total Loan By GMD/Medium"
+msgstr "Total Loan By GMD/Medium"
+
+msgid "Total Loan By Collection Type"
+msgstr "Total Loan By Collection Type"
+
+msgid "Custom Recapitulations"
+msgstr "Custom Recapitulations"
+
+msgid "Report Filter"
+msgstr "Report Filter"
+
+msgid "Recap By"
+msgstr "Recap By"
+
+msgid "Apply Filter"
+msgstr "Apply Filter"
+
+msgid "Title and Collection Recap by"
+msgstr "Title and Collection Recap by"
+
+msgid "Print Current Page"
+msgstr "Print Current Page"
+
+msgid "Export to spreadsheet format"
+msgstr "Export to spreadsheet format"
+
+msgid "Title and Collection recapitulation based on classification and others"
+msgstr "Title and Collection recapitulation based on classification and others"
+
+msgid "Title List"
+msgstr "Title List"
+
+msgid "List of bibliographic titles"
+msgstr "List of bibliographic titles"
+
+msgid "Items Title List"
+msgstr "Items Title List"
+
+msgid "List of collection/items"
+msgstr "List of collection/items"
+
+msgid "Items Usage Statistics"
+msgstr "Items Usage Statistics"
+
+msgid "List of Collection/items usage statistic"
+msgstr "List of Collection/items usage statistic"
+
+msgid "Loans by Classification"
+msgstr "Loans by Classification"
+
+msgid "Loan statistic by classification"
+msgstr "Loan statistic by classification"
+
+msgid "List of library member/patron"
+msgstr "List of library member/patron"
+
+msgid "Loan List by Member"
+msgstr "Loan List by Member"
+
+msgid "List of loan by each member"
+msgstr "List of loan by each member"
+
+msgid "Loan Due Date Warnings"
+msgstr "Loan Due Date Warnings"
+
+msgid "Staff Activity"
+msgstr "Staff Activity"
+
+msgid "Staff activity log recapitulation"
+msgstr "Staff activity log recapitulation"
+
+msgid "Visitor Statistic"
+msgstr "Visitor Statistic"
+
+msgid "Visitor Statistic (by Day)"
+msgstr "Visitor Statistic (by Day)"
+
+msgid "Visitor List"
+msgstr "Visitor List"
+
+msgid "Fines Report"
+msgstr "Fines Report"
+
+msgid "Member Fines List"
+msgstr "Member Fines List"
+
+msgid "Procurement Report"
+msgstr "Procurement Report"
+
+msgid "Download Counter"
+msgstr "Download Counter"
+
+msgid "Downloaded Attachment Report"
+msgstr "Downloaded Attachment Report"
+
+msgid "Attachment Report"
+msgstr "Attachment Report"
+
+msgid "Title/ISBN"
+msgstr "Title/ISBN"
+
+msgid "Publish year"
+msgstr "Publish year"
+
+msgid "Access Date after"
+msgstr "Access Date after"
+
+msgid "Access Date before"
+msgstr "Access Date before"
+
+msgid "to"
+msgstr "to"
+
+msgid "Record each page"
+msgstr "Record each page"
+
+msgid "Set between 20 and 200"
+msgstr "Set between 20 and 200"
+
+msgid "Show More Filter Options"
+msgstr "Show More Filter Options"
+
+msgid "File title"
+msgstr "File title"
+
+msgid "Type"
+msgstr "Type"
+
+msgid "Attachment Report (Detail)"
+msgstr "Attachment Report (Detail)"
+
+msgid "UnKnown"
+msgstr "UnKnown"
+
+msgid "This report loan items which will due in 3 to 0 days"
+msgstr "This report loan items which will due in 3 to 0 days"
+
+msgid "Send Notification e-mail"
+msgstr "Send Notification e-mail"
+
+msgid "Jan"
+msgstr "Jan"
+
+msgid "Feb"
+msgstr "Feb"
+
+msgid "Mar"
+msgstr "Mar"
+
+msgid "Apr"
+msgstr "Apr"
+
+msgid "May"
+msgstr "May"
+
+msgid "Jun"
+msgstr "Jun"
+
+msgid "Jul"
+msgstr "Jul"
+
+msgid "Aug"
+msgstr "Aug"
+
+msgid "Sep"
+msgstr "Sep"
+
+msgid "Oct"
+msgstr "Oct"
+
+msgid "Nov"
+msgstr "Nov"
+
+msgid "Dec"
+msgstr "Dec"
+
+msgid "Fines count report for"
+msgstr "Fines count report for"
+
+msgid "Press Ctrl and click to select multiple entries"
+msgstr "Press Ctrl and click to select multiple entries"
+
+msgid "Input Date"
+msgstr "Input Date"
+
+msgid "0 Classes"
+msgstr "0 Classes"
+
+msgid "1 Classes"
+msgstr "1 Classes"
+
+msgid "2 Classes"
+msgstr "2 Classes"
+
+msgid "2X Classes (Islamic Related)"
+msgstr "2X Classes (Islamic Related)"
+
+msgid "3 Classes"
+msgstr "3 Classes"
+
+msgid "4 Classes"
+msgstr "4 Classes"
+
+msgid "5 Classes"
+msgstr "5 Classes"
+
+msgid "6 Classes"
+msgstr "6 Classes"
+
+msgid "7 Classes"
+msgstr "7 Classes"
+
+msgid "8 Classes"
+msgstr "8 Classes"
+
+msgid "9 Classes"
+msgstr "9 Classes"
+
+msgid "NON Decimal Classes"
+msgstr "NON Decimal Classes"
+
+msgid "Loan Recap By Class"
+msgstr "Loan Recap By Class"
+
+msgid "for year"
+msgstr "for year"
+
+msgid "Show in chart/plot"
+msgstr "Show in chart/plot"
+
+msgid "Loan Date From"
+msgstr "Loan Date From"
+
+msgid "Loan Date Until"
+msgstr "Loan Date Until"
+
+msgid "Loan Status"
+msgstr "Loan Status"
+
+msgid "On Loan"
+msgstr "On Loan"
+
+msgid "Returned"
+msgstr "Returned"
+
+msgid "Debet"
+msgstr "Debet"
+
+msgid "Fines List by Member"
+msgstr "Fines List by Member"
+
+msgid "Register Date From"
+msgstr "Register Date From"
+
+msgid "Register Date Until"
+msgstr "Register Date Until"
+
+msgid "Book Price"
+msgstr "Book Price"
+
+msgid "day(s)"
+msgstr "day(s)"
+
+msgid "Procurement List in Year : "
+msgstr "Procurement List in Year : "
+
+msgid "Self Location"
+msgstr "Self Location"
+
+msgid "Displays a collection procurement report"
+msgstr "Displays a collection procurement report"
+
+msgid "t"
+msgstr "t"
+
+msgid "i"
+msgstr "i"
+
+msgid "Receiving Year"
+msgstr "Receiving Year"
+
+msgid "Procurement List"
+msgstr "Procurement List"
+
+msgid "Procurement Bar Chart"
+msgstr "Procurement Bar Chart"
+
+msgid "Procurement Report Year : "
+msgstr "Procurement Report Year : "
+
+msgid "Reserve Date From"
+msgstr "Reserve Date From"
+
+msgid "Reserve Date Until"
+msgstr "Reserve Date Until"
+
+msgid "Activity Date From"
+msgstr "Activity Date From"
+
+msgid "Activity Date Until"
+msgstr "Activity Date Until"
+
+msgid "Real Name"
+msgstr "Real Name"
+
+msgid "Login Username"
+msgstr "Login Username"
+
+msgid "Bibliography Data Entry"
+msgstr "Bibliography Data Entry"
+
+msgid "Item Data Entry"
+msgstr "Item Data Entry"
+
+msgid "Member Data Entry"
+msgstr "Member Data Entry"
+
+msgid "Returns"
+msgstr "Returns"
+
+msgid "Visitors Report"
+msgstr "Visitors Report"
+
+msgid "NON-Member visitor"
+msgstr "NON-Member visitor"
+
+msgid "Visitor ID"
+msgstr "Visitor ID"
+
+msgid "Visitor Name"
+msgstr "Visitor Name"
+
+msgid "Room"
+msgstr "Room"
+
+msgid "Visit Date From"
+msgstr "Visit Date From"
+
+msgid "Visit Date Until"
+msgstr "Visit Date Until"
+
+msgid "Visit Date"
+msgstr "Visit Date"
+
+msgid "Library Visitor Report"
+msgstr "Library Visitor Report"
+
+msgid "NON-Member Visitor"
+msgstr "NON-Member Visitor"
+
+msgid "Total visit/month"
+msgstr "Total visit/month"
+
+msgid "Visitor Count Report for year <strong>{selectedYear}</strong>"
+msgstr "Visitor Count Report for year <strong>{selectedYear}</strong>"
+
+msgid "Visitor Report by Day"
+msgstr "Visitor Report by Day"
+
+msgid "Visitor Report for <strong>{selectedMonth}, {selectedYear}</strong>"
+msgstr "Visitor Report for <strong>{selectedMonth}, {selectedYear}</strong>"
+
+msgid "Total Titles"
+msgstr "Total Titles"
+
+msgid " (including titles that still don't have items yet)"
+msgstr " (including titles that still don't have items yet)"
+
+msgid "Total Titles with items"
+msgstr "Total Titles with items"
+
+msgid " (only titles that have items)"
+msgstr " (only titles that have items)"
+
+msgid "Total Titles without items"
+msgstr "Total Titles without items"
+
+msgid " (only titles that haven't items)"
+msgstr " (only titles that haven't items)"
+
+msgid "Total Items/Copies"
+msgstr "Total Items/Copies"
+
+msgid "Total Checkout Items"
+msgstr "Total Checkout Items"
+
+msgid "Total Items In Library"
+msgstr "Total Items In Library"
+
+msgid "10 Most Popular Titles"
+msgstr "10 Most Popular Titles"
+
+msgid "Collection Statistic Summary"
+msgstr "Collection Statistic Summary"
+
+msgid "Collection Statistic Report"
+msgstr "Collection Statistic Report"
+
+msgid "ERROR! Collection Statistic Report failed to generate, possibly because {directory} directory is not writable"
+msgstr "ERROR! Collection Statistic Report failed to generate, possibly because {directory} directory is not writable"
+
+msgid "Collection Statistic"
+msgstr "Collection Statistic"
+
+msgid "Download Report"
+msgstr "Download Report"
+
+msgid "Total Loan"
+msgstr "Total Loan"
+
+msgid "Total Loan Transactions"
+msgstr "Total Loan Transactions"
+
+msgid "Transaction Average (Per Day)"
+msgstr "Transaction Average (Per Day)"
+
+msgid "Total Peak Transaction"
+msgstr "Total Peak Transaction"
+
+msgid "Members Already Had Loans"
+msgstr "Members Already Had Loans"
+
+msgid "Members Never Have Loans Yet"
+msgstr "Members Never Have Loans Yet"
+
+msgid "Total Overdued Loans"
+msgstr "Total Overdued Loans"
+
+msgid "Loan Data Summary"
+msgstr "Loan Data Summary"
+
+msgid "Loan Report"
+msgstr "Loan Report"
+
+msgid "ERROR! Loan Report failed to generate, possibly because {directory} directory is not writable"
+msgstr "ERROR! Loan Report failed to generate, possibly because {directory} directory is not writable"
+
+msgid "Total Registered Members"
+msgstr "Total Registered Members"
+
+msgid "Total Active Member"
+msgstr "Total Active Member"
+
+msgid "Total Expired Member"
+msgstr "Total Expired Member"
+
+msgid "There are no active members in this period"
+msgstr "There are no active members in this period"
+
+msgid "10 most active members"
+msgstr "10 most active members"
+
+msgid "Membership Data Summary"
+msgstr "Membership Data Summary"
+
+msgid "Membership Report"
+msgstr "Membership Report"
+
+msgid "ERROR! Membership Report failed to generate, possibly because {directory} directory is not writable"
+msgstr "ERROR! Membership Report failed to generate, possibly because {directory} directory is not writable"
+
+msgid "record(s) found. Currently displaying page"
+msgstr "record(s) found. Currently displaying page"
+
+msgid "record each page"
+msgstr "record each page"
+
+msgid "REPORTING FORM"
+msgstr "REPORTING FORM"
+
+msgid "View Library Collection Statistic"
+msgstr "View Library Collection Statistic"
+
+msgid "View Library Loan Report"
+msgstr "View Library Loan Report"
+
+msgid "View Membership Report"
+msgstr "View Membership Report"
+
+msgid "OTHER REPORTS"
+msgstr "OTHER REPORTS"
+
+msgid "Serial Control"
+msgstr "Serial Control"
+
+msgid "Edit Bibliographic data"
+msgstr "Edit Bibliographic data"
+
+msgid "Add New Subscription"
+msgstr "Add New Subscription"
+
+msgid "View Subscriptions"
+msgstr "View Subscriptions"
+
+msgid "Serial Title"
+msgstr "Serial Title"
+
+msgid "Kardex data updated!"
+msgstr "Kardex data updated!"
+
+msgid "Kardex data deleted!"
+msgstr "Kardex data deleted!"
+
+msgid "Are you sure to remove selected Kardex data?"
+msgstr "Are you sure to remove selected Kardex data?"
+
+msgid "Date Expected"
+msgstr "Date Expected"
+
+msgid "Date Received"
+msgstr "Date Received"
+
+msgid "Seq. Number"
+msgstr "Seq. Number"
+
+msgid "Note"
+msgstr "Note"
+
+msgid "Add New Kardex"
+msgstr "Add New Kardex"
+
+msgid "Trash"
+msgstr "Trash"
+
+msgid "Kardex Detail for subscription"
+msgstr "Kardex Detail for subscription"
+
+msgid "SERIAL CONTROL"
+msgstr "SERIAL CONTROL"
+
+msgid "Subscription"
+msgstr "Subscription"
+
+msgid "Manage Subscription"
+msgstr "Manage Subscription"
+
+msgid "Error inserting subscription data, Subscription Date must be filled!"
+msgstr "Error inserting subscription data, Subscription Date must be filled!"
+
+msgid "Subscription Data Successfully Updated"
+msgstr "Subscription Data Successfully Updated"
+
+msgid "Subscription Data FAILED to Updated. Please Contact System Administrator"
+msgstr "Subscription Data FAILED to Updated. Please Contact System Administrator"
+
+msgid "New Subscription Data Successfully Saved"
+msgstr "New Subscription Data Successfully Saved"
+
+msgid "Subscription Data FAILED to Save. Please Contact System Administrator"
+msgstr "Subscription Data FAILED to Save. Please Contact System Administrator"
+
+msgid "Subscription data successfully deleted"
+msgstr "Subscription data successfully deleted"
+
+msgid "Subscription data FAILED to deleted!"
+msgstr "Subscription data FAILED to deleted!"
+
+msgid "Subscription Start"
+msgstr "Subscription Start"
+
+msgid "Total Exemplar Expected"
+msgstr "Total Exemplar Expected"
+
+msgid "Period Name"
+msgstr "Period Name"
+
+msgid "Subscription Notes"
+msgstr "Subscription Notes"
+
+msgid "You are going to edit Subscription data"
+msgstr "You are going to edit Subscription data"
+
+msgid "View/Edit Kardex Detail"
+msgstr "View/Edit Kardex Detail"
+
+msgid "NO stock taking proccess initialized yet!"
+msgstr "NO stock taking proccess initialized yet!"
+
+msgid "Stock Take Proccess"
+msgstr "Stock Take Proccess"
+
+msgid "Current Missing/Lost Items"
+msgstr "Current Missing/Lost Items"
+
+msgid "Change Status"
+msgstr "Change Status"
+
+msgid "List stocktakes by"
+msgstr "List stocktakes by"
+
+msgid "Current User Only"
+msgstr "Current User Only"
+
+msgid "All User"
+msgstr "All User"
+
+msgid "Exists"
+msgstr "Exists"
+
+msgid "Missing"
+msgstr "Missing"
+
+msgid "You must be an admin to run the completion process!"
+msgstr "You must be an admin to run the completion process!"
+
+msgid "NO stock taking proccess running!"
+msgstr "NO stock taking proccess running!"
+
+msgid "Stock Take Report"
+msgstr "Stock Take Report"
+
+msgid "LOST Item list"
+msgstr "LOST Item list"
+
+msgid "Stock Take Error Logs"
+msgstr "Stock Take Error Logs"
+
+msgid "Time"
+msgstr "Time"
+
+msgid "Message"
+msgstr "Message"
+
+msgid "ERROR! Stock take report failed to generate, possibly because {directory} directory is not writable"
+msgstr "ERROR! Stock take report failed to generate, possibly because {directory} directory is not writable"
+
+msgid "Stock Take Proccess Finished!"
+msgstr "Stock Take Proccess Finished!"
+
+msgid "Finish Stock Take"
+msgstr "Finish Stock Take"
+
+msgid "Are you sure to end current stock take proccess? Once it finished there is no way you can rollback this stock take"
+msgstr "Are you sure to end current stock take proccess? Once it finished there is no way you can rollback this stock take"
+
+msgid "Purge Lost Item"
+msgstr "Purge Lost Item"
+
+msgid "Stock Take"
+msgstr "Stock Take"
+
+msgid "Stock Take Name"
+msgstr "Stock Take Name"
+
+msgid "Start Date"
+msgstr "Start Date"
+
+msgid "End Date"
+msgstr "End Date"
+
+msgid "Initializer"
+msgstr "Initializer"
+
+msgid "Total Item Stock Taked"
+msgstr "Total Item Stock Taked"
+
+msgid "Total Item Lost"
+msgstr "Total Item Lost"
+
+msgid "Total Item Exists"
+msgstr "Total Item Exists"
+
+msgid "Total Item On Loan"
+msgstr "Total Item On Loan"
+
+msgid "Stock Take Participants"
+msgstr "Stock Take Participants"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Report"
+msgstr "Report"
+
+msgid "Currently Active"
+msgstr "Currently Active"
+
+msgid "View"
+msgstr "View"
+
+msgid "Stock take report : <title>"
+msgstr "Stock take report : <title>"
+
+msgid "You must be an admin to run initialization process!"
+msgstr "You must be an admin to run initialization process!"
+
+msgid "Initialize Stock Take Process"
+msgstr "Initialize Stock Take Process"
+
+msgid "Before stock taking, it is recommended to backup your database first."
+msgstr "Before stock taking, it is recommended to backup your database first."
+
+msgid "Looks like you have not backed up before."
+msgstr "Looks like you have not backed up before."
+
+msgid "Skip backup at your own risk!"
+msgstr "Skip backup at your own risk!"
+
+msgid "Skip"
+msgstr "Skip"
+
+msgid "There is already stock taking proccess running!"
+msgstr "There is already stock taking proccess running!"
+
+msgid "Stock Take Name must be filled!"
+msgstr "Stock Take Name must be filled!"
+
+msgid "Stock Taking Initialized"
+msgstr "Stock Taking Initialized"
+
+msgid "Stock Taking FAILED to Initialized.\\\\nNo item to stock take!"
+msgstr "Stock Taking FAILED to Initialized.\\\\nNo item to stock take!"
+
+msgid "Initialize Stock Take"
+msgstr "Initialize Stock Take"
+
+msgid "Separate each class comma sign. Use * for wildcard"
+msgstr "Separate each class comma sign. Use * for wildcard"
+
+msgid "Current Lost Item"
+msgstr "Current Lost Item"
+
+msgid "Print"
+msgstr "Print"
+
+msgid "Re-synchronize will only update current stock take's item data. It won't update any new bibliographic or item data that were inserted in the middle of stock take proccess"
+msgstr "Re-synchronize will only update current stock take's item data. It won't update any new bibliographic or item data that were inserted in the middle of stock take proccess"
+
+msgid "Resynchronize Now"
+msgstr "Resynchronize Now"
+
+msgid "Stock Take Log"
+msgstr "Stock Take Log"
+
+msgid "Username"
+msgstr "Username"
+
+msgid "Current Stock Take Report"
+msgstr "Current Stock Take Report"
+
+msgid "Total Checked/Scanned Items"
+msgstr "Total Checked/Scanned Items"
+
+msgid "Stock take report detail for %s"
+msgstr "Stock take report detail for %s"
+
+msgid "items already checked"
+msgstr "items already checked"
+
+msgid "Lost Items"
+msgstr "Lost Items"
+
+msgid "Existing Items"
+msgstr "Existing Items"
+
+msgid "On Loan Items"
+msgstr "On Loan Items"
+
+msgid " classes"
+msgstr " classes"
+
+msgid "ERROR! Current Stock Take Report failed to generate, possibly because {directory} directory is not writable"
+msgstr "ERROR! Current Stock Take Report failed to generate, possibly because {directory} directory is not writable"
+
+msgid "Sorry, data not available!"
+msgstr "Sorry, data not available!"
+
+msgid "Time Checked"
+msgstr "Time Checked"
+
+msgid "Succesfully upload stock take file"
+msgstr "Succesfully upload stock take file"
+
+msgid " item codes scanned!"
+msgstr " item codes scanned!"
+
+msgid "Stock Take Upload"
+msgstr "Stock Take Upload"
+
+msgid "Upload a plain text file (.txt) containing list of Item Code to stock take. Each Item Code separated by line."
+msgstr "Upload a plain text file (.txt) containing list of Item Code to stock take. Each Item Code separated by line."
+
+msgid "Upload File"
+msgstr "Upload File"
+
+msgid "Please enter a valid item code/barcode. You enter a BLANK code!"
+msgstr "Please enter a valid item code/barcode. You enter a BLANK code!"
+
+msgid "Item %s (%s) is currently ON LOAN"
+msgstr "Item %s (%s) is currently ON LOAN"
+
+msgid "Item %s is currently ON LOAN"
+msgstr "Item %s is currently ON LOAN"
+
+msgid "Item %s is already SCANNED!"
+msgstr "Item %s is already SCANNED!"
+
+msgid "Item Code (%s) have rule to skipped by stock take"
+msgstr "Item Code (%s) have rule to skipped by stock take"
+
+msgid "Item Code %s have rule to skipped by stock take"
+msgstr "Item Code %s have rule to skipped by stock take"
+
+msgid "Item Code (%s) doesnt exists in stock take data. Invalid Item Code OR Maybe out of Stock Take range"
+msgstr "Item Code (%s) doesnt exists in stock take data. Invalid Item Code OR Maybe out of Stock Take range"
+
+msgid "Item Code %s doesnt exists in stock take data.\\\\nInvalid Item Code OR Maybe out of Stock Take range"
+msgstr "Item Code %s doesnt exists in stock take data.\\\\nInvalid Item Code OR Maybe out of Stock Take range"
+
+msgid "STOCK TAKE"
+msgstr "STOCK TAKE"
+
+msgid "Stock Take History"
+msgstr "Stock Take History"
+
+msgid "View Stock Take History"
+msgstr "View Stock Take History"
+
+msgid "Initialize"
+msgstr "Initialize"
+
+msgid "Initialize New Stock Take Proccess"
+msgstr "Initialize New Stock Take Proccess"
+
+msgid "Current Stock Take"
+msgstr "Current Stock Take"
+
+msgid "View Current Stock Take Process"
+msgstr "View Current Stock Take Process"
+
+msgid "View Current Stock Take Report"
+msgstr "View Current Stock Take Report"
+
+msgid "View Lost Item in Current Stock Take Proccess"
+msgstr "View Lost Item in Current Stock Take Proccess"
+
+msgid "View Log of Current Stock Take Proccess"
+msgstr "View Log of Current Stock Take Proccess"
+
+msgid "Upload List"
+msgstr "Upload List"
+
+msgid "Upload List in text file"
+msgstr "Upload List in text file"
+
+msgid "Resynchronize"
+msgstr "Resynchronize"
+
+msgid "Resynchronize bibliographic data with current stock take"
+msgstr "Resynchronize bibliographic data with current stock take"
+
+msgid "Finish Current Stock Take Proccess"
+msgstr "Finish Current Stock Take Proccess"
+
+msgid "Code verified!"
+msgstr "Code verified!"
+
+msgid "Invalid verification code!"
+msgstr "Invalid verification code!"
+
+msgid "Two-factor authentication has been disabled."
+msgstr "Two-factor authentication has been disabled."
+
+msgid "Upss... something wrong!"
+msgstr "Upss... something wrong!"
+
+msgid "User Name or Real Name can't be empty"
+msgstr "User Name or Real Name can't be empty"
+
+msgid "Login username or Real Name is probihited!"
+msgstr "Login username or Real Name is probihited!"
+
+msgid "User Data Successfully Updated"
+msgstr "User Data Successfully Updated"
+
+msgid "User Data FAILED to Updated. Please Contact System Administrator"
+msgstr "User Data FAILED to Updated. Please Contact System Administrator"
+
+msgid "New User Data Successfully Saved"
+msgstr "New User Data Successfully Saved"
+
+msgid "User Data FAILED to Save. Please Contact System Administrator"
+msgstr "User Data FAILED to Save. Please Contact System Administrator"
+
+msgid "Librarian & System Users"
+msgstr "Librarian & System Users"
+
+msgid "User List"
+msgstr "User List"
+
+msgid "Add New User"
+msgstr "Add New User"
+
+msgid "User Type"
+msgstr "User Type"
+
+msgid "E-Mail"
+msgstr "E-Mail"
+
+msgid "Social Media"
+msgstr "Social Media"
+
+msgid "REMOVE IMAGE"
+msgstr "REMOVE IMAGE"
+
+msgid "User Photo"
+msgstr "User Photo"
+
+msgid "Group(s)"
+msgstr "Group(s)"
+
+msgid "Two Factor Authentication enabled."
+msgstr "Two Factor Authentication enabled."
+
+msgid "Disable It"
+msgstr "Disable It"
+
+msgid "Scan this QRcode with your authenticator (e.g. Google Authenticator or {link}) <br> and enter verification code below to enable Two Factor Authentication."
+msgstr "Scan this QRcode with your authenticator (e.g. Google Authenticator or {link}) <br> and enter verification code below to enable Two Factor Authentication."
+
+msgid "Verification code"
+msgstr "Verification code"
+
+msgid "Verify"
+msgstr "Verify"
+
+msgid "Database Backup"
+msgstr "Database Backup"
+
+msgid "Start New Backup"
+msgstr "Start New Backup"
+
+msgid "Database Backup Configuration"
+msgstr "Database Backup Configuration"
+
+msgid "Backup Configuration"
+msgstr "Backup Configuration"
+
+msgid "Verbose process"
+msgstr "Verbose process"
+
+msgid "Processing"
+msgstr "Processing"
+
+msgid "Backup Executor"
+msgstr "Backup Executor"
+
+msgid "Backup Time"
+msgstr "Backup Time"
+
+msgid "Backup File Location"
+msgstr "Backup File Location"
+
+msgid "File Size"
+msgstr "File Size"
+
+msgid "File not found"
+msgstr "File not found"
+
+msgid "Data has been saved"
+msgstr "Data has been saved"
+
+msgid "Failed to save data"
+msgstr "Failed to save data"
+
+msgid "Are you sure you want to make it automatically on first login?. It will take longer to complete if your SLiMS has a large collection."
+msgstr "Are you sure you want to make it automatically on first login?. It will take longer to complete if your SLiMS has a large collection."
+
+msgid "Starting..."
+msgstr "Starting..."
+
+msgid "Backup SUCCESSFUL, backup files saved to %s !"
+msgstr "Backup SUCCESSFUL, backup files saved to %s !"
+
+msgid "Compressing..."
+msgstr "Compressing..."
+
+msgid "File is compressed using tar gz archive format"
+msgstr "File is compressed using tar gz archive format"
+
+msgid "Compressing Success"
+msgstr "Compressing Success"
+
+msgid "Backup FAILED!,\\\\n%s"
+msgstr "Backup FAILED!,\\\\n%s"
+
+msgid "Backup FAILED! The Backup directory is not exists or not writeable"
+msgstr "Backup FAILED! The Backup directory is not exists or not writeable"
+
+msgid "Contact System Administrator for the right path of backup directory"
+msgstr "Contact System Administrator for the right path of backup directory"
+
+msgid "Backup"
+msgstr "Backup"
+
+msgid "Barcode Generator"
+msgstr "Barcode Generator"
+
+msgid "ERROR! Barcodes failed to generate, possibly because {directory} directory is not writable"
+msgstr "ERROR! Barcodes failed to generate, possibly because {directory} directory is not writable"
+
+msgid "Error creating barcode!"
+msgstr "Error creating barcode!"
+
+msgid "Barcode generation finished"
+msgstr "Barcode generation finished"
+
+msgid "Enter your barcodes code on one or more textboxes below to create barcode"
+msgstr "Enter your barcodes code on one or more textboxes below to create barcode"
+
+msgid "Barcode Size"
+msgstr "Barcode Size"
+
+msgid "Small"
+msgstr "Small"
+
+msgid "Medium"
+msgstr "Medium"
+
+msgid "Big"
+msgstr "Big"
+
+msgid "Generate Barcodes"
+msgstr "Generate Barcodes"
+
+msgid "PHP Mongodb extension library is not installed yet!"
+msgstr "PHP Mongodb extension library is not installed yet!"
+
+msgid "Index table truncated!"
+msgstr "Index table truncated!"
+
+msgid "Index table FAILED to truncated, probably because of database query error!"
+msgstr "Index table FAILED to truncated, probably because of database query error!"
+
+msgid "<strong>%d</strong> records (from total of <strong>%d</strong>) re-indexed. Finished in %d minutes %d second(s)"
+msgstr "<strong>%d</strong> records (from total of <strong>%d</strong>) re-indexed. Finished in %d minutes %d second(s)"
+
+msgid "<strong>%d</strong> index records failed to indexed. The IDs are: %s"
+msgstr "<strong>%d</strong> index records failed to indexed. The IDs are: %s"
+
+msgid "Please empty the Index first before re-creating the Index"
+msgstr "Please empty the Index first before re-creating the Index"
+
+msgid "<strong>%d</strong> records (from total of <strong>%d</strong>) re-indexed. Finished in %d second(s)"
+msgstr "<strong>%d</strong> records (from total of <strong>%d</strong>) re-indexed. Finished in %d second(s)"
+
+msgid "Bibliographic Index"
+msgstr "Bibliographic Index"
+
+msgid "Emptying Index"
+msgstr "Emptying Index"
+
+msgid "Re-create Index"
+msgstr "Re-create Index"
+
+msgid "Update Index"
+msgstr "Update Index"
+
+msgid "Bibliographic indexing will speed up on cataloging search"
+msgstr "Bibliographic indexing will speed up on cataloging search"
+
+msgid "Total data on biblio: "
+msgstr "Total data on biblio: "
+
+msgid " records."
+msgstr " records."
+
+msgid "Total indexed data: "
+msgstr "Total indexed data: "
+
+msgid "Unidexed data: "
+msgstr "Unidexed data: "
+
+msgid "Biblio from "
+msgstr "Biblio from "
+
+msgid "Bibliographic Index (ElasticSearch)"
+msgstr "Bibliographic Index (ElasticSearch)"
+
+msgid "Captcha Configuration"
+msgstr "Captcha Configuration"
+
+msgid "Default captcha provider"
+msgstr "Default captcha provider"
+
+msgid "Enable for section"
+msgstr "Enable for section"
+
+msgid "Title or Path can't be empty!"
+msgstr "Title or Path can't be empty!"
+
+msgid "Content data updated"
+msgstr "Content data updated"
+
+msgid "Content data FAILED to update!"
+msgstr "Content data FAILED to update!"
+
+msgid "Content data saved"
+msgstr "Content data saved"
+
+msgid "Content data FAILED to save!"
+msgstr "Content data FAILED to save!"
+
+msgid "Content"
+msgstr "Content"
+
+msgid "Content List"
+msgstr "Content List"
+
+msgid "Add New Content"
+msgstr "Add New Content"
+
+msgid "Content Title"
+msgstr "Content Title"
+
+msgid "Content Settings"
+msgstr "Content Settings"
+
+msgid "Publish at"
+msgstr "Publish at"
+
+msgid "This is News"
+msgstr "This is News"
+
+msgid "Path (Must be unique)"
+msgstr "Path (Must be unique)"
+
+msgid "Max 20 character"
+msgstr "Max 20 character"
+
+msgid "Draft?"
+msgstr "Draft?"
+
+msgid "Successfully save currency configuration"
+msgstr "Successfully save currency configuration"
+
+msgid "Currency Configuration"
+msgstr "Currency Configuration"
+
+msgid "Extension Intl must be enable first."
+msgstr "Extension Intl must be enable first."
+
+msgid "Enable system currency?"
+msgstr "Enable system currency?"
+
+msgid "Region"
+msgstr "Region"
+
+msgid "By default region value same as default language"
+msgstr "By default region value same as default language"
+
+msgid "Number of decimal position"
+msgstr "Number of decimal position"
+
+msgid "Custom Field"
+msgstr "Custom Field"
+
+msgid "Field or Label can't be empty"
+msgstr "Field or Label can't be empty"
+
+msgid "Data List can't be empty"
+msgstr "Data List can't be empty"
+
+msgid "New Custom Field Successfully Updated"
+msgstr "New Custom Field Successfully Updated"
+
+msgid "Custom Field Data FAILED to Updated. Please Contact System Administrator"
+msgstr "Custom Field Data FAILED to Updated. Please Contact System Administrator"
+
+msgid "New Custom Field Successfully Saved"
+msgstr "New Custom Field Successfully Saved"
+
+msgid "Custom Field Data Data FAILED to Save. Please Contact System Administrator"
+msgstr "Custom Field Data Data FAILED to Save. Please Contact System Administrator"
+
+msgid "Custom Field Editor"
+msgstr "Custom Field Editor"
+
+msgid "Field List"
+msgstr "Field List"
+
+msgid "Add New Field"
+msgstr "Add New Field"
+
+msgid "Primary Menu"
+msgstr "Primary Menu"
+
+msgid "Text"
+msgstr "Text"
+
+msgid "Text Area"
+msgstr "Text Area"
+
+msgid "Numeric"
+msgstr "Numeric"
+
+msgid "Drop Down"
+msgstr "Drop Down"
+
+msgid "Check List"
+msgstr "Check List"
+
+msgid "Choice"
+msgstr "Choice"
+
+msgid "Input Type"
+msgstr "Input Type"
+
+msgid "Is Public"
+msgstr "Is Public"
+
+msgid "Custom Style"
+msgstr "Custom Style"
+
+msgid "Add Item"
+msgstr "Add Item"
+
+msgid "Data List"
+msgstr "Data List"
+
+msgid "You are going to edit %s custom field"
+msgstr "You are going to edit %s custom field"
+
+msgid "<strong>Warning</strong> : Update data list or primary table will be delete this table content"
+msgstr "<strong>Warning</strong> : Update data list or primary table will be delete this table content"
+
+msgid "SLiMS Environment Mode"
+msgstr "SLiMS Environment Mode"
+
+msgid "SLiMS Version"
+msgstr "SLiMS Version"
+
+msgid "Operating System"
+msgstr "Operating System"
+
+msgid "OS Architecture"
+msgstr "OS Architecture"
+
+msgid "Web Server"
+msgstr "Web Server"
+
+msgid "PHP version"
+msgstr "PHP version"
+
+msgid "MySQL Database version"
+msgstr "MySQL Database version"
+
+msgid "MySQL Client version"
+msgstr "MySQL Client version"
+
+msgid "Browser/User Agent"
+msgstr "Browser/User Agent"
+
+msgid "Hostname"
+msgstr "Hostname"
+
+msgid "jQuery version"
+msgstr "jQuery version"
+
+msgid "HTML5 Support?"
+msgstr "HTML5 Support?"
+
+msgid "System Environment"
+msgstr "System Environment"
+
+msgid "Information on SLiMS System Environment. Use this to support troubleshotting problem."
+msgstr "Information on SLiMS System Environment. Use this to support troubleshotting problem."
+
+msgid "env.sample.php file is not exists!"
+msgstr "env.sample.php file is not exists!"
+
+msgid "Configuration has been saved!"
+msgstr "Configuration has been saved!"
+
+msgid "System Environment Settings"
+msgstr "System Environment Settings"
+
+msgid "SLiMS Environment preferences."
+msgstr "SLiMS Environment preferences."
+
+msgid "Production"
+msgstr "Production"
+
+msgid "Development"
+msgstr "Development"
+
+msgid "System Environment Mode"
+msgstr "System Environment Mode"
+
+msgid "Environment for some IP?"
+msgstr "Environment for some IP?"
+
+msgid "Range Ip wil be impacted with Environment. Example : 10.120.33.40;20.100.34.10. "
+msgstr "Range Ip wil be impacted with Environment. Example : 10.120.33.40;20.100.34.10. "
+
+msgid "Leave it empty, if you want to set environment to impact for all IP"
+msgstr "Leave it empty, if you want to set environment to impact for all IP"
+
+msgid "Holiday Settings"
+msgstr "Holiday Settings"
+
+msgid "Holiday description can't be empty!"
+msgstr "Holiday description can't be empty!"
+
+msgid "Holiday Date Start must have the format YYYY-MM-DD!"
+msgstr "Holiday Date Start must have the format YYYY-MM-DD!"
+
+msgid "Holiday Data Successfully updated"
+msgstr "Holiday Data Successfully updated"
+
+msgid "Holiday FAILED to update. Please Contact System Administrator"
+msgstr "Holiday FAILED to update. Please Contact System Administrator"
+
+msgid "New Holiday Successfully Saved"
+msgstr "New Holiday Successfully Saved"
+
+msgid "Holiday Date End must have the format YYYY-MM-DD if it is not empty!"
+msgstr "Holiday Date End must have the format YYYY-MM-DD if it is not empty!"
+
+msgid "Holiday FAILED to Save. Please Contact System Administrator"
+msgstr "Holiday FAILED to Save. Please Contact System Administrator"
+
+msgid "Holiday Setting"
+msgstr "Holiday Setting"
+
+msgid "Special holiday"
+msgstr "Special holiday"
+
+msgid "Add Special holiday"
+msgstr "Add Special holiday"
+
+msgid "Holiday Date Start"
+msgstr "Holiday Date Start"
+
+msgid "Holiday Date End"
+msgstr "Holiday Date End"
+
+msgid "Holiday Description"
+msgstr "Holiday Description"
+
+msgid "You are going to edit holiday data"
+msgstr "You are going to edit holiday data"
+
+msgid "Day name"
+msgstr "Day name"
+
+msgid "Sunday"
+msgstr "Sunday"
+
+msgid "Monday"
+msgstr "Monday"
+
+msgid "Tuesday"
+msgstr "Tuesday"
+
+msgid "Wednesday"
+msgstr "Wednesday"
+
+msgid "Thursday"
+msgstr "Thursday"
+
+msgid "Friday"
+msgstr "Friday"
+
+msgid "Saturday"
+msgstr "Saturday"
+
+msgid "Maximum 6 day can be set as holiday!"
+msgstr "Maximum 6 day can be set as holiday!"
+
+msgid "Holiday settings saved"
+msgstr "Holiday settings saved"
+
+msgid "System Configuration"
+msgstr "System Configuration"
+
+msgid "Modify global application preferences"
+msgstr "Modify global application preferences"
+
+msgid "Logo Image removed. Refreshing page"
+msgstr "Logo Image removed. Refreshing page"
+
+msgid "Settings saved. Refreshing page"
+msgstr "Settings saved. Refreshing page"
+
+msgid "Library Name"
+msgstr "Library Name"
+
+msgid "Library Subname"
+msgstr "Library Subname"
+
+msgid "Main Logo"
+msgstr "Main Logo"
+
+msgid "Favicon"
+msgstr "Favicon"
+
+msgid "Logo Image"
+msgstr "Logo Image"
+
+msgid "Default App. Language"
+msgstr "Default App. Language"
+
+msgid "List of timezones supported by PHP"
+msgstr "List of timezones supported by PHP"
+
+msgid "Default App. Timezone"
+msgstr "Default App. Timezone"
+
+msgid "Search Engine"
+msgstr "Search Engine"
+
+msgid "Number Of Collections To Show In OPAC Result List"
+msgstr "Number Of Collections To Show In OPAC Result List"
+
+msgid "Show Promoted Titles at Homepage"
+msgstr "Show Promoted Titles at Homepage"
+
+msgid "Don't Print"
+msgstr "Don't Print"
+
+msgid "Print Circulation Receipt"
+msgstr "Print Circulation Receipt"
+
+msgid "Loan and Due Date Manual Change"
+msgstr "Loan and Due Date Manual Change"
+
+msgid "Loan Limit Override"
+msgstr "Loan Limit Override"
+
+msgid "Ignore Holidays Fine Calculation"
+msgstr "Ignore Holidays Fine Calculation"
+
+msgid "OPAC XML Detail"
+msgstr "OPAC XML Detail"
+
+msgid "OPAC XML Result"
+msgstr "OPAC XML Result"
+
+msgid "Enable Search Spellchecker"
+msgstr "Enable Search Spellchecker"
+
+msgid "Forbid"
+msgstr "Forbid"
+
+msgid "Allow"
+msgstr "Allow"
+
+msgid "Allow OPAC File Download"
+msgstr "Allow OPAC File Download"
+
+msgid "Session Login Timeout"
+msgstr "Session Login Timeout"
+
+msgid "Barcode Encoding"
+msgstr "Barcode Encoding"
+
+msgid "Visitor Counter by IP"
+msgstr "Visitor Counter by IP"
+
+msgid "Allowed Counter IP"
+msgstr "Allowed Counter IP"
+
+msgid "Separate ip with ;"
+msgstr "Separate ip with ;"
+
+msgid "Visitor Limitation by Time"
+msgstr "Visitor Limitation by Time"
+
+msgid "Time visitor limitation (in minute)"
+msgstr "Time visitor limitation (in minute)"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Database"
+msgstr "Database"
+
+msgid "Reserve methode"
+msgstr "Reserve methode"
+
+msgid "Reserve for item on loan only"
+msgstr "Reserve for item on loan only"
+
+msgid "Activate Confirm Alert?"
+msgstr "Activate Confirm Alert?"
+
+msgid "Ignore SSL verification"
+msgstr "Ignore SSL verification"
+
+msgid "SLiMS will ignore all error about SSL validation while download contents from other resource"
+msgstr "SLiMS will ignore all error about SSL validation while download contents from other resource"
+
+msgid "NB : Password is hidden for security reason"
+msgstr "NB : Password is hidden for security reason"
+
+msgid "Example"
+msgstr "Example"
+
+msgid "Directory config is not writeable."
+msgstr "Directory config is not writeable."
+
+msgid "Settings inserted."
+msgstr "Settings inserted."
+
+msgid "E-Mail Configuration"
+msgstr "E-Mail Configuration"
+
+msgid "E-Mail test"
+msgstr "E-Mail test"
+
+msgid "Modify E-Mail preferences"
+msgstr "Modify E-Mail preferences"
+
+msgid "Make the following files and directories (and their contents) writeable (i.e., by changing the owner or permissions with chown or chmod)"
+msgstr "Make the following files and directories (and their contents) writeable (i.e., by changing the owner or permissions with chown or chmod)"
+
+msgid "Environment"
+msgstr "Environment"
+
+msgid "SMTP Encryption"
+msgstr "SMTP Encryption"
+
+msgid "SMTP Server address"
+msgstr "SMTP Server address"
+
+msgid "SMTP Port"
+msgstr "SMTP Port"
+
+msgid "Authentication Username"
+msgstr "Authentication Username"
+
+msgid "Authentication Password"
+msgstr "Authentication Password"
+
+msgid "Password does not appearance for security reason. If you want to look it, open sysconfig.mail.inc.php file."
+msgstr "Password does not appearance for security reason. If you want to look it, open sysconfig.mail.inc.php file."
+
+msgid "Email Sender Address"
+msgstr "Email Sender Address"
+
+msgid "Email Sender Label"
+msgstr "Email Sender Label"
+
+msgid "Do Test"
+msgstr "Do Test"
+
+msgid "Send Mail"
+msgstr "Send Mail"
+
+msgid "Receiver Name"
+msgstr "Receiver Name"
+
+msgid "Receiver Address"
+msgstr "Receiver Address"
+
+msgid "Dummy Content"
+msgstr "Dummy Content"
+
+msgid "Error saving custom data!"
+msgstr "Error saving custom data!"
+
+msgid "Custom data saved!"
+msgstr "Custom data saved!"
+
+msgid "This theme not customizable"
+msgstr "This theme not customizable"
+
+msgid "Membercard Configuration"
+msgstr "Membercard Configuration"
+
+msgid "Customize theme preferences"
+msgstr "Customize theme preferences"
+
+msgid "Activate"
+msgstr "Activate"
+
+msgid "Customize"
+msgstr "Customize"
+
+msgid "Module name and path can't be empty"
+msgstr "Module name and path can't be empty"
+
+msgid "Modules path doesn't exists! Please check again in module base directory"
+msgstr "Modules path doesn't exists! Please check again in module base directory"
+
+msgid "Module Data Successfully Updated"
+msgstr "Module Data Successfully Updated"
+
+msgid "Module Data FAILED to Updated. Please Contact System Administrator"
+msgstr "Module Data FAILED to Updated. Please Contact System Administrator"
+
+msgid "New Module Data Successfully Saved"
+msgstr "New Module Data Successfully Saved"
+
+msgid "Module Data FAILED to Save. Please Contact System Administrator"
+msgstr "Module Data FAILED to Save. Please Contact System Administrator"
+
+msgid "Modules"
+msgstr "Modules"
+
+msgid "Modules List"
+msgstr "Modules List"
+
+msgid "Add New Modules"
+msgstr "Add New Modules"
+
+msgid "Module Name"
+msgstr "Module Name"
+
+msgid "Module Path"
+msgstr "Module Path"
+
+msgid "Module Description"
+msgstr "Module Description"
+
+msgid "You are going to edit data"
+msgstr "You are going to edit data"
+
+msgid "Read"
+msgstr "Read"
+
+msgid "Write"
+msgstr "Write"
+
+msgid "Enable or disable submenu"
+msgstr "Enable or disable submenu"
+
+msgid "Plugin not found"
+msgstr "Plugin not found"
+
+msgid "Plugin %s enabled"
+msgstr "Plugin %s enabled"
+
+msgid "Plugin %s disabled"
+msgstr "Plugin %s disabled"
+
+msgid "Plugin"
+msgstr "Plugin"
+
+msgid "Enable plugin"
+msgstr "Enable plugin"
+
+msgid "Extension ZIP is not exists."
+msgstr "Extension ZIP is not exists."
+
+msgid "Plugin List"
+msgstr "Plugin List"
+
+msgid "Install plugin from .zip file"
+msgstr "Install plugin from .zip file"
+
+msgid "Upload Plugin"
+msgstr "Upload Plugin"
+
+msgid "Enable/Disable"
+msgstr "Enable/Disable"
+
+msgid "Enabled"
+msgstr "Enabled"
+
+msgid "Disabled"
+msgstr "Disabled"
+
+msgid "Version"
+msgstr "Version"
+
+msgid "By"
+msgstr "By"
+
+msgid "View Detail"
+msgstr "상세 보기"
+
+msgid "Shortcut Settings"
+msgstr "Shortcut Settings"
+
+msgid "Add or remove application shortcuts"
+msgstr "Add or remove application shortcuts"
+
+msgid "Shortcut setting saved"
+msgstr "Shortcut setting saved"
+
+msgid "Move back"
+msgstr "Move back"
+
+msgid "CONFIGURATION"
+msgstr "CONFIGURATION"
+
+msgid "Configure Global System Preferences"
+msgstr "Configure Global System Preferences"
+
+msgid "Information about System Environment"
+msgstr "Information about System Environment"
+
+msgid "System Environment Setting"
+msgstr "System Environment Setting"
+
+msgid "Configure System Environment Mode"
+msgstr "Configure System Environment Mode"
+
+msgid "UCS Setting"
+msgstr "UCS Setting"
+
+msgid "Configure UCS Preferences"
+msgstr "Configure UCS Preferences"
+
+msgid "Plugins"
+msgstr "Plugins"
+
+msgid "Configure custom field"
+msgstr "Configure custom field"
+
+msgid "Currency Setting"
+msgstr "Currency Setting"
+
+msgid "Configure System Currency"
+msgstr "Configure System Currency"
+
+msgid "E-Mail Setting"
+msgstr "E-Mail Setting"
+
+msgid "Configure E-Mail Preferences"
+msgstr "Configure E-Mail Preferences"
+
+msgid "Captcha Setting"
+msgstr "Captcha Setting"
+
+msgid "Configure Captcha"
+msgstr "Configure Captcha"
+
+msgid "Biblio Indexes"
+msgstr "Biblio Indexes"
+
+msgid "Bibliographic Indexes management"
+msgstr "Bibliographic Indexes management"
+
+msgid "Configure Application Modules"
+msgstr "Configure Application Modules"
+
+msgid "User Group"
+msgstr "User Group"
+
+msgid "Manage Group of Application User"
+msgstr "Manage Group of Application User"
+
+msgid "Manage Application User or Library Staff"
+msgstr "Manage Application User or Library Staff"
+
+msgid "Configure Holiday Setting"
+msgstr "Configure Holiday Setting"
+
+msgid "System Log"
+msgstr "System Log"
+
+msgid "View Application System Log"
+msgstr "View Application System Log"
+
+msgid "Backup Application Database"
+msgstr "Backup Application Database"
+
+msgid "System Log data completely cleared!"
+msgstr "System Log data completely cleared!"
+
+msgid "Are you SURE to completely clear system log data? This action cannot be undo!"
+msgstr "Are you SURE to completely clear system log data? This action cannot be undo!"
+
+msgid "CLEAR LOGS"
+msgstr "CLEAR LOGS"
+
+msgid "Save Logs record to file?"
+msgstr "Save Logs record to file?"
+
+msgid "Save Logs To File"
+msgstr "Save Logs To File"
+
+msgid "Custom data saved! Reload the page to see changes."
+msgstr "Custom data saved! Reload the page to see changes."
+
+msgid "This theme not customizable. "
+msgstr "This theme not customizable. "
+
+msgid "Theme Configuration"
+msgstr "Theme Configuration"
+
+msgid "Public Template"
+msgstr "Public Template"
+
+msgid "Admin Template"
+msgstr "Admin Template"
+
+msgid "Admin Theme Configuration"
+msgstr "Admin Theme Configuration"
+
+msgid "UCS Configuration"
+msgstr "UCS Configuration"
+
+msgid "Settings "
+msgstr "Settings "
+
+msgid "Failed save settings!"
+msgstr "Failed save settings!"
+
+msgid "Modify UCS preferences"
+msgstr "Modify UCS preferences"
+
+msgid "Enable UCS"
+msgstr "Enable UCS"
+
+msgid "Auto delete record"
+msgstr "Auto delete record"
+
+msgid "Auto insert record"
+msgstr "Auto insert record"
+
+msgid "Server address"
+msgstr "Server address"
+
+msgid "Server ID"
+msgstr "Server ID"
+
+msgid "Server Password"
+msgstr "Server Password"
+
+msgid "Group name can't be empty"
+msgstr "Group name can't be empty"
+
+msgid "Group Data Successfully Updated"
+msgstr "Group Data Successfully Updated"
+
+msgid "Group Data FAILED to Updated. Please Contact System Administrator"
+msgstr "Group Data FAILED to Updated. Please Contact System Administrator"
+
+msgid "New Group Data Successfully Saved"
+msgstr "New Group Data Successfully Saved"
+
+msgid "Group Data FAILED to Save. Please Contact System Administrator"
+msgstr "Group Data FAILED to Save. Please Contact System Administrator"
+
+msgid "Group List"
+msgstr "Group List"
+
+msgid "Add New Group"
+msgstr "Add New Group"
+
+msgid "Group Name"
+msgstr "Group Name"
+
+msgid "Privileges"
+msgstr "Privileges"
+
+msgid "You are going to edit Group data"
+msgstr "You are going to edit Group data"
+
+msgid "There isn't anyone else in the room."
+msgstr "There isn't anyone else in the room."
+
+msgid "Someone has connected."
+msgstr "Someone has connected."
+
+msgid "Someone has joined the room."
+msgstr "Someone has joined the room."
+
+msgid "Someone has disconnected."
+msgstr "Someone has disconnected."
+
+msgid "Someone has left the room."
+msgstr "Someone has left the room."
+
+msgid "Library Rules"
+msgstr "Library Rules"
+
+msgid "Front Header1 Text"
+msgstr "Front Header1 Text"
+
+msgid "Front Header2 Text"
+msgstr "Front Header2 Text"
+
+msgid "Back Header1 Text"
+msgstr "Back Header1 Text"
+
+msgid "Back Header2 Text"
+msgstr "Back Header2 Text"
+
+msgid "Box Width"
+msgstr "Box Width"
+
+msgid "Box Height"
+msgstr "Box Height"
+
+msgid "Factor"
+msgstr "Factor"
+
+msgid "Barcode Scale"
+msgstr "Barcode Scale"
+
+msgid "Font Color"
+msgstr "Font Color"
+
+msgid "Card Front Color"
+msgstr "Card Front Color"
+
+msgid "Card Back Color"
+msgstr "Card Back Color"
+
+msgid "City"
+msgstr "City"
+
+msgid "Officials"
+msgstr "Officials"
+
+msgid "Officials ID"
+msgstr "Officials ID"
+
+msgid "Back Side Image"
+msgstr "Back Side Image"
+
+msgid "Front Header1 Font Size"
+msgstr "Front Header1 Font Size"
+
+msgid "Front Header2 Font Size"
+msgstr "Front Header2 Font Size"
+
+msgid "Back Header1 Font Size"
+msgstr "Back Header1 Font Size"
+
+msgid "Back Header2 Font Size"
+msgstr "Back Header2 Font Size"
+
+msgid "Header Color"
+msgstr "Header Color"
+
+msgid "Rules Font Size"
+msgstr "Rules Font Size"
+
+msgid "Address Font Size"
+msgstr "Address Font Size"
+
+msgid "Job Title"
+msgstr "Job Title"
+
+msgid "Front Side Image"
+msgstr "Front Side Image"
+
+msgid "Stamp file"
+msgstr "Stamp file"
+
+msgid "Signature_File"
+msgstr "Signature_File"
+
+msgid "Logo"
+msgstr "Logo"
+
+msgid "Web Online Public Access Catalog - Use the search options to find documents quickly"
+msgstr "Web Online Public Access Catalog - Use the search options to find documents quickly"
+
+msgid "You are currently Logged on as member"
+msgstr "You are currently Logged on as member"
+
+msgid "LOGOUT"
+msgstr "LOGOUT"
+
+msgid "Captcha Error : {class} is not compatible with captcha contract!"
+msgstr "Captcha Error : {class} is not compatible with captcha contract!"
+
+msgid "Backup database has been finished as %s"
+msgstr "Backup database has been finished as %s"
+
+msgid "No table to repair. Everything is all right."
+msgstr "No table to repair. Everything is all right."
+
+msgid "Success migrating database"
+msgstr "Success migrating database"
+
+msgid "All plugin has been disabled"
+msgstr "All plugin has been disabled"
+
+msgid "Mime {mime} is not allowed!"
+msgstr "Mime {mime} is not allowed!"
+
+msgid "Extension {extension} is not allowed!"
+msgstr "Extension {extension} is not allowed!"
+
+msgid "Size {fileSize} greater than {maxSize}."
+msgstr "Size {fileSize} greater than {maxSize}."
+
+msgid "Main List"
+msgstr "Main List"
+
+msgid "Publication Year"
+msgstr "Publication Year"
+
+msgid "Availability"
+msgstr "이용 가능"
+
+msgid "On Shelf"
+msgstr "On Shelf"
+
+msgid "Attachment"
+msgstr "Attachment"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Audio"
+msgstr "Audio"
+
+msgid "Video"
+msgstr "Video"
+
+msgid "See More"
+msgstr "See More"
+
+msgid "Put marked selection into basket"
+msgstr "Put marked selection into basket"
+
+msgid " comments available"
+msgstr " comments available"
+
+msgid " at "
+msgstr " at "
+
+msgid " write"
+msgstr " write"
+
+msgid "Welcome to Library Automation, "
+msgstr "Welcome to Library Automation, "
+
+msgid "Chat As "
+msgstr "Chat As "
+
+msgid "Chat With Librarian"
+msgstr "Chat With Librarian"
+
+msgid "End Chat"
+msgstr "End Chat"
+
+msgid "Please type your name before starting in conversations."
+msgstr "Please type your name before starting in conversations."
+
+msgid "Your Name:"
+msgstr "Your Name:"
+
+msgid "You may also hit Enter button to starting in conversation. "
+msgstr "You may also hit Enter button to starting in conversation. "
+
+msgid "More result"
+msgstr "More result"
+
+msgid "All Locations"
+msgstr "All Locations"
+
+msgid "All Collections"
+msgstr "All Collections"
+
+msgid "All GMD/Media"
+msgstr "All GMD/Media"
+
+msgid "Most relevant"
+msgstr "Most relevant"
+
+msgid "Recently Added"
+msgstr "Recently Added"
+
+msgid "Most Loaned"
+msgstr "Most Loaned"
+
+msgid "Publication Year [newest]"
+msgstr "Publication Year [newest]"
+
+msgid "Publication Year [oldest]"
+msgstr "Publication Year [oldest]"
+
+msgid "Title Ascending"
+msgstr "Title Ascending"
+
+msgid "Title Descending"
+msgstr "Title Descending"
+
+msgid "Found <strong>{biblio_list->num_rows}</strong> from your keywords"
+msgstr "<strong>{biblio_list->num_rows}</strong>건의 결과를 찾았습니다"
+
+msgid "Current Loan item(s)"
+msgstr "Current Loan item(s)"
+
+msgid "Your Current Loan"
+msgstr "Your Current Loan"
+
+msgid "Return Date"
+msgstr "Return Date"
+
+msgid "item(s) loan history"
+msgstr "item(s) loan history"
+
+msgid "Your Loan History"
+msgstr "Your Loan History"
+
+msgid "Please supply valid username and password"
+msgstr "Please supply valid username and password"
+
+msgid "Captcha incorrect."
+msgstr "Captcha incorrect."
+
+msgid "Current email not found. Please try again."
+msgstr "Current email not found. Please try again."
+
+msgid "Error not available"
+msgstr "Error not available"
+
+msgid "Cannot send the email. Please try again."
+msgstr "Cannot send the email. Please try again."
+
+msgid "<strong>Congratulations! </strong>An instruction has been sent to your email. Please check your inbox."
+msgstr "<strong>Congratulations! </strong>An instruction has been sent to your email. Please check your inbox."
+
+msgid "Your browser does not support Javascript or Javascript is disabled. Application won't run without Javascript!"
+msgstr "Your browser does not support Javascript or Javascript is disabled. Application won't run without Javascript!"
+
+msgid "If you need help resetting your password, we can help by sending you a link to reset it."
+msgstr "If you need help resetting your password, we can help by sending you a link to reset it."
+
+msgid "Your email address"
+msgstr "Your email address"
+
+msgid "Reset my password"
+msgstr "Reset my password"
+
+msgid "Forgot My Password"
+msgstr "Forgot My Password"
+
+msgid "Access to file restricted. Member logged in but doesnt have privilege to download"
+msgstr "Access to file restricted. Member logged in but doesnt have privilege to download"
+
+msgid "Profile of our Librarian"
+msgstr "Profile of our Librarian"
+
+msgid "Position"
+msgstr "Position"
+
+msgid "Social"
+msgstr "Social"
+
+msgid "No librarian data yet"
+msgstr "No librarian data yet"
+
+msgid "Wrong Username or Password. ACCESS DENIED"
+msgstr "Wrong Username or Password. ACCESS DENIED"
+
+msgid "Invalid login form!"
+msgstr "Invalid login form!"
+
+msgid "Wrong Captcha Code entered, Please write the right code!"
+msgstr "Wrong Captcha Code entered, Please write the right code!"
+
+msgid "Current password can not be empty!"
+msgstr "Current password can not be empty!"
+
+msgid "Hi {username}, please update your password!"
+msgstr "Hi {username}, please update your password!"
+
+msgid "Current Password"
+msgstr "Current Password"
+
+msgid "Not valid token!"
+msgstr "Not valid token!"
+
+msgid "Go Home"
+msgstr "Go Home"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Remember me"
+msgstr "Remember me"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Forgot my password"
+msgstr "Forgot my password"
+
+msgid "Library Automation Login"
+msgstr "Library Automation Login"
+
+msgid "Welcome to Member's Area where you can view your current loan information and view your membership status."
+msgstr "Welcome to Member's Area where you can view your current loan information and view your membership status."
+
+msgid "Please fill your Username and Password to Login!"
+msgstr "Please fill your Username and Password to Login!"
+
+msgid "Login success for member %s from address %s"
+msgstr "Login success for member %s from address %s"
+
+msgid "Login FAILED for member %s from address %s"
+msgstr "Login FAILED for member %s from address %s"
+
+msgid "Login FAILED! Wrong Member ID or password!"
+msgstr "Login FAILED! Wrong Member ID or password!"
+
+msgid "Title has been added in the basket."
+msgstr "Title has been added in the basket."
+
+msgid "Data has been deleted"
+msgstr "Data has been deleted"
+
+msgid "Bookmarked"
+msgstr "북마크됨"
+
+msgid "Data failed saved"
+msgstr "Data failed saved"
+
+msgid "Please, login first!"
+msgstr "Please, login first!"
+
+msgid "Your Membership Already EXPIRED! Please extend your membership."
+msgstr "Your Membership Already EXPIRED! Please extend your membership."
+
+msgid "Membership currently in pending state, no loan transaction can be made yet."
+msgstr "Membership currently in pending state, no loan transaction can be made yet."
+
+msgid "Confirm Password"
+msgstr "Confirm Password"
+
+msgid "Change Password"
+msgstr "Change Password"
+
+msgid "item(s) currently on loan"
+msgstr "item(s) currently on loan"
+
+msgid "Download All Current Loan"
+msgstr "Download All Current Loan"
+
+msgid "Marked At"
+msgstr "Marked At"
+
+msgid "Action"
+msgstr "Action"
+
+msgid "title currently on list"
+msgstr "title currently on list"
+
+msgid "Click to view detail"
+msgstr "Click to view detail"
+
+msgid "OVERDUED"
+msgstr "OVERDUED"
+
+msgid "Download All Loan History"
+msgstr "Download All Loan History"
+
+msgid "Reserve title(s) on Basket"
+msgstr "Reserve title(s) on Basket"
+
+msgid "Clear Basket"
+msgstr "Clear Basket"
+
+msgid "Remove selected title(s) from Basket"
+msgstr "Remove selected title(s) from Basket"
+
+msgid "title(s) on basket"
+msgstr "title(s) on basket"
+
+msgid "%s already reseved"
+msgstr "%s already reseved"
+
+msgid "Item for %s is available for loan"
+msgstr "Item for %s is available for loan"
+
+msgid "%s reserved successfully"
+msgstr "%s reserved successfully"
+
+msgid "Reserve %s failed. "
+msgstr "Reserve %s failed. "
+
+msgid "No item available to be reserved for %s"
+msgstr "No item available to be reserved for %s"
+
+msgid "No Titles to reserve"
+msgstr "No Titles to reserve"
+
+msgid "Reservation not allowed"
+msgstr "Reservation not allowed"
+
+msgid "Reserve limit reached"
+msgstr "Reserve limit reached"
+
+msgid "Maximum reserve limit is %d collection"
+msgstr "Maximum reserve limit is %d collection"
+
+msgid "Your password have been changed successfully."
+msgstr "Your password have been changed successfully."
+
+msgid "Current password entered WRONG! Please insert the right password!"
+msgstr "Current password entered WRONG! Please insert the right password!"
+
+msgid "Password confirmation FAILED! Make sure to check undercase or uppercase letters!"
+msgstr "Password confirmation FAILED! Make sure to check undercase or uppercase letters!"
+
+msgid "Password update FAILED! ERROR ON DATABASE!"
+msgstr "Password update FAILED! ERROR ON DATABASE!"
+
+msgid "Reservation e-mail sent successfully!. please contact librarians for further info."
+msgstr "Reservation e-mail sent successfully!. please contact librarians for further info."
+
+msgid "Current Loan"
+msgstr "Current Loan"
+
+msgid "Title Bookmark"
+msgstr "Title Bookmark"
+
+msgid "Title Basket"
+msgstr "Title Basket"
+
+msgid "My Account"
+msgstr "My Account"
+
+msgid "My Current Loan"
+msgstr "My Current Loan"
+
+msgid "My Title Bookmark"
+msgstr "My Title Bookmark"
+
+msgid "My Title Basket"
+msgstr "My Title Basket"
+
+msgid "My Loan History"
+msgstr "My Loan History"
+
+msgid "Member Detail"
+msgstr "Member Detail"
+
+msgid "Please wait. your reservation is being sent"
+msgstr "Please wait. your reservation is being sent"
+
+msgid "Reservation request sent"
+msgstr "Reservation request sent"
+
+msgid "Reservation e-mail sent"
+msgstr "Reservation e-mail sent"
+
+msgid "Unexcpected error. Please tell it to the librarian"
+msgstr "Unexcpected error. Please tell it to the librarian"
+
+msgid "Library Member Login"
+msgstr "Library Member Login"
+
+msgid "Please insert your member ID and password given by library system administrator. If you are library's member and don't have a password yet, please contact library staff."
+msgstr "Please insert your member ID and password given by library system administrator. If you are library's member and don't have a password yet, please contact library staff."
+
+msgid "Failed to query user data from database with error: "
+msgstr "Failed to query user data from database with error: "
+
+msgid "Password has been updated successfully."
+msgstr "Password has been updated successfully."
+
+msgid "Salt key has been expired."
+msgstr "Salt key has been expired."
+
+msgid "Current email not found or salt key has been expired"
+msgstr "Current email not found or salt key has been expired"
+
+msgid "Create new password"
+msgstr "Create new password"
+
+msgid "Library News"
+msgstr "Library News"
+
+msgid "Sorry, we don't have any news for you yet."
+msgstr "Sorry, we don't have any news for you yet."
+
+msgid "Library Location"
+msgstr "Library Location"
+
+msgid "Link copied to clipboard"
+msgstr "Link copied to clipboard"
+
+msgid "Thank you for your comment."
+msgstr "Thank you for your comment."
+
+msgid "FAILED to store you comment. Please Contact System Administrator"
+msgstr "FAILED to store you comment. Please Contact System Administrator"
+
+msgid "Record Detail"
+msgstr "Record Detail"
+
+msgid "Back To Previous"
+msgstr "Back To Previous"
+
+msgid "Show detail in XML format"
+msgstr "Show detail in XML format"
+
+msgid "XML Detail"
+msgstr "XML Detail"
+
+msgid "Citation for: {title}"
+msgstr "{title} 인용"
+
+msgid "Cite this"
+msgstr "Cite this"
+
+msgid "Member ID can't be empty"
+msgstr "Member ID can't be empty"
+
+msgid ", thank you for inserting your data to our visitor log"
+msgstr ", thank you for inserting your data to our visitor log"
+
+msgid "Your membership already EXPIRED, please renew/extend your membership immediately"
+msgstr "Your membership already EXPIRED, please renew/extend your membership immediately"
+
+msgid "Welcome back"
+msgstr "Welcome back"
+
+msgid "Sorry, Please fill institution field if you are not library member"
+msgstr "Sorry, Please fill institution field if you are not library member"
+
+msgid "Error inserting counter data to database!"
+msgstr "Error inserting counter data to database!"
+
+msgid "Welcome to our library."
+msgstr "Welcome to our library."
+
+msgid "Please fill your member ID or name."
+msgstr "회원 ID 또는 이름을 입력하세요."
+
+msgid "Error while inserting counter data to database."
+msgstr "Error while inserting counter data to database."
+
+msgid "Visitor Counter"
+msgstr "Visitor Counter"
+
+msgid "Please login to see this attachment"
+msgstr "Please login to see this attachment"
+
+msgid "You have no authorization to download this file."
+msgstr "You have no authorization to download this file."
+
+msgid "Currently On Loan (Due on "
+msgstr "Currently On Loan (Due on "
+
+msgid "Available but not for loan"
+msgstr "Available but not for loan"
+
+msgid "Location name is not set"
+msgstr "Location name is not set"
+
+msgid "Arabic"
+msgstr "Arabic"
+
+msgid "Bengali"
+msgstr "Bengali"
+
+msgid "Brazilian Portuguese"
+msgstr "Brazilian Portuguese"
+
+msgid "English"
+msgstr "English"
+
+msgid "Espanol"
+msgstr "Espanol"
+
+msgid "German"
+msgstr "German"
+
+msgid "Indonesian"
+msgstr "Indonesian"
+
+msgid "Japanese"
+msgstr "Japanese"
+
+msgid "Malay"
+msgstr "Malay"
+
+msgid "Persian"
+msgstr "Persian"
+
+msgid "Russian"
+msgstr "Russian"
+
+msgid "Thai"
+msgstr "Thai"
+
+msgid "Turkish"
+msgstr "Turkish"
+
+msgid "Urdu"
+msgstr "Urdu"
+
+msgid "System"
+msgstr "시스템"
+
+msgid "Reporting"
+msgstr "보고"
+
+msgid "Select All"
+msgstr "전체 선택"
+
+msgid "Unselect All"
+msgstr "전체 해제"
+
+msgid "Select Invert"
+msgstr "반전 선택"
+
+msgid "Home"
+msgstr "홈"
+
+msgid "View OPAC in New Window"
+msgstr "View OPAC in New Window"
+
+msgid "Warning"
+msgstr "Warning"
+
+msgid "You don't have access to interact with this module. Call system administrator to give you right to access it."
+msgstr "You don't have access to interact with this module. Call system administrator to give you right to access it."
+
+msgid "%s insert bibliographic data from Inlislite MARC-XML service (server: %s) with title (%s) and biblio_id (%s)"
+msgstr "%s insert bibliographic data from Inlislite MARC-XML service (server: %s) with title (%s) and biblio_id (%s)"
+
+msgid "Search/Retrieve from Inlislite via MARC-XML"
+msgstr "Search/Retrieve from Inlislite via MARC-XML"
+
+msgid "Inlislite Server"
+msgstr "Inlislite Server"
+
+msgid "Have found <strong>%s</strong> records from searched keywords <strong>%s</strong> from <i>%s</i>"
+msgstr "Have found <strong>%s</strong> records from searched keywords <strong>%s</strong> from <i>%s</i>"
+
+msgid "Labels & Barcode Printing"
+msgstr "Labels & Barcode Printing"
+
+msgid "No data found with item code {itemcode}."
+msgstr "No data found with item code {itemcode}."
+
+msgid "Read Counter"
+msgstr "Read Counter"
+
+msgid "Enter item code / barcode value into input form below!"
+msgstr "Enter item code / barcode value into input form below!"
+
+msgid "Barcode"
+msgstr "Barcode"
+
+msgid "Read Counter Report"
+msgstr "Read Counter Report"
+
+msgid "Read Start"
+msgstr "Read Start"
+
+msgid "Read Until"
+msgstr "Read Until"
+
+msgid "DELETE"
+msgstr "DELETE"
+
+msgid "EDIT"
+msgstr "EDIT"
+
+msgid "Are You Sure Want to DELETE Selected Data?"
+msgstr "Are You Sure Want to DELETE Selected Data?"
+
+msgid "ascendingly"
+msgstr "ascendingly"
+
+msgid "descendingly"
+msgstr "descendingly"
+
+msgid "Order list by"
+msgstr "Order list by"
+
+msgid "Enlarge Debug Box"
+msgstr "Enlarge Debug Box"
+
+msgid "Delete Record"
+msgstr "Delete Record"
+
+msgid "Are you sure to delete {recordTitle}?"
+msgstr "Are you sure to delete {recordTitle}?"
+
+msgid "First Page"
+msgstr "First Page"
+
+msgid "Previous"
+msgstr "Previous"
+
+msgid "Next"
+msgstr "Next"
+
+msgid "Last Page"
+msgstr "Last Page"
+
+msgid "No Data"
+msgstr "데이터 없음"
+
+msgid "Personal Name"
+msgstr "Personal Name"
+
+msgid "Organizational Body"
+msgstr "Organizational Body"
+
+msgid "Conference"
+msgstr "Conference"
+
+msgid "Topic"
+msgstr "Topic"
+
+msgid "Geographic"
+msgstr "Geographic"
+
+msgid "Temporal"
+msgstr "Temporal"
+
+msgid "Genre"
+msgstr "Genre"
+
+msgid "Occupation"
+msgstr "Occupation"
+
+msgid "Primary Author"
+msgstr "Primary Author"
+
+msgid "Additional Author"
+msgstr "Additional Author"
+
+msgid "Editor"
+msgstr "Editor"
+
+msgid "Translator"
+msgstr "Translator"
+
+msgid "Director"
+msgstr "Director"
+
+msgid "Producer"
+msgstr "Producer"
+
+msgid "Composer"
+msgstr "Composer"
+
+msgid "Illustrator"
+msgstr "Illustrator"
+
+msgid "Creator"
+msgstr "Creator"
+
+msgid "Contributor"
+msgstr "Contributor"
+
+msgid "Senior Librarian"
+msgstr "Senior Librarian"
+
+msgid "Library Staff"
+msgstr "Library Staff"
+
+msgid "View record detail description for this title"
+msgstr "이 자료의 상세 정보 보기"
+
+msgid "View record detail description in XML Format"
+msgstr "View record detail description in XML Format"
+
+msgid "Cite"
+msgstr "인용"
+
+msgid "none copy available"
+msgstr "none copy available"
+
+msgid "{numberAvailable} copies available for loan"
+msgstr "{numberAvailable} copies available for loan"
+
+msgid "mark this"
+msgstr "mark this"
+
+msgid "Share to"
+msgstr "Share to"
+
+msgid "Share this title to Facebook"
+msgstr "Share this title to Facebook"
+
+msgid "Share this title to Twitter"
+msgstr "Share this title to Twitter"
+
+msgid "Share this title to Google Plus"
+msgstr "Share this title to Google Plus"
+
+msgid "Share this title to Digg It"
+msgstr "Share this title to Digg It"
+
+msgid "Share this title to Reddit"
+msgstr "Share this title to Reddit"
+
+msgid "Share this title to LinkedIn"
+msgstr "Share this title to LinkedIn"
+
+msgid "Share this title to StumbleUpon"
+msgstr "Share this title to StumbleUpon"
+
+msgid "APA Style"
+msgstr "APA 스타일"
+
+msgid "Chicago Style"
+msgstr "시카고 스타일"
+
+msgid "MLA Style"
+msgstr "MLA 스타일"
+
+msgid "Turabian Style"
+msgstr "튜라비안 스타일"
+
+msgid "Description Not Available"
+msgstr "설명 없음"
+
+msgid "No copy data"
+msgstr "소장 정보 없음"
+
+msgid "Detail Information"
+msgstr "상세 정보"
+
+msgid "Other version/related"
+msgstr "관련 자료"
+
+msgid "No other version available"
+msgstr "다른 버전 없음"
+
+msgid "Comments"
+msgstr "댓글"
+
+msgid "Collections"
+msgstr "Collections"
+
+msgid "Member Area"
+msgstr "회원 공간"
+
+msgid "No Result"
+msgstr "결과 없음"
+
+msgid "Please try again"
+msgstr "다시 시도하세요"
+
+msgid "Search Result"
+msgstr "Search Result"
+
+msgid "Information"
+msgstr "정보"
+
+msgid "Search Cluster"
+msgstr "Search Cluster"
+
+msgid "Generating search cluster..."
+msgstr "Generating search cluster..."
+
+msgid "SEARCH"
+msgstr "SEARCH"
+
+msgid "start it by typing one or more keywords for title, author or subject"
+msgstr "제목, 저자 또는 주제어를 입력하세요"
+
+msgid "use logical search \\\"title=library AND author=robert\\\""
+msgstr "use logical search \\\"title=library AND author=robert\\\""
+
+msgid "just click on the Search button to see all collections"
+msgstr "just click on the Search button to see all collections"
+
+msgid "Back To Home"
+msgstr "Back To Home"
+
+msgid "Read More"
+msgstr "더 보기"
+
+msgid "Library Information"
+msgstr "도서관 정보"
+
+msgid "Help on Search"
+msgstr "Help on Search"
+
+msgid "Librarian LOGIN"
+msgstr "Librarian LOGIN"
+
+msgid "About SLiMS"
+msgstr "About SLiMS"
+
+msgid "Select Language"
+msgstr "언어 선택"
+
+msgid "Please insert your library member ID otherwise your full name instead"
+msgstr "Please insert your library member ID otherwise your full name instead"
+
+msgid "Member ID / Visitor Name"
+msgstr "Member ID / Visitor Name"
+
+msgid "Other Information"
+msgstr "기타 정보"
+
+msgid "Advanced Search"
+msgstr "고급 검색"
+
+msgid "Items is not available"
+msgstr "Items is not available"
+
+msgid "Add to basket"
+msgstr "바구니에 추가"
+
+msgid "MARC Download"
+msgstr "MARC 다운로드"
+
+msgid "Item Not Available"
+msgstr "Item Not Available"
+
+msgid "Bookmark"
+msgstr "북마크"
+
+msgid "Share"
+msgstr "공유"
+
+msgid "You must be logged in to post a comment"
+msgstr "댓글을 작성하려면 로그인하세요"
+
+msgid "Select the topic you are interested in"
+msgstr "관심 주제를 선택하세요"
+
+msgid "Literature"
+msgstr "문학"
+
+msgid "Social Sciences"
+msgstr "사회 과학"
+
+msgid "Applied Sciences"
+msgstr "응용 과학"
+
+msgid "Art & Recreation"
+msgstr "예술 & 레크리에이션"
+
+msgid "see more.."
+msgstr "see more.."
+
+msgid "Popular among our collections"
+msgstr "Popular among our collections"
+
+msgid "Our library's line of collection that have been favoured by our users were shown here. Look for them. Borrow them. Hope you also like them"
+msgstr "Our library's line of collection that have been favoured by our users were shown here. Look for them. Borrow them. Hope you also like them"
+
+msgid "New collections + updated"
+msgstr "New collections + updated"
+
+msgid "These are new collections list. Hope you like them. Maybe not all of them are new. But in term of time, we make sure that these are fresh from our processing oven"
+msgstr "These are new collections list. Hope you like them. Maybe not all of them are new. But in term of time, we make sure that these are fresh from our processing oven"
+
+msgid "Top reader of the year"
+msgstr "Top reader of the year"
+
+msgid "Our best users, readers, so far. Continue to read if you want your name being mentioned here"
+msgstr "Our best users, readers, so far. Continue to read if you want your name being mentioned here"
+
+msgid "Enter title"
+msgstr "제목 입력"
+
+msgid "Enter author(s) name"
+msgstr "저자명 입력"
+
+msgid "Enter subject"
+msgstr "주제어 입력"
+
+msgid "Enter ISBN/ISSN"
+msgstr "ISBN/ISSN 입력"
+
+msgid "Publish Year"
+msgstr "출판 연도"
+
+msgid "Enter publish year"
+msgstr "출판 연도 입력"
+
+msgid "Find Collection"
+msgstr "자료 찾기"
+
+msgid "Where do you want to share?"
+msgstr "어디에 공유하시겠습니까?"
+
+msgid "Computer Science, Information & General Works"
+msgstr "컴퓨터 과학, 정보 & 총류"
+
+msgid "Philosophy & Psychology"
+msgstr "철학 & 심리학"
+
+msgid "Religion"
+msgstr "종교"
+
+msgid "Pure Science"
+msgstr "순수 과학"
+
+msgid "History & Geography"
+msgstr "역사 & 지리"
+
+msgid "News"
+msgstr "뉴스"
+
+msgid "Profile"
+msgstr "프로필"
+
+msgid "Filter by"
+msgstr "필터"
+
+msgid "Enter keyword to search collection..."
+msgstr "검색어를 입력하세요..."
+
+msgid "Search by :"
+msgstr "검색 기준:"
+
+msgid "OR TRY"
+msgstr "또는 시도"
+
+msgid "Last search:"
+msgstr "최근 검색:"
+
+msgid "Services"
+msgstr "서비스"
+
+msgid "About Us"
+msgstr "소개"
+
+msgid "Enter keywords"
+msgstr "키워드 입력"
+
+msgid "Keep SLiMS Alive"
+msgstr "SLiMS 지원하기"
+
+msgid "Want to Contribute?"
+msgstr "기여하고 싶으신가요?"
+
+msgid "Powered by "
+msgstr "제공: "
+
+msgid "Chat"
+msgstr "채팅"
+
+msgid "Enable this theme for mobile?"
+msgstr "모바일에서 이 테마 사용?"
+
+msgid "Yes, please!"
+msgstr "네, 원합니다!"
+
+msgid "No, I want use lighweight theme"
+msgstr "아니요, 가벼운 테마 사용"
+
+msgid "Library Sub Name"
+msgstr "도서관 부명칭"
+
+msgid "Disable Slide"
+msgstr "Disable Slide"
+
+msgid "Slide Transition"
+msgstr "Slide Transition"
+
+msgid "Fade"
+msgstr "Fade"
+
+msgid "Slide Left"
+msgstr "Slide Left"
+
+msgid "Slide Right"
+msgstr "Slide Right"
+
+msgid "Slide Up"
+msgstr "Slide Up"
+
+msgid "Slide Down"
+msgstr "Slide Down"
+
+msgid "Zoom In"
+msgstr "확대"
+
+msgid "Burn"
+msgstr "굽기"
+
+msgid "Flash"
+msgstr "Flash"
+
+msgid "Slide Animation"
+msgstr "Slide Animation"
+
+msgid "Delay"
+msgstr "Delay"
+
+msgid "Popular Collection"
+msgstr "인기 컬렉션"
+
+msgid "Popular Items"
+msgstr "인기 자료"
+
+msgid "New Collection"
+msgstr "새 컬렉션"
+
+msgid "New Items"
+msgstr "새 자료"
+
+msgid "Top Reader"
+msgstr "최다 독자"
+
+msgid "Suggestion"
+msgstr "제안"
+
+msgid "Map"
+msgstr "지도"
+
+msgid "Map URL"
+msgstr "Map URL"
+
+msgid "Map Description"
+msgstr "Map Description"
+
+msgid "Facebook URL"
+msgstr "페이스북 URL"
+
+msgid "Twitter URL"
+msgstr "트위터 URL"
+
+msgid "Youtube URL"
+msgstr "유튜브 URL"
+
+msgid "Instagram URL"
+msgstr "Instagram URL"
+
+msgid "Footer About Us"
+msgstr "소개"
+
+msgid "Visitor log voice"
+msgstr "방문자 로그"
+
+msgid "Welcome to "
+msgstr "환영합니다: "
+
+msgid "Enter your member ID"
+msgstr "회원 ID 입력"
+
+msgid "Enter your institution"
+msgstr "기관명 입력"
+
+msgid "Enough fill your member ID if you are member of "
+msgstr "회원이시면 회원 ID를 입력하세요: "
+
+msgid "Check In"
+msgstr "체크인"
+
+msgid "Put some keyword(s)..."
+msgstr "Put some keyword(s)..."
+
+
+msgid "Browse by Topic"
+msgstr "주제별 탐색"
+
+msgid "Collection Detail"
+msgstr "자료 상세"
+
+msgid "General Works"
+msgstr "총류"
+
+msgid "Latest Collections"
+msgstr "최신 컬렉션"
+
+msgid "Mathematics"
+msgstr "수학"
+
+msgid "Most read by our members"
+msgstr "회원들이 많이 읽은 자료"
+
+msgid "Newly added to our library"
+msgstr "새로 추가된 자료"
+
+msgid "Our Librarians"
+msgstr "사서 소개"
+
+msgid "Our most active readers this year"
+msgstr "올해 가장 활발한 독자"
+
+msgid "Popular Collections"
+msgstr "인기 컬렉션"
+
+msgid "See All"
+msgstr "전체 보기"
+
+msgid "Sort by"
+msgstr "정렬"
+
+msgid "Top Reader of the Year"
+msgstr "올해의 최다 독자"

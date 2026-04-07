@@ -1,0 +1,1 @@
+<?php define("INDEX_AUTH", 1); $_GET["mod"]="bibliography"; $_REQUEST["action"]="fetch_title"; $_POST["title"]="testing"; $_POST["biblio_id"]="1"; require "sysconfig.inc.php"; require "plugins/cover_manager/index.php"; ?>
