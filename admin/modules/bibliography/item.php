@@ -513,7 +513,7 @@ if (isset($_POST['detail']) OR (isset($_GET['action']) AND $_GET['action'] == 'd
     $datagrid->chbox_form_URL = $_SERVER['PHP_SELF'];
     
     // Hide Technical Columns (ItemID: 0, AuthorPlaceholder/Real: 3, BiblioID: 9)
-    $datagrid->invisible_fields = array(0, 3, 9);
+    $datagrid->invisible_fields = array(0, 3, 8);
 
     // put the result into variables
     $datagrid_result = $datagrid->createDataGrid($dbs, $table_spec, 20, ($can_read AND $can_write));
