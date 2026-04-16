@@ -313,6 +313,27 @@ $('.subMenuItem').click(function(){
     let new_pathname  = '<?php echo AWB?>help.php?url='+path_array[path_array.length-2]+'/'+clean_path[0]+'.md';
     $('.s-help').attr('href', new_pathname);
   });
+
+// ── Sidebar Accordion ─────────────────────────────────────
+$(document).off('click.smAcc').on('click.smAcc', '#sidepan .subMenuHeader', function () {
+  var $header  = $(this);
+  var targetId = $header.data('target');
+  var $body    = $('#' + targetId);
+
+  if (!$body.length) return;
+
+  var isOpen = !$body.hasClass('smAcc-collapsed');
+  if (isOpen) {
+    $body.addClass('smAcc-collapsed');
+    $header.removeClass('smAcc-open');
+    $header.find('.smAcc-arrow').html('&#9654;');
+  } else {
+    $body.removeClass('smAcc-collapsed');
+    $header.addClass('smAcc-open');
+    $header.find('.smAcc-arrow').html('&#9660;');
+  }
+});
+// ── /Sidebar Accordion ───────────────────────────────────
 </script>
 <?php include "chat.php" ?>
 </body>

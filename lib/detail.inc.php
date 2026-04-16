@@ -254,6 +254,8 @@ HTML;
             list($avail_class, $avail_status) = ['item-onloan', __('Currently On Loan (Due on ').date($sysconf['date_format'], strtotime($loan_stat_d[0])).')'];
         } else if ($copy_d['no_loan']) {
             list($avail_class, $avail_status) = ['item-notforloan', __('Available but not for loan').' - '.$copy_d['item_status_name']];
+        } else if (($copy_d['condition'] ?? '') == 'rusak_berat') {
+            list($avail_class, $avail_status) = ['item-damaged', __('Tidak tersedia (Rusak Berat)')];
         } else {
             $this->total_item_available++;
             list($avail_class, $avail_status) = ['item-available', __('Available').(trim($copy_d['item_status_name']??'')?' - '.$copy_d['item_status_name']:'')];

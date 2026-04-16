@@ -69,6 +69,14 @@ if (isset($_GET['inPopUp'])) {
 }
 
 /* RECORD OPERATION */
+if (!function_exists('showTitleAuthors')) {
+    function showTitleAuthors($obj_db, $array_data)
+    {
+        $idx = 2; // Title at 2, Author at 3
+        return '<div style="float: left;"><span class="title">'.$array_data[$idx].'</span><div class="authors">'.($array_data[$idx+1] ?? '').'</div></div>';
+    }
+}
+
 if (isset($_POST['saveData']) AND $can_read AND $can_write) {
     $itemCode = $dbs->escape_string(trim(strip_tags($_POST['itemCode'])));
     if (empty($itemCode)) {
@@ -106,6 +114,7 @@ if (isset($_POST['saveData']) AND $can_read AND $can_write) {
         $data['price_currency'] = trim($dbs->escape_string(strip_tags($_POST['priceCurrency'])));
         if (!$data['price_currency']) { $data['price_currency'] = 'literal{NULL}'; }
         $data['price'] = preg_replace('@[.,\-a-z ]@i', '', strip_tags($_POST['price']));
+        $data['condition'] = trim($dbs->escape_string($_POST['itemCondition']));
         $data['input_date'] = date('Y-m-d H:i:s');
         $data['last_update'] = date('Y-m-d H:i:s');
         $data['uid'] = $_SESSION['uid'];
@@ -350,6 +359,12 @@ if (isset($_POST['detail']) OR (isset($_GET['action']) AND $_GET['action'] == 'd
             $item_status_options[] = array($item_status_d[0], $item_status_d[1]);
         }
     $form->addSelectList('itemStatusID', __('Item Status'), $item_status_options, $rec_d['item_status_id']??'','style="width:40%" class="form-control"');
+    // item condition
+    $item_condition_options = array();
+    $item_condition_options[] = array('baik', __('Baik'));
+    $item_condition_options[] = array('rusak_ringan', __('Rusak Ringan'));
+    $item_condition_options[] = array('rusak_berat', __('Rusak Berat'));
+    $form->addSelectList('itemCondition', __('Kondisi Buku'), $item_condition_options, $rec_d['condition']??'baik','style="width:40%" class="form-control"');
     // order number
     $form->addTextField('text', 'orderNo', __('Order Number'), $rec_d['order_no']??'', 'style="width: 40%;" class="form-control"');
     // order date
@@ -428,36 +443,22 @@ if (isset($_POST['detail']) OR (isset($_GET['action']) AND $_GET['action'] == 'd
 
         // create datagrid
         $datagrid = new simbio_datagrid();
-        if ($can_write) {
-            $datagrid->setSQLColumn('item.item_id',
-                'item.item_code AS \''.__('Item Code').'\'',
-                'item.biblio_id AS \''.__('Title').'\'',
-                'ct.coll_type_name AS \''.__('Collection Type').'\'',
-                'loc.location_name AS \''.__('Location').'\'',
-                'biblio.classification AS \''.__('Classification').'\'',
-                'item.last_update AS \''.__('Last Updated').'\'');
-            $datagrid->modifyColumnContent(2, 'callback{showTitleAuthors}');
-            $title_field_idx = 2;
-        } else {
-            $datagrid->setSQLColumn('item.item_code AS \''.__('Item Code').'\'',
-                'item.biblio_id AS \''.__('Title').'\'',
-                'ct.coll_type_name AS \''.__('Collection Type').'\'',
-                'loc.location_name AS \''.__('Location').'\'',
-                'biblio.classification AS \''.__('Classification').'\'',
-                'item.last_update AS \''.__('Last Updated').'\'');
-            $datagrid->modifyColumnContent(1, 'callback{showTitleAuthors}');
-        }
+        $cols = array('item.item_id',
+            'item.item_code AS \''.__('Item Code').'\'',
+            'item.biblio_id AS \''.__('Title').'\'',
+            '\'\' AS \''.__('Author').'\'',
+            'ct.coll_type_name AS \''.__('Collection Type').'\'',
+            'loc.location_name AS \''.__('Location').'\'',
+            'item.call_number AS \''.__('Call Number').'\'',
+            'COALESCE(item.item_status_id, \'0\') AS \''.__('Status').'\'',
+            'item.last_update AS \''.__('Last Updated').'\'',
+            'item.biblio_id');
+        $datagrid->setSQLColumn(...$cols);
+        $datagrid->modifyColumnContent(2, 'callback{showTitleAuthors}');
+        $datagrid->modifyColumnContent(7, 'callback{showInlineItemStatus7}');
         $datagrid->setSQLorder('item.last_update DESC');
     } else {
         require LIB.'biblio_list_index.inc.php';
-
-        // callback function to show title and authors in datagrid
-        function showTitleAuthors($obj_db, $array_data)
-        {
-            global $title_field_idx;
-            $_output = '<div style="float: left;"><span class="title">'.$array_data[$title_field_idx].'</span><div class="authors">'.$array_data[$title_field_idx+1].'</div></div>';
-            return $_output;
-        }
 
         /* ITEM LIST */
         // table spec
@@ -468,32 +469,19 @@ if (isset($_POST['detail']) OR (isset($_GET['action']) AND $_GET['action'] == 'd
 
         // create datagrid
         $datagrid = new simbio_datagrid();
-        if ($can_write) {
-            $datagrid->setSQLColumn('item.item_id',
-                'item.item_code AS \''.__('Item Code').'\'',
-                'index.title AS \''.__('Title').'\'',
-                'index.author AS \''.__('Author').'\'',
-                'ct.coll_type_name AS \''.__('Collection Type').'\'',
-                'loc.location_name AS \''.__('Location').'\'',
-                #'index.classification AS \''.__('Classification').'\'',
-                'item.call_number AS \''.__('Call Number').'\'',
-                'item.last_update AS \''.__('Last Updated').'\'');
-            $datagrid->invisible_fields = array(2);
-            $title_field_idx = 2;
-            $datagrid->modifyColumnContent(2, 'callback{showTitleAuthors}');
-        } else {
-            $datagrid->setSQLColumn('item.item_code AS \''.__('Item Code').'\'',
-                'index.title AS \''.__('Title').'\'',
-                'index.author AS \''.__('Author').'\'',
-                'ct.coll_type_name AS \''.__('Collection Type').'\'',
-                'loc.location_name AS \''.__('Location').'\'',
-                #'index.classification AS \''.__('Classification').'\'',
-                'item.call_number AS \''.__('Call Number').'\'',
-                'item.last_update AS \''.__('Last Updated').'\'');
-            $datagrid->invisible_fields = array(2);
-            $title_field_idx = 1;
-            $datagrid->modifyColumnContent(1, 'callback{showTitleAuthors}');
-        }
+        $cols = array('item.item_id',
+            'item.item_code AS \''.__('Item Code').'\'',
+            'index.title AS \''.__('Title').'\'',
+            'index.author AS \''.__('Author').'\'',
+            'ct.coll_type_name AS \''.__('Collection Type').'\'',
+            'loc.location_name AS \''.__('Location').'\'',
+            'item.call_number AS \''.__('Call Number').'\'',
+            'COALESCE(item.item_status_id, \'0\') AS \''.__('Status').'\'',
+            'item.last_update AS \''.__('Last Updated').'\'',
+            'item.biblio_id');
+        $datagrid->setSQLColumn(...$cols);
+        $datagrid->modifyColumnContent(2, 'callback{showTitleAuthors}');
+        $datagrid->modifyColumnContent(7, 'callback{showInlineItemStatus7}');
         $datagrid->setSQLorder('item.last_update DESC');
     }
 
@@ -523,6 +511,9 @@ if (isset($_POST['detail']) OR (isset($_GET['action']) AND $_GET['action'] == 'd
     $datagrid->table_header_attr = 'class="dataListHeader" style="font-weight: bold;"';
     // set delete proccess URL
     $datagrid->chbox_form_URL = $_SERVER['PHP_SELF'];
+    
+    // Hide Technical Columns (ItemID: 0, AuthorPlaceholder/Real: 3, BiblioID: 9)
+    $datagrid->invisible_fields = array(0, 3, 9);
 
     // put the result into variables
     $datagrid_result = $datagrid->createDataGrid($dbs, $table_spec, 20, ($can_read AND $can_write));

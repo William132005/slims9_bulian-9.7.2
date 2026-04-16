@@ -133,21 +133,55 @@ class module extends simbio
     {
         global $dbs;
         $_submenu = '';
-        $_submenu_current = 'curModuleLink';
         $i = 0;
         $menus = $this->getSubMenuItems($str_module);
-        // iterate menu array
-        foreach ($menus as $header => $menu) {
-            $_submenu .= '<div class="subMenuHeader subMenuHeader-' . $header . '">' . strtoupper($header) . '</div>';
 
-            foreach ($menu as $item) {
+        // Detect active group by current URL
+        $current_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http')
+            . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+        $active_header = null;
+        foreach ($menus as $header => $items) {
+            foreach ($items as $item) {
                 if (!$item) continue;
-                if ($i > 0) $_submenu_current = '';
-                $_submenu .= '<a class="subMenuItem ' . $_submenu_current . '" '
+                if (!empty($item[1]) && strpos($current_url, $item[1]) !== false) {
+                    $active_header = $header;
+                    break 2;
+                }
+            }
+        }
+        // Default: first group open if no match
+        if ($active_header === null && !empty($menus)) {
+            $active_header = array_keys($menus)[0];
+        }
+
+        $gi = 0;
+        foreach ($menus as $header => $items) {
+            $group_id  = 'smg-' . preg_replace('/[^a-z0-9]/', '', strtolower($header)) . '-' . $gi;
+            $is_open   = ($header === $active_header);
+            $arrow     = $is_open ? '&#9660;' : '&#9654;';
+
+            $_submenu .= '<div class="subMenuHeader subMenuHeader-' . $header
+                . ($is_open ? ' smAcc-open' : '')
+                . '" data-target="' . $group_id . '" role="button">'
+                . '<span class="smAcc-label">' . strtoupper($header) . '</span>'
+                . '<span class="smAcc-arrow">' . $arrow . '</span>'
+                . '</div>';
+
+            $_submenu .= '<div id="' . $group_id . '" class="smAcc-body' . ($is_open ? '' : ' smAcc-collapsed') . '">';
+
+            foreach ($items as $item) {
+                if (!$item) continue;
+                $cur_class = ($i === 0 && !$is_open ? '' : ($i === 0 ? ' curModuleLink' : ''));
+                $_submenu .= '<a class="subMenuItem' . $cur_class . '" '
                     . ' href="' . $item[1] . '"'
-                    . ' title="' . (isset($item[2]) ? $item[2] : $item[0]) . '" href="#"><span>' . $item[0] . '</span></a>';
+                    . ' title="' . (isset($item[2]) ? $item[2] : $item[0]) . '">'
+                    . '<span>' . $item[0] . '</span>'
+                    . '</a>';
                 $i++;
             }
+
+            $_submenu .= '</div>';
+            $gi++;
         }
         $_submenu .= '&nbsp;';
         return $_submenu;

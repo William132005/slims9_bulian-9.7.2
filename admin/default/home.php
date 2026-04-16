@@ -71,6 +71,12 @@ if (basename($_SERVER['PHP_SELF']) == basename(__FILE__)) {
             $warnings[] = str_replace('{num_overdue}', $num_overdue, __('There are currently <strong>{num_overdue}</strong> library members having overdue. Please check at <b>Circulation</b> module at <b>Overdues</b> section for more detail')); //mfc
             $overdue_q->free_result();
         }
+        // check for unbilled late returns
+        $unbilled_q = $dbs->query('SELECT COUNT(loan_id) FROM loan WHERE is_return=0 AND is_billed=0 AND TO_DAYS(due_date) < TO_DAYS(\'' . date('Y-m-d') . '\') GROUP BY member_id');
+        $num_unbilled = $unbilled_q->num_rows;
+        if ($num_unbilled > 0) {
+            $warnings[] = str_replace('{num}', $num_unbilled, __('Terdapat <strong>{num}</strong> anggota yang belum mengembalikan buku dan belum ditagih Semester ini.'));
+        }
         // check if images dir is writable or not
         if (!is_writable(IMGBS) OR !is_writable(IMGBS . 'barcodes') OR !is_writable(IMGBS . 'persons') OR !is_writable(IMGBS . 'docs')) {
             $warnings[] = __('<strong>Images</strong> directory and directories under it is not writable. Make sure it is writable by changing its permission or you won\'t be able to upload any images and create barcodes');
@@ -83,15 +89,10 @@ if (basename($_SERVER['PHP_SELF']) == basename(__FILE__)) {
         if (!is_writable(UPLOAD)) {
             $warnings[] = __('<strong>File upload</strong> directory is not writable. Make sure it is writable (and all directories under it) by changing its permission or you won\'t be able to upload any file, create report files and create database backups.');
         }
-        // check mysqldump
-        //if (!file_exists($sysconf['mysqldump'])) {
-        //    $warnings[] = __('The PATH for <strong>mysqldump</strong> program is not right! Please check configuration file or you won\'t be able to do any database backups.');
-        //}
         // check installer directory
         if (is_dir('../install/')) {
             $warnings[] = __('Installer folder is still exist inside your server. Please remove it or rename to another name for security reason.');
         }
-
 
         // check need to be repaired mysql database
         $query_of_tables = $dbs->query('SHOW TABLES');
@@ -138,26 +139,6 @@ if (basename($_SERVER['PHP_SELF']) == basename(__FILE__)) {
             }
         }
 
-        /*if (utility::havePrivilege('system', 'r') && utility::havePrivilege('system', 'w'))
-        {
-            // info
-            $backupConfigStatus = config('database_backup.reminder') || config('database_backup.auto');
-            $backupIsNoAuto = config('database_backup.reminder') && !config('database_backup.auto');
-            $alreadyBackup = DB::hasBackup(by: DB::BACKUP_BASED_ON_DAY);
-
-
-            if ($alreadyBackup === false && $backupConfigStatus) 
-                $_SESSION['token'] = utility::createRandomString(32);
-            
-            if ($alreadyBackup === false && $is_repaired === false && $backupIsNoAuto === true) {
-                echo '<div class="alert alert-info border-0 mt-3">';
-                echo '<span>' . __('It looks like today you haven\'t backup your database.') . 
-                '.&nbsp;&nbsp;<a href="'.MWB.'system/backup_proc.php" id="backupproc" class="notAJAX btn btn-primary">' . __('Backup Now') . '</a>' .
-                '</span>';
-                echo '</div>';
-            }
-        }*/
-
         // if there any warnings
         if ($warnings) {
             echo '<div class="alert alert-warning border-0 mt-3">';
@@ -177,8 +158,70 @@ if (basename($_SERVER['PHP_SELF']) == basename(__FILE__)) {
                 unset($content_data);
             }
         } else {
-        $start_date = date('Y-m-d');
+            $today = date('Y-m-d');
+
+            // =============================================
+            // QUERY: Statistik Harian
+            // =============================================
+            $q_loan_today = $dbs->query("SELECT COUNT(loan_id) as total FROM loan WHERE DATE(loan_date) = '$today' AND is_lent = 1");
+            $loan_today = ($r = $q_loan_today->fetch_assoc()) ? (int)$r['total'] : 0;
+
+            $q_return_today = $dbs->query("SELECT COUNT(loan_id) as total FROM loan WHERE DATE(return_date) = '$today' AND is_return = 1");
+            $return_today = ($r = $q_return_today->fetch_assoc()) ? (int)$r['total'] : 0;
+
+            // =============================================
+            // QUERY: Daftar Pinjam Hari Ini
+            // =============================================
+            $q_loan_list = $dbs->query("
+                SELECT
+                    m.member_name,
+                    b.title,
+                    l.due_date,
+                    l.item_code
+                FROM loan l
+                LEFT JOIN member m ON l.member_id = m.member_id
+                LEFT JOIN item i ON l.item_code = i.item_code
+                LEFT JOIN biblio b ON i.biblio_id = b.biblio_id
+                WHERE DATE(l.loan_date) = '$today' AND l.is_lent = 1
+                ORDER BY l.loan_date DESC
+                LIMIT 10
+            ");
+
+            // =============================================
+            // QUERY: Daftar Kembali Hari Ini
+            // =============================================
+            $q_return_list = $dbs->query("
+                SELECT
+                    m.member_name,
+                    b.title,
+                    l.return_date,
+                    l.item_code
+                FROM loan l
+                LEFT JOIN member m ON l.member_id = m.member_id
+                LEFT JOIN item i ON l.item_code = i.item_code
+                LEFT JOIN biblio b ON i.biblio_id = b.biblio_id
+                WHERE DATE(l.return_date) = '$today' AND l.is_return = 1
+                ORDER BY l.return_date DESC
+                LIMIT 10
+            ");
+
+            // =============================================
+            // QUERY: Anggota Aktif Hari Ini (yang pinjam atau kembali)
+            // =============================================
+            $q_active_members = $dbs->query("
+                SELECT DISTINCT
+                    m.member_name,
+                    m.member_id
+                FROM loan l
+                LEFT JOIN member m ON l.member_id = m.member_id
+                WHERE DATE(l.loan_date) = '$today' OR DATE(l.return_date) = '$today'
+                LIMIT 8
+            ");
         ?>
+
+        <!-- =====================================================
+             4 WIDGET ATAS (koleksi, item, dipinjam, tersedia)
+        ===================================================== -->
         <div class="row">
             <div class="col-xs-6 col-md-3 col-lg-3">
                 <div class="card border-0">
@@ -218,255 +261,318 @@ if (basename($_SERVER['PHP_SELF']) == basename(__FILE__)) {
             </div>
         </div>
 
+        <!-- =====================================================
+             STATISTIK HARIAN — 2 card: Pinjam, Kembali
+        ===================================================== -->
         <div class="row mt-3">
-            <div class="col col-md-8 s-dashboard">
-                <div class="card border-0">
-                    <div class="card-body">
-                        <h5 class="card-title"><?php echo __('Latest Transactions') ?></h5>
-                        <canvas id="line-chartjs" height="294"></canvas>
-                        <div class="s-dashboard-legend">
-                            <i class="fa fa-square" style="color:#F4CC17;"></i> <?php echo __('Loan') ?>
-                            <i class="fa fa-square" style="color:#459CBD;"></i> <?php echo __('Return') ?>
-                            <i class="fa fa-square" style="color:#5D45BD;"></i> <?php echo __('Extend') ?>
-                        </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="slims-dash-card slims-dash-card--green">
+                    <div class="slims-dash-card__icon"><i class="fa fa-sign-out"></i></div>
+                    <div class="slims-dash-card__body">
+                        <div class="slims-dash-card__value"><?= $loan_today ?></div>
+                        <div class="slims-dash-card__label"><?php echo __('Pinjam Hari Ini') ?></div>
                     </div>
                 </div>
             </div>
-            <div class="col col-md-4 s-dashboard">
-                <div class="card border-0">
-                    <div class="card-body">
-                        <h5 class="card-title"><?php echo __('Summary') ?></h5>
-                        <div class="s-chart">
-                            <canvas id="radar-chartjs" width="175" height="175"></canvas>
-                        </div>
-                        <table class="table">
-                            <tr>
-                                <td class="text-left"><i class="fa fa-square"
-                                                         style="color:#f2f2f2;"></i>&nbsp;&nbsp;<?php echo __('Total') ?>
-                                </td>
-                                <td class="text-right loan_total">0</td>
-                            </tr>
-                            <tr>
-                                <td class="text-left"><i class="fa fa-square"
-                                                         style="color:#337AB7;"></i>&nbsp;&nbsp;<?php echo __('New') ?>
-                                </td>
-                                <td class="text-right loan_new">0</td>
-                            </tr>
-                            <tr>
-                                <td class="text-left"><i class="fa fa-square"
-                                                         style="color:#06B1CD;"></i>&nbsp;&nbsp;<?php echo __('Return') ?>
-                                </td>
-                                <td class="text-right loan_return">0</td>
-                            </tr>
-                            <tr>
-                                <td class="text-left"><i class="fa fa-square"
-                                                         style="color:#4AC49B;"></i>&nbsp;&nbsp;<?php echo __('Extends') ?>
-                                </td>
-                                <td class="text-right loan_extend">0</td>
-                            </tr>
-                            <tr>
-                                <td class="text-left"><i class="fa fa-square"
-                                                         style="color:#F4CC17;"></i>&nbsp;&nbsp;<?php echo __('Overdue') ?>
-                                </td>
-                                <td class="text-right loan_overdue">0</td>
-                            </tr>
-                        </table>
+            <div class="col-xs-12 col-md-6">
+                <div class="slims-dash-card slims-dash-card--blue">
+                    <div class="slims-dash-card__icon"><i class="fa fa-sign-in"></i></div>
+                    <div class="slims-dash-card__body">
+                        <div class="slims-dash-card__value"><?= $return_today ?></div>
+                        <div class="slims-dash-card__label"><?php echo __('Kembali Hari Ini') ?></div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- =====================================================
+             BARIS UTAMA: Pinjam Hari Ini + Kembali Hari Ini
+        ===================================================== -->
+        <div class="row mt-3">
+
+            <!-- Pinjam Hari Ini -->
+            <div class="col-md-6">
+                <div class="slims-panel">
+                    <div class="slims-panel__header">
+                        <i class="fa fa-sign-out"></i>&nbsp; <?php echo __('Pinjam Hari Ini') ?>
+                        <?php if ($loan_today > 0): ?>
+                            <span class="slims-badge slims-badge--green" style="margin-left:auto;"><?= $loan_today ?> transaksi</span>
+                        <?php endif; ?>
+                    </div>
+                    <div class="slims-panel__body p-0">
+                        <table class="slims-table">
+                            <thead>
+                                <tr>
+                                    <th><?php echo __('Anggota') ?></th>
+                                    <th><?php echo __('Judul Buku') ?></th>
+                                    <th><?php echo __('Kode Item') ?></th>
+                                    <th><?php echo __('Tgl Kembali') ?></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+                            $has_loan = false;
+                            if ($q_loan_list) {
+                                while ($row = $q_loan_list->fetch_assoc()) {
+                                    $has_loan = true;
+                                    $member_name = htmlspecialchars($row['member_name'] ?? '-');
+                                    $title_text  = htmlspecialchars(mb_strimwidth($row['title'] ?? '-', 0, 40, '…'));
+                                    $item_code   = htmlspecialchars($row['item_code'] ?? '-');
+                                    $due_date    = !empty($row['due_date']) ? date('d M Y', strtotime($row['due_date'])) : '-';
+                                    echo "<tr>
+                                        <td><i class='fa fa-user-circle' style='color:#6c757d;margin-right:5px;'></i>{$member_name}</td>
+                                        <td>{$title_text}</td>
+                                        <td><code style='font-size:0.78rem;'>{$item_code}</code></td>
+                                        <td style='white-space:nowrap;color:#e67e22;font-weight:600;'>{$due_date}</td>
+                                    </tr>";
+                                }
+                            }
+                            if (!$has_loan) {
+                                echo '<tr><td colspan="4" class="text-center text-muted" style="padding:24px 0;">Belum ada peminjaman hari ini.</td></tr>';
+                            }
+                            ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kembali Hari Ini -->
+            <div class="col-md-6">
+                <div class="slims-panel">
+                    <div class="slims-panel__header">
+                        <i class="fa fa-sign-in"></i>&nbsp; <?php echo __('Kembali Hari Ini') ?>
+                        <?php if ($return_today > 0): ?>
+                            <span class="slims-badge slims-badge--blue" style="margin-left:auto;"><?= $return_today ?> transaksi</span>
+                        <?php endif; ?>
+                    </div>
+                    <div class="slims-panel__body p-0">
+                        <table class="slims-table">
+                            <thead>
+                                <tr>
+                                    <th><?php echo __('Anggota') ?></th>
+                                    <th><?php echo __('Judul Buku') ?></th>
+                                    <th><?php echo __('Kode Item') ?></th>
+                                    <th><?php echo __('Tgl Kembali') ?></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+                            $has_return = false;
+                            if ($q_return_list) {
+                                while ($row = $q_return_list->fetch_assoc()) {
+                                    $has_return = true;
+                                    $member_name = htmlspecialchars($row['member_name'] ?? '-');
+                                    $title_text  = htmlspecialchars(mb_strimwidth($row['title'] ?? '-', 0, 40, '…'));
+                                    $item_code   = htmlspecialchars($row['item_code'] ?? '-');
+                                    $ret_date    = !empty($row['return_date']) ? date('d M Y', strtotime($row['return_date'])) : '-';
+                                    echo "<tr>
+                                        <td><i class='fa fa-user-circle' style='color:#6c757d;margin-right:5px;'></i>{$member_name}</td>
+                                        <td>{$title_text}</td>
+                                        <td><code style='font-size:0.78rem;'>{$item_code}</code></td>
+                                        <td style='white-space:nowrap;color:#28a745;font-weight:600;'>{$ret_date}</td>
+                                    </tr>";
+                                }
+                            }
+                            if (!$has_return) {
+                                echo '<tr><td colspan="4" class="text-center text-muted" style="padding:24px 0;">Belum ada pengembalian hari ini.</td></tr>';
+                            }
+                            ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Anggota Aktif Hari Ini -->
+                <?php
+                $active_members = [];
+                if ($q_active_members) {
+                    while ($am = $q_active_members->fetch_assoc()) {
+                        $active_members[] = $am;
+                    }
+                }
+                if (!empty($active_members)): ?>
+                <div class="slims-panel mt-3">
+                    <div class="slims-panel__header">
+                        <i class="fa fa-users"></i>&nbsp; <?php echo __('Anggota Aktif Hari Ini') ?>
+                    </div>
+                    <div class="slims-panel__body p-0">
+                        <table class="slims-table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th><?php echo __('ID Anggota') ?></th>
+                                    <th><?php echo __('Nama Anggota') ?></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <?php $no = 1; foreach ($active_members as $am): ?>
+                                <tr>
+                                    <td style="color:#999;width:32px;"><?= $no++ ?></td>
+                                    <td><code style="font-size:0.78rem;"><?= htmlspecialchars($am['member_id'] ?? '-') ?></code></td>
+                                    <td><i class="fa fa-user-circle" style="color:#6c757d;margin-right:5px;"></i><?= htmlspecialchars($am['member_name'] ?? '-') ?></td>
+                                </tr>
+                            <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <?php endif; ?>
+
+            </div><!-- /kembali hari ini -->
+        </div><!-- /row utama -->
+
     </div>
 </div>
-    <script src="<?php echo JWB ?>chartjs/Chart.min.js"></script>
-    <script>
-            
-        $(function () {
 
-            async function getTotal(url, selector = null) {
-                if(selector !== null) $(selector).text('...');
-                let res = await (await fetch(url,{headers: {'SLiMS-Http-Cache': 'cache'}})).json();
-                if(selector !== null) $(selector).text(new Intl.NumberFormat('id-ID').format(res.data));
+<!-- =====================================================
+     STYLES — Dashboard Custom Components
+===================================================== -->
+<style>
+/* ---------- Daily Stats Cards ---------- */
+.slims-dash-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border-radius: 14px;
+    padding: 20px 22px;
+    margin-bottom: 4px;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.09);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.slims-dash-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.14);
+}
+.slims-dash-card--green { background: linear-gradient(135deg,#d4edda,#c3e6cb); border-left: 5px solid #28a745; }
+.slims-dash-card--blue  { background: linear-gradient(135deg,#cce5ff,#b8daff); border-left: 5px solid #007bff; }
+.slims-dash-card--red   { background: linear-gradient(135deg,#f8d7da,#f5c6cb); border-left: 5px solid #dc3545; }
+.slims-dash-card__icon  { font-size: 2.2rem; opacity: 0.75; }
+.slims-dash-card--green .slims-dash-card__icon { color: #155724; }
+.slims-dash-card--blue  .slims-dash-card__icon { color: #004085; }
+.slims-dash-card--red   .slims-dash-card__icon { color: #721c24; }
+.slims-dash-card__value { font-size: 2.1rem; font-weight: 800; line-height: 1; }
+.slims-dash-card--green .slims-dash-card__value { color: #155724; }
+.slims-dash-card--blue  .slims-dash-card__value { color: #004085; }
+.slims-dash-card--red   .slims-dash-card__value { color: #721c24; }
+.slims-dash-card__label { font-size: 0.78rem; font-weight: 700; margin-top: 4px; opacity: 0.8; text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* ---------- Panel ---------- */
+.slims-panel {
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    border: 1px solid #e9ecef;
+    overflow: hidden;
+}
+.slims-panel--danger { border-color: #f5c6cb; }
+.slims-panel.mb-3   { margin-bottom: 18px; }
+.slims-panel__header {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 12px 18px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #343a40;
+    background: linear-gradient(90deg,#f8f9fa,#fff);
+    border-bottom: 1px solid #e9ecef;
+}
+.slims-panel__header--danger {
+    background: linear-gradient(90deg,#f8d7da,#fff5f6);
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+.slims-panel__body    { padding: 14px 18px; }
+.slims-panel__body.p-0 { padding: 0; }
+
+/* ---------- Table ---------- */
+.slims-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+.slims-table thead tr { background: #f8f9fa; }
+.slims-table th {
+    padding: 10px 14px;
+    font-weight: 700;
+    color: #495057;
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid #dee2e6;
+}
+.slims-table td { padding: 9px 14px; border-bottom: 1px solid #f0f0f0; vertical-align: middle; color: #495057; }
+.slims-table tbody tr:last-child td { border-bottom: none; }
+.slims-table tbody tr:hover { background: #fafafa; }
+
+/* ---------- Badges ---------- */
+.slims-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 9px;
+    border-radius: 50px;
+    font-size: 0.74rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+.slims-badge--green { background: #d4edda; color: #155724; }
+.slims-badge--blue  { background: #cce5ff; color: #004085; }
+.slims-badge--red   { background: #f8d7da; color: #721c24; }
+
+/* ---------- Empty State ---------- */
+.slims-empty-state { text-align: center; padding: 18px 10px; border-radius: 8px; }
+.slims-empty-state--green { background: #d4edda; color: #155724; }
+.slims-empty-state p { margin: 8px 0 0; font-weight: 700; font-size: 0.83rem; }
+</style>
+
+    <script>
+        $(function () {
+            async function getTotal(url, selector) {
+                if (selector) $(selector).text('...');
+                let res = await (await fetch(url, {headers: {'SLiMS-Http-Cache': 'cache'}})).json();
+                if (selector) $(selector).text(new Intl.NumberFormat('id-ID').format(res.data));
                 return res.data;
             }
 
             getTotal('<?= SWB ?>index.php?p=api/biblio/total/all', '.biblio_total_all');
-            getTotal('<?= SWB ?>index.php?p=api/item/total/all', '.item_total_all');
-            getTotal('<?= SWB ?>index.php?p=api/item/total/lent', '.item_total_lent');
+            getTotal('<?= SWB ?>index.php?p=api/item/total/all',   '.item_total_all');
+            getTotal('<?= SWB ?>index.php?p=api/item/total/lent',  '.item_total_lent');
             getTotal('<?= SWB ?>index.php?p=api/item/total/available', '.item_total_available');
-
-            // get summary
-            fetch('<?= SWB ?>index.php?p=api/loan/summary', {headers: {'SLiMS-Http-Cache': 'cache'}})
-                .then(res => res.json())
-                .then(res => {
-
-                    $('.loan_total').text(new Intl.NumberFormat('id-ID').format(res.data.total));
-                    $('.loan_new').text(new Intl.NumberFormat('id-ID').format(res.data.new));
-                    $('.loan_return').text(new Intl.NumberFormat('id-ID').format(res.data.return));
-                    $('.loan_extend').text(new Intl.NumberFormat('id-ID').format(res.data.extend));
-                    $('.loan_overdue').text(new Intl.NumberFormat('id-ID').format(res.data.overdue));
-
-                    let data = [
-                        {
-                            value: parseInt(res.data.total),
-                            color: "#f2f2f2",
-                            label: "<?php echo __('Total'); ?>"
-                        },
-                        {
-                            value: parseInt(res.data.new),
-                            color: "#337AB7",
-                            label: "<?php echo __('Loan'); ?>"
-                        },
-                        {
-                            value: parseInt(res.data.return),
-                            color: "#06B1CD",
-                            label: "<?php echo __('Return'); ?>"
-                        },
-                        {
-                            value: parseInt(res.data.extend),
-                            color: "#4AC49B",
-                            label: "<?php echo __('Extend'); ?>"
-                        },
-                        {
-                            value: parseInt(res.data.overdue),
-                            color: "#F4CC17",
-                            label: "<?php echo __('Overdue'); ?>"
-                        }
-
-                    ];
-
-                    let r = $('#radar-chartjs');
-                    let container = $(r).parent();
-                    let rt = r.get(0).getContext("2d");
-                    $(window).resize(respondCanvas);
-
-                    function respondCanvas() {
-                        r.attr('width', $(container).width()); //max width
-                        r.attr('height', $(container).height()); //max height
-                        //Call a function to redraw other content (texts, images etc)
-                        let myChart = new Chart(rt).Doughnut(data, {
-                            animation: false,
-                            segmentStrokeWidth: 1
-                        });
-                    }
-
-                    respondCanvas()
-                });
-
-            // ===================================
-            // bar chart
-            // ===================================
-
-            fetch('<?= SWB ?>index.php?p=api/loan/getdate/<?= $start_date ?>', {headers: {'SLiMS-Http-Cache': 'cache'}})
-            .then(res => res.json())
-            .then(res => {
-
-                let a = getTotal('<?= SWB ?>index.php?p=api/loan/summary/<?= $start_date ?>');
-                a.then(res_total => {
-
-                    let lineChartData = {
-                        labels: res.raw,
-                        datasets: [
-                            {
-                                fillColor: '#F4CC17',
-                                highlightFill: '#F4CC17',
-                                data: res_total.loan
-                            },
-                            {
-                                fillColor: '#459CBD',
-                                highlightFill: '#459CBD',
-                                data: res_total.return
-                            },
-                            {
-                                fillColor: '#5D45BD',
-                                highlightFill: '#5D45BD',
-                                data: res_total.extend
-                            },
-                        ]
-                    }
-
-                    let c = $('#line-chartjs');
-                    let container = $(c).parent();
-                    let ct = c.get(0).getContext("2d");
-                    $(window).resize(respondCanvas);
-
-                    function respondCanvas() {
-                        c.attr('width', $(container).width()); //max width
-                        c.attr('height', $(container).height()); //max height
-                        //Call a function to redraw other content (texts, images etc)
-                        new Chart(ct).Bar(lineChartData, {
-                            barShowStroke: false,
-                            barDatasetSpacing: 4,
-                            animation: {
-                                onProgress: function(animation) {
-                                    progress.value = animation.animationObject.currentStep / animation.animationObject.numSteps;
-                                }
-                            }
-                        });
-                    }
-
-                    respondCanvas();
-                })
-            })
-        });
 
         <?php if (utility::havePrivilege('system', 'r') && utility::havePrivilege('system', 'w')): ?>
             <?php if (config('database_backup.reminder') && !config('database_backup.auto')): ?>
-                // Backup process
                 $('#backupproc').click(function(e) {
-                    e.preventDefault()
-                    
-                    let currentLabel = $(this).html()
-
-                    $(this).removeClass('btn-primary').addClass('btn-secondary disabled')
-                    $(this).html('<?= __('Please wait') ?>')
-
+                    e.preventDefault();
+                    let currentLabel = $(this).html();
+                    $(this).removeClass('btn-primary').addClass('btn-secondary disabled');
+                    $(this).html('<?= __('Please wait') ?>');
                     backupDatabase($(this).attr('href'), function(result) {
-                        if (result.status)  {
-                            window.location.href = '<?= $_SERVER['PHP_SELF'] ?>'
+                        if (result.status) {
+                            window.location.href = '<?= $_SERVER['PHP_SELF'] ?>';
                         } else {
-                            $(this).html(currentLabel)
-                            console.error(result.message)
-                            window.toastr.error(result.message, '<?= __('Error') ?>')
+                            console.error(result.message);
+                            window.toastr.error(result.message, '<?= __('Error') ?>');
                         }
-                    })                    
-                })
+                    });
+                });
             <?php endif; ?>
 
             function backupDatabase(href, callback) {
-                $.post(href, {start:true,tkn:'<?= $_SESSION['token']??'' ?>',verbose:'no',response:'json'}, function(result, status, post){
-                        var result = JSON.parse(result)
-                        callback(result)
+                $.post(href, {start:true, tkn:'<?= $_SESSION['token']??'' ?>', verbose:'no', response:'json'}, function(result) {
+                    callback(JSON.parse(result));
                 });
             }
-
-            <?php /*if (!$is_repaired && !$alreadyBackup && config('database_backup.auto')): ?> 
-                $('.contentDesc').slideUp();
-                $('#backupProccess').slideDown();
-
-                backupDatabase('<?= MWB.'system/backup_proc.php' ?>', function(result) {
-                    if (result.status)  {
-                        window.location.href = '<?= $_SERVER['PHP_SELF'] ?>'
-                    } else {
-                        $(this).html(currentLabel)
-                        console.error(result.message)
-                        window.toastr.error(result.message, '<?= __('Error') ?>')
-                    }
-                })
-            <?php endif;*/ ?> 
         <?php endif; ?>
 
         <?php if ($_SESSION['uid'] === '1') : ?>
-        // get lastest release
-        fetch('https://api.github.com/repos/slims/slims9_bulian/releases/latest')
-            .then(res => res.json())
-            .then(res => {
-                if (res.tag_name > '<?= SENAYAN_VERSION_TAG; ?>') {
-                    $('#new_version').text(res.tag_name);
-                    $('#alert-new-version').removeClass('hidden');
-                    $('#alert-new-version a').attr('href', res.html_url)
-                }
-            })
+            fetch('https://api.github.com/repos/slims/slims9_bulian/releases/latest')
+                .then(res => res.json())
+                .then(res => {
+                    if (res.tag_name > '<?= SENAYAN_VERSION_TAG; ?>') {
+                        $('#new_version').text(res.tag_name);
+                        $('#alert-new-version').removeClass('hidden');
+                        $('#alert-new-version a').attr('href', res.html_url);
+                    }
+                });
         <?php endif; ?>
-
+        });
     </script>
 <?php } ?>

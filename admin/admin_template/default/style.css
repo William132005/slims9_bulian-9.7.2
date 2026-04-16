@@ -1158,7 +1158,6 @@ sidebar
   font-weight: 600;
   color: #475569;
 }
-#sidepan .subMenuItem:first-child,
 #sidepan .curModuleLink {
   background-color: #000080 !important;
   color: #ffffff !important;
@@ -1166,11 +1165,6 @@ sidebar
   margin: 2px 8px;
   padding-left: 16px;
   font-weight: 600;
-}
-#sidepan .subMenuItem:first-child {
-  color: #c54545 !important;
-  background-color: transparent !important;
-  font-weight: normal;
 }
 #sidepan .subMenuItem:not(.curModuleLink):hover {
   background-color: #EEF2FF !important;
@@ -1448,4 +1442,68 @@ pre.sf-dump, pre.sf-dump .sf-dump-default {
 
 input[id*='simbio-checkbox-'], label[for*='simbio-checkbox-'] {
   cursor: pointer !important;
+}
+
+/* ============================================================
+   SIDEBAR ACCORDION — default template
+   ============================================================ */
+
+/* Make the group header a clickable flex row */
+#sidepan .scroll-content .subMenuHeader,
+#sidepan .subMenuHeader {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px 14px 10px 16px !important;
+  margin-top: 0 !important;
+  border-top: 1px solid #E2E8F0 !important;
+  transition: background 0.15s;
+}
+#sidepan .subMenuHeader:first-child {
+  border-top: none !important;
+}
+#sidepan .subMenuHeader:hover,
+#sidepan .subMenuHeader.smAcc-open {
+  background-color: #EEF2FF;
+  color: #000080 !important;
+}
+#sidepan .subMenuHeader.smAcc-open {
+  color: #000080 !important;
+}
+
+/* Label inside header */
+.smAcc-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #94A3B8;
+  flex: 1;
+}
+#sidepan .subMenuHeader.smAcc-open .smAcc-label,
+#sidepan .subMenuHeader:hover .smAcc-label {
+  color: #000080;
+}
+
+/* Arrow indicator */
+.smAcc-arrow {
+  font-size: 9px;
+  color: #CBD5E1;
+  flex-shrink: 0;
+  margin-left: 6px;
+}
+#sidepan .subMenuHeader.smAcc-open .smAcc-arrow {
+  color: #000080;
+}
+
+/* Collapsible body */
+.smAcc-body {
+  overflow: hidden;
+  max-height: 800px;
+  transition: max-height 0.28s ease;
+}
+.smAcc-body.smAcc-collapsed {
+  max-height: 0;
 }

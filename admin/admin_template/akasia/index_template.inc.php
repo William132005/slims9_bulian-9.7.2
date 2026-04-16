@@ -224,6 +224,29 @@ include 'function.php';
         $(this).removeAttr('checked');
       });
     })
+
+    // ── Sidebar Accordion ──────────────────────────────────
+    // Use document-level delegation so it works whenever #sidepan renders
+    $(document).off('click.slimsAcc').on('click.slimsAcc', 'li.s-acc-header', function () {
+      var $header  = $(this);
+      var targetId = $header.data('target');
+      var $body    = $('#' + targetId);
+
+      if (!$body.length) return;
+
+      var isOpen = !$body.hasClass('s-acc-collapsed');
+
+      if (isOpen) {
+        $body.addClass('s-acc-collapsed');
+        $header.removeClass('s-acc-open');
+        $header.find('.s-acc-arrow').html('&#9654;');
+      } else {
+        $body.removeClass('s-acc-collapsed');
+        $header.addClass('s-acc-open');
+        $header.find('.s-acc-arrow').html('&#9660;');
+      }
+    });
+    // ── /Sidebar Accordion ─────────────────────────────────
   </script>
   <?php include "chat.php" ?>
 </body>

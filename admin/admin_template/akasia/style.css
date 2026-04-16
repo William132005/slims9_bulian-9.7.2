@@ -1791,3 +1791,103 @@ button.prev-btn {
 pre.sf-dump, pre.sf-dump .sf-dump-default {
   z-index: 0 !important;
 }
+
+/* ============================================================
+   SIDEBAR ACCORDION — Group Headers & Collapsible Bodies
+   ============================================================ */
+
+/* Header group label */
+li.s-acc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px 10px 16px;
+  cursor: pointer;
+  background-color: #1a1d24;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-left: 3px solid transparent;
+  transition: background 0.18s, border-color 0.18s;
+  user-select: none;
+  list-style: none;
+}
+li.s-acc-header:hover {
+  background-color: #105E7C;
+  border-left-color: #4AB1DD;
+}
+li.s-acc-header.s-acc-open {
+  background-color: #0D4D65;
+  border-left-color: #4AB1DD;
+}
+
+/* Header label text */
+.s-acc-label {
+  color: #9ab;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+li.s-acc-header.s-acc-open .s-acc-label,
+li.s-acc-header:hover .s-acc-label {
+  color: #fff;
+}
+
+/* Arrow indicator */
+.s-acc-arrow {
+  color: #6a8090;
+  font-size: 10px;
+  line-height: 1;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+li.s-acc-header.s-acc-open .s-acc-arrow {
+  color: #4AB1DD;
+}
+
+/* Accordion body (collapsible wrapper) */
+li.s-acc-body {
+  list-style: none;
+  overflow: hidden;
+  max-height: 1000px;
+  transition: max-height 0.28s ease;
+}
+li.s-acc-body.s-acc-collapsed {
+  max-height: 0;
+}
+
+/* Inner nav list */
+.s-acc-inner {
+  display: block !important;
+  padding: 0;
+  margin: 0;
+}
+.s-acc-inner li {
+  list-style: none;
+}
+.s-acc-inner li a {
+  padding-left: 28px !important;
+  font-size: 10px;
+  border-left: 3px solid transparent;
+  transition: border-color 0.15s, background 0.15s;
+}
+.s-acc-inner li a:hover,
+.s-acc-inner li a:focus {
+  background-color: #0D4D65;
+  border-left-color: #4AB1DD;
+  color: #fff;
+}
+
+/* Override: prevent existing .s-menu li div ul {display:none} from hiding accordion inner lists */
+.s-menu li div ul.s-acc-inner,
+ul.s-acc-inner {
+  display: block !important;
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  left: auto !important;
+  top: auto !important;
+  z-index: auto !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  overflow: visible !important;
+}

@@ -64,7 +64,8 @@ trait HasCustomField
         return $custom_data;
     }
 
-    static function getCustomDataFromDatabase($custom_field_key, $key, $id) {
+    static function getCustomDataFromDatabase($custom_field_key, $key, $id)
+    {
         $table = $custom_field_key . '_custom';
         $db = DB::getInstance();
         $stmt = $db->prepare("select * from `$table` where `$key` = :id");
@@ -119,8 +120,14 @@ trait HasCustomField
     static function insertCustomData($table, $custom_field_key, $key, $id)
     {
         $data = self::getCustomDataFromPost($custom_field_key);
+
+        // FIX: Jika tidak ada custom field terdefinisi, skip insert
+        if (empty($data)) {
+            return null;
+        }
+
         $data[$key] = $id;
-        
+
         $db = DB::getInstance();
 
         $fields = array_keys($data);
@@ -139,6 +146,12 @@ trait HasCustomField
     static function updateCustomData($table, $custom_field_key, $key, $id)
     {
         $data = self::getCustomDataFromPost($custom_field_key);
+
+        // FIX: Jika tidak ada custom field terdefinisi, skip update
+        if (empty($data)) {
+            return;
+        }
+
         $db = DB::getInstance();
 
         $fields = array_keys($data);

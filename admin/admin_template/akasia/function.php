@@ -115,14 +115,69 @@ function sub_menu($str_module = '', $_module = array())
 	  $menu[] = array(__($label), MWB.$path, __($label));
 	}
     }
-    // iterate menu array
-    foreach ($menu as $i=>$_list) {
-      if ($_list[0] == 'Header') {
-        $_submenu .= '<li class="s-submenu-header">'.$menu[$i][1].'</li>'."\n";
-      } else {
-        $_submenu .= '<li><a class="menu s-current-child submenu-'.$i.' '.strtolower(str_replace(' ', '-', $menu[$i][0])).'" href="'.$menu[$i][1].'" title="'.( isset($menu[$i][2])?$menu[$i][2]:$menu[$i][0] ).'"><i class="nav-icon fa fa-bars"></i> '.$menu[$i][0].'</a></li>'."\n";
-      }
+
+    // Build accordion groups
+    $groups    = [];
+    $cur_group = null;
+
+    foreach ($menu as $i => $_list) {
+        if ($_list[0] == 'Header') {
+            if ($cur_group !== null) {
+                $groups[] = $cur_group;
+            }
+            $cur_group = ['label' => $_list[1], 'items' => []];
+        } else {
+            if ($cur_group === null) {
+                $cur_group = ['label' => '', 'items' => []];
+            }
+            $cur_group['items'][] = ['index' => $i, 'data' => $_list];
+        }
     }
+    if ($cur_group !== null) {
+        $groups[] = $cur_group;
+    }
+
+    if (empty($groups)) {
+        $_submenu .= '</ul></div>';
+        return $_submenu;
+    }
+
+    // Detect active group by matching current URL
+    $current_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http')
+        . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    $active_group_idx = 0;
+    foreach ($groups as $gi => $grp) {
+        foreach ($grp['items'] as $item) {
+            if (!empty($item['data'][1]) && strpos($current_url, $item['data'][1]) !== false) {
+                $active_group_idx = $gi;
+                break 2;
+            }
+        }
+    }
+
+    $pfx = 'acc-' . preg_replace('/[^a-z0-9]/', '', strtolower($str_module));
+
+    foreach ($groups as $gi => $grp) {
+        $group_id   = $pfx . '-g' . $gi;
+        $is_open    = ($gi === $active_group_idx);
+        $open_class = $is_open ? ' s-acc-open' : '';
+
+        if (!empty($grp['label'])) {
+            $_submenu .= '<li class="s-acc-header' . $open_class . '" data-target="' . $group_id . '">'
+                . '<span class="s-acc-label">' . $grp['label'] . '</span>'
+                . '<span class="s-acc-arrow">' . ($is_open ? '&#9660;' : '&#9654;') . '</span>'
+                . '</li>' . "\n";
+        }
+
+        $_submenu .= '<li class="s-acc-body' . ($is_open ? '' : ' s-acc-collapsed') . '" id="' . $group_id . '"><ul class="nav s-acc-inner">' . "\n";
+        foreach ($grp['items'] as $item) {
+            $i      = $item['index'];
+            $_list  = $item['data'];
+            $_submenu .= '<li><a class="menu s-current-child submenu-' . $i . ' ' . strtolower(str_replace(' ', '-', $_list[0])) . '" href="' . $_list[1] . '" title="' . (isset($_list[2]) ? $_list[2] : $_list[0]) . '"><i class="nav-icon fa fa-bars"></i> ' . $_list[0] . '</a></li>' . "\n";
+        }
+        $_submenu .= '</ul></li>' . "\n";
+    }
+
     $_submenu .= '</ul></div>';
     return $_submenu;
 }

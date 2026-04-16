@@ -1374,5 +1374,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'history') {
     }
 
     echo $datagrid_result;
+
 }
+/* main content end */
 /* main content end */
