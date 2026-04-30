@@ -159,11 +159,13 @@ class circulation extends member
         $_d = $_q->fetch_row();
         if ($_q->num_rows > 0) {
             // first, check for availability for this item
+            /*
             $_q_cond = $this->obj_db->query("SELECT `condition` FROM item WHERE item_code='$str_item_code'");
             $_d_cond = $_q_cond->fetch_assoc();
             if (($_d_cond['condition'] ?? '') == 'rusak_berat') {
                 return ITEM_UNAVAILABLE;
             }
+            */
 
             $_avail_q = $this->obj_db->query("SELECT item_code FROM loan AS L
                 WHERE L.item_code='$str_item_code' AND L.is_lent=1 AND L.is_return=0");

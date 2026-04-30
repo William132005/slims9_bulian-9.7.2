@@ -106,6 +106,17 @@ if ($biblioID) {
   $table = new simbio_table();
   $table->table_attr = 'align="center" class="detailTable" style="width: 100%;" cellpadding="2" cellspacing="0"';
 
+  // table header
+  $table->setHeader(array(
+    __('Action'),
+    __('Delete'),
+    __('Item Code'),
+    __('Location'),
+    __('Shelf Location'),
+    __('Collection Type'),
+    __('Status')
+  ));
+
   // database list
   $item_q = $dbs->query('SELECT i.item_id, i.item_code, b.title, i.site, loc.location_name, ct.coll_type_name, st.item_status_name FROM item AS i
     LEFT JOIN biblio AS b ON i.biblio_id=b.biblio_id

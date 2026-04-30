@@ -353,8 +353,8 @@ if (isset($_POST['detail']) OR (isset($_GET['action']) AND $_GET['action'] == 'd
     $form->addSelectList('collTypeID', __('Collection Type'), $coll_type_options, $rec_d['coll_type_id']??'','style="width: 40%" class="form-control"');
     // item status
         // get item status data from database
-        $item_status_q = $dbs->query("SELECT item_status_id, item_status_name FROM mst_item_status");
-        $item_status_options[] = array('0', __('Available'));
+        $item_status_q = $dbs->query("SELECT item_status_id, item_status_name FROM mst_item_status ORDER BY item_status_id");
+        $item_status_options = [];
         while ($item_status_d = $item_status_q->fetch_row()) {
             $item_status_options[] = array($item_status_d[0], $item_status_d[1]);
         }
@@ -512,8 +512,9 @@ if (isset($_POST['detail']) OR (isset($_GET['action']) AND $_GET['action'] == 'd
     // set delete proccess URL
     $datagrid->chbox_form_URL = $_SERVER['PHP_SELF'];
     
-    // Hide Technical Columns (ItemID: 0, AuthorPlaceholder/Real: 3, BiblioID: 9)
-    $datagrid->invisible_fields = array(0, 3, 8);
+    // Hide: coll_type (display pos 5 → pre-shift=3), extra biblio_id (display pos 10 → pre-shift=8)
+    // item_code is at display pos 2 → NOT hidden → will appear
+    $datagrid->invisible_fields = array(3, 8);
 
     // put the result into variables
     $datagrid_result = $datagrid->createDataGrid($dbs, $table_spec, 20, ($can_read AND $can_write));

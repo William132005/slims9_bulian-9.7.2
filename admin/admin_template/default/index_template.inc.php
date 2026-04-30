@@ -220,24 +220,41 @@ $('.s-close').click(function(e){
 
   // ── DROPDOWN PENGATURAN ──────────────────────────────────────────
 (function() {
-    var hiddenMods = ['master_file', 'stock_take', 'system', 'reporting', 'serial_control'];
-    var menuItems = [
-        { label: 'Daftar Kendali',          url: 'index.php?mod=master_file' },
-        { label: 'Inventarisasi',           url: 'index.php?mod=stock_take' },
-        { label: 'Sistem',                  url: 'index.php?mod=system' },
-        { label: 'Pelaporan',               url: 'index.php?mod=reporting' },
-        { label: 'Kendali Terbitan Berseri',url: 'index.php?mod=serial_control' }
-    ];
+    var dropdownMods = ['stock_take', 'system', 'reporting'];
+    var hideCompletelyMods = ['master_file', 'serial_control'];
+    var menuItems = [];
 
-    // Sembunyikan item-item yang akan dipindah ke dropdown
+    // Ambil item yang benar-benar ada di DOM, sembunyikan dari menu asli
     $('#mainMenu a').each(function() {
-        var href = $(this).attr('href') || '';
-        for (var i = 0; i < hiddenMods.length; i++) {
-            if (href.indexOf('mod=' + hiddenMods[i]) !== -1) {
-                $(this).closest('li').hide();
+        var $a = $(this);
+        var href = $a.attr('href') || '';
+        
+        // Cek apakah modul ini harus disembunyikan sepenuhnya (hilang dari menu utama & dropdown)
+        var shouldHideCompletely = false;
+        for (var i = 0; i < hideCompletelyMods.length; i++) {
+            if (href.indexOf('mod=' + hideCompletelyMods[i]) !== -1) {
+                $a.closest('li').hide();
+                shouldHideCompletely = true;
+                break;
+            }
+        }
+
+        if (shouldHideCompletely) return; // Lewati, jangan masukkan ke dropdown
+
+        // Cek apakah modul ini harus dipindah ke dropdown Pengaturan
+        for (var i = 0; i < dropdownMods.length; i++) {
+            if (href.indexOf('mod=' + dropdownMods[i]) !== -1) {
+                menuItems.push({
+                    label: $.trim($a.text()),
+                    url: href
+                });
+                $a.closest('li').hide();
+                break;
             }
         }
     });
+
+    if (menuItems.length === 0) return;
 
     // Bangun HTML dropdown Bootstrap
     var dropItems = menuItems.map(function(item) {

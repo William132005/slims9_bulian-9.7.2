@@ -71,6 +71,12 @@ function visitOnLoan($member_id)
 
 // transaction is finished
 if (isset($_POST['finish'])) {
+    // session may have expired — guard against missing memberID
+    if (empty($_SESSION['memberID'])) {
+        toastr(__('Session expired. Please start the transaction again.'))->error();
+        echo '<script type="text/javascript">parent.$("#mainContent").simbioAJAX("' . MWB . 'circulation/index.php");</script>';
+        exit();
+    }
     // create circulation object
     $memberID = $dbs->escape_string($_SESSION['memberID']);
     $circulation = new circulation($dbs, $memberID);
